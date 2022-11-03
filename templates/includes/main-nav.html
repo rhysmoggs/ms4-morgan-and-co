@@ -23,10 +23,10 @@
                 Furniture
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="furniture-link">
-                <a href="" class="dropdown-item">Chairs</a>
-                <a href="" class="dropdown-item">Sofas</a>
-                <a href="" class="dropdown-item">Tables</a>
-                <a href="" class="dropdown-item">All Furniture</a>
+                <a href="{% url 'products' %}?category=chair" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=sofa" class="dropdown-item">Sofas</a>
+                <a href="{% url 'products' %}?category=table" class="dropdown-item">Tables</a>
+                <a href="{% url 'products' %}?category=chair,sofa,table" class="dropdown-item">All Furniture</a>
             </div>
         </li>
 
@@ -35,31 +35,26 @@
                 Rooms
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="rooms-link">
-                <a href="" class="dropdown-item">Living Room</a>
-                <a href="" class="dropdown-item">Bedroom</a>
-                <a href="" class="dropdown-item">Dining Room</a>
-                <a href="" class="dropdown-item">Kitchen</a>
-                <a href="" class="dropdown-item">All Rooms</a>
+                <a href="{% url 'products' %}?room=living_room" class="dropdown-item">Living Room</a>
+                <a href="{% url 'products' %}?room=bedroom" class="dropdown-item">Bedroom</a>
+                <a href="{% url 'products' %}?room=dining_room" class="dropdown-item">Dining Room</a>
+                <a href="{% url 'products' %}?room=kitchen" class="dropdown-item">Kitchen</a>
+                <a href="{% url 'products' %}?room=living_room,bedroom,dining_room,kitchen" class="dropdown-item">All Rooms</a>
             </div>
         </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="living-link" aria-expanded="false">
-                Living Room
+        
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=new_arrivals" id="new-arrivals-link" aria-expanded="false">
+                New Arrivals
             </a>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-danger" href="{% url 'products' %}?category=clearance" id="clearance-link" aria-expanded="false">
+                Clearance
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
-            </div>
         </li>
+
     </ul>
 </div>
 <div class="border-0 p-3 rounded-0 my-0 d-none d-lg-block">
