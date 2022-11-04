@@ -104,6 +104,23 @@ a.room-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 108px;
+    right: 28px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -136,5 +153,9 @@ a.room-badge > span.badge:hover {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .message-container {
+        top: 64px;
     }
 }
