@@ -33,6 +33,11 @@ body {
     min-width: 260px;
 }
 
+.card-img-top {
+    height: 20vw;
+    object-fit: cover;
+}
+
 .btn-black {
     background: black;
     color: white;
