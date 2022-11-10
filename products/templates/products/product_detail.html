@@ -93,6 +93,53 @@
             </div>
         </div>
     </div>
+    <!-- Review Section -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5 text-center my-3">
+                <div class="card mt-5">
+                    {% if reviews.count %}
+                        <h5 class="card-header">Product Reviews ({{ reviews.count }})</h5>
+                    {% else %}
+                        <h5 class="card-header">Product Reviews (0)</h5>
+                        <br>
+                        <p>Be the first to add a review for the <strong>{{ product }}</strong></p>
+                    {% endif %}
+                    {% for review in reviews %}
+                    <div class="row card-body align-items-center">
+                        <div class="col-3">
+                            <div><i class="fas fa-user fa-lg"></i></div>
+                            <p class="card-text">{{ review.review_author }}</p>
+                            <hr>
+                            <small class="card-text">{{ review.review_date }}</small>
+                        </div>
+                        <div class="col-9">
+                            {% if review.review_text %}
+                            <p class="card-text">{{ review.review_text }}</p>
+                            {% else %}
+                            <small class="text-muted">No Comment</small>
+                            {% endif %}
+                            <p class="card-text"><i class="fas fa-star mr-1"></i>{{ review.review_rating }}</p>
+                        </div>
+                    </div>
+                    <!-- <hr> -->
+                    <hr class="w-75 mx-auto">
+                    {% endfor %}
+                </div>
+            </div>
+            {% if request.user.is_authenticated %}
+                {% include 'reviews/includes/reviews.html' %}
+            {% else %}
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col text-center my-5">
+                        <p class="text-center">You must be a registered user to leave a review. Log in <a class="font-weight-bold" href="{% url 'account_login' %}">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
