@@ -8,8 +8,6 @@ from products.models import Product
 from profiles.models import UserProfile
 from django.contrib.auth.models import User
 
-# Create your views here.
-
 
 @login_required
 def add_review(request, product_id):
@@ -37,3 +35,21 @@ def add_review(request, product_id):
     }
 
     return render(request, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a product review """
+    # if not request.user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('home'))
+    review = get_object_or_404(Review, id=review_id)
+    product = review.product
+
+    review.delete()
+
+    messages.success(request, f'{product.name} review deleted!')
+
+    return redirect(
+        # reverse('product_detail', kwargs={"product_id": product.id}))
+        reverse('product_detail', args=[product.id]))

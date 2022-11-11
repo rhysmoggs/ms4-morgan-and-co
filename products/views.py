@@ -84,7 +84,7 @@ def product_detail(request, product_id):
             product=product,
             review_author=get_object_or_404(User, username=request.user)
         )
-    
+
     form = ReviewForm()
 
     average_rating = reviews.aggregate(Avg('review_rating'))['review_rating__avg']
