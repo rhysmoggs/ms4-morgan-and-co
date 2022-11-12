@@ -1,0 +1,1 @@
+web: gunicorn morgan_and_co.wsgi:application
