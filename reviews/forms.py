@@ -10,6 +10,9 @@ class ReviewForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        placeholder = {
+            'review_text': 'Write your review here',
+        }
         labels = {
             'review_text': 'Product Review',
             'review_rating': 'Rating',
@@ -17,3 +20,4 @@ class ReviewForm(forms.ModelForm):
 
         for field in self.fields:
             self.fields[field].label = labels[field]
+        self.fields['review_text'].widget.attrs['placeholder'] = placeholder['review_text']
