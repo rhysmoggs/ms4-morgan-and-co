@@ -5,6 +5,7 @@ html {
 body {
     background: no-repeat center center fixed;
     background-image: linear-gradient(rgba(241, 236, 236, 0.5), rgba(0, 0, 0, 0.5)), url("/media/background-lg.jpg");
+    background-size: cover;
     height: calc(100vh - 210px);
     color: #555;
     font-family: 'Poppins', sans-serif;
