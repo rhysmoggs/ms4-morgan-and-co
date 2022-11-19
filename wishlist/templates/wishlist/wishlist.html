@@ -23,14 +23,13 @@
 
     <div class="row justify-content-center">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <div>
             {% if wishlist.count %}
                 {% if wishlist.count == 1 %}
-                <!-- <h5 class="card-header">Wishlist Items ({{ wishlist.count }})</h5> -->
-                <p class="text-muted">You have {{ wishlist.count }} item in your Wishlist</p>
+                    <p class="text-muted">You have {{ wishlist.count }} item in your Wishlist</p>
                 {% else %}
-                <p class="text-muted">You have {{ wishlist.count }} items in your Wishlist</p>
+                    <p class="text-muted">You have {{ wishlist.count }} items in your Wishlist</p>
                 {% endif %}
-                
                 <div class="table-responsive rounded d-md-block">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
@@ -40,44 +39,44 @@
                                 <th scope="col">Price</th>
                             </tr>
                         </thead>
-                        
-                    {% for product in wishlist %}
-                        <tr>
-                            <td class="p-3 w-25">
-                                <a href="{% url 'product_detail' product.id %}">
-                                    {% if product.image %}
-                                    <img class="w-100" src="{{ product.image.url }}"
-                                    alt="{{ product.product.name }}">
-                                    {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                    {% endif %}
-                                </a>
-                            </td>
-                            <td class="py-3">
-                                <p class="my-0"><strong>{{ product.name }}</strong></p>
-                            </td>
-                            <td class="py-3">
-                                <p class="lead mb-0 font-weight-bold">£{{ product.price }}</p>
-                            </td>
-                            <td class="py-3">
-                                <a class="text-black" href="#">
-                                    <div class="text-center">
-                                        <div><i class="fas fa-trash fa-lg"></i></div>
-                                        <p class="my-0 text-danger">Remove from Wishlist</p>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                    {% endfor %}
+                        {% for product in wishlist %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        {% if product.image %}
+                                        <img class="w-100" src="{{ product.image.url }}"
+                                        alt="{{ product.product.name }}">
+                                        {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        {% endif %}
+                                    </a>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ product.name }}</strong></p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="lead mb-0 font-weight-bold">£{{ product.price }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <a class="text-black" href="{% url 'remove_from_wishlist' product.id %}">
+                                        <div class="text-center">
+                                            <div><i class="fas fa-trash fa-lg"></i></div>
+                                            <p class="my-0 text-danger">Remove from Wishlist</p>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
                     </table>
-                {% else %}
-                    <p class="text-muted">You have 0 items in your Wishlist</p>
-                    <br>
-                    <!-- <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a> -->
-                    <p>Take a look at our 
-                        <a href="{% url 'products' %}"><strong>products page</strong></a>
-                    </p>
-                {% endif %}
+                </div>
+            {% else %}
+                <p class="text-muted">You have 0 items in your Wishlist</p>
+                <br>
+                <!-- <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a> -->
+                <p>Take a look at our 
+                    <a href="{% url 'products' %}"><strong>products page</strong></a>
+                </p>
+            {% endif %}
             </div>
         </div>
     </div>
