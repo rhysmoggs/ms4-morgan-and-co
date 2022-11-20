@@ -16,13 +16,13 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Wishlist</h2>
+            <h2 class="logo-font mb-4 text-center">Wishlist</h2>
             <hr>
         </div>
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
+        <div class="col-12 col-lg-10 order-lg-last mb-5">
             <div>
             {% if wishlist.count %}
                 {% if wishlist.count == 1 %}
@@ -44,8 +44,7 @@
                                 <td class="p-3 w-25">
                                     <a href="{% url 'product_detail' product.id %}">
                                         {% if product.image %}
-                                        <img class="w-100" src="{{ product.image.url }}"
-                                        alt="{{ product.product.name }}">
+                                        <img class="w-100" src="{{ product.image.url }}" alt="{{ product.product.name }}">
                                         {% else %}
                                         <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                         {% endif %}
@@ -90,6 +89,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
