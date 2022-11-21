@@ -9,6 +9,12 @@ body {
     height: calc(100vh - 210px);
     color: #555;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 100vh;
 }
 
 /* from Bulma */
