@@ -4,7 +4,8 @@ html {
 
 body {
     background: no-repeat center center fixed;
-    background-image: linear-gradient(rgba(241, 236, 236, 0.5), rgba(0, 0, 0, 0.5)), url("/media/background-lg.jpg");
+    /* background-image: linear-gradient(rgba(241, 236, 236, 0.5), rgba(0, 0, 0, 0.5)), url("/media/background-lg.jpg"); */
+    background-image: linear-gradient(rgba(241, 236, 236, 0.5), rgba(0, 0, 0, 0.5)), url("/media/background-blue.jpg");
     background-size: cover;
     height: calc(100vh - 210px);
     color: #555;
@@ -42,7 +43,8 @@ footer {
 
 .card-img-top {
     height: 20vw;
-    object-fit: cover;
+    /* object-fit: cover; */
+    object-fit: contain;
 }
 
 .btn-black {
@@ -292,14 +294,21 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 160px;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 160px);
     }
 
     .message-container {
         top: 64px;
+    }
+}
+
+/* increase product size */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 40vw;
     }
 }

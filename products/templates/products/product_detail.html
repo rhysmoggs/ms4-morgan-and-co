@@ -17,11 +17,11 @@
                 <div class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -143,7 +143,7 @@
                                     <div class="col-12">
                                         <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
                                             <span class="icon">
-                                                <i class="fas fa-plus"></i>
+                                                <i class="far fa-heart"></i>
                                             </span>
                                             <span class="text-uppercase">Add to Wishlist</span>
                                         </a> 
@@ -170,7 +170,7 @@
                     <p>Be the first to add a review for the <strong>{{ product }}</strong></p>
                 {% endif %}
                 <!-- <hr> -->
-                <div class="card mt-5">
+                <div class="card border-0 mt-5">
                     {% for review in reviews %}
                     <div class="row card-body align-items-center">
                         <div class="col-3">
