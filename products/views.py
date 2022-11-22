@@ -8,6 +8,8 @@ from .models import Product, Category, Room
 from .forms import ProductForm
 
 from django.contrib.auth.models import User
+from profiles.models import UserProfile
+from wishlist.models import Wishlist
 from reviews.models import Review
 from reviews.forms import ReviewForm
 
@@ -85,6 +87,20 @@ def product_detail(request, product_id):
             review_author=get_object_or_404(User, username=request.user)
         )
 
+    # for wishlist info
+    user = get_object_or_404(UserProfile, user=request.user)
+    print(user)
+    check_wishlist = None
+    print(check_wishlist)
+    try:
+        get_user_wishlist = Wishlist.objects.get(user=user)
+        print(get_user_wishlist)
+        check_wishlist = get_user_wishlist.products.all()
+        print(check_wishlist)
+    except Wishlist.DoesNotExist:
+        pass
+    check_wishlist = Wishlist.objects.filter(user=user, products=product)
+
     form = ReviewForm()
 
     average_rating = reviews.aggregate(Avg('review_rating'))['review_rating__avg']
@@ -96,7 +112,8 @@ def product_detail(request, product_id):
         'reviews': reviews,
         'form': form,
         'average_rating': average_rating,
-        'reviews_by_user': reviews_by_user
+        'reviews_by_user': reviews_by_user,
+        'check_wishlist': check_wishlist
     }
 
     return render(request, 'products/product_detail.html', context)

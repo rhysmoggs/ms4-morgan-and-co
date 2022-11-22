@@ -66,10 +66,27 @@
                 {% endif %}
               </div>
             </li>
+            {% if request.user.is_authenticated %}
+              <li class="list-inline-item">
+                <a class="text-black nav-link" href="{% url 'wishlist' %}">
+                  <div class="text-center">
+                    <p class="my-0">
+                      {% if wishlist %}
+                      <div><i class="fas fa-heart"></i></div>
+                      Wishlist
+                      {% else %}
+                      <div><i class="far fa-heart"></i></div>
+                      Wishlist
+                      {% endif %}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            {% endif %}
             <li class="list-inline-item">
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                 <div class="text-center">
-                  <div><i class="fas fa-shopping-bag"></i></div>
+                  <div><i class="fas fa-shopping-cart"></i></div>
                   <p class="my-0">
                     {% if grand_total %}
                       £{{ grand_total|floatformat:2 }}

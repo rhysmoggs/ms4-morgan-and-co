@@ -54,12 +54,12 @@
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}" class="btn btn-light text-primary"><div><i class="fas fa-edit text-black"></i></div>Edit</a> | 
                             <!-- Delete product modal trigger -->
-                            <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#detailModal">
+                            <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ product.id }}">
                                 <div><i class="fas fa-trash fa-lg text-black"></i></div>
                                 Delete
                             </button>
                             <!-- Delete product modal -->
-                            <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="delete_{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -120,7 +120,7 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            {% if user.is_authenticated %}
+                            <!-- {% if user.is_authenticated %}
                             <div class="col-12">
                                 <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -129,6 +129,26 @@
                                     <span class="text-uppercase">Add to Wishlist</span>
                                 </a> 
                             </div>
+                            {% endif %} -->
+                            {% if request.user.is_authenticated %}
+                                {% if check_wishlist.count > 0 %}
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col text-center my-5">
+                                                <p class="text-left"><strong>{{ product.name }}</strong> in your <a href="{% url 'wishlist' %}">Wishlist</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="col-12">
+                                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                            <span class="text-uppercase">Add to Wishlist</span>
+                                        </a> 
+                                    </div>
+                                {% endif %}
                             {% endif %}
                         </div>
                     </form>
@@ -173,12 +193,12 @@
                             <small class="ml-3">
                                 <a href="{% url 'edit_review' review.id %}" class="btn btn-light text-primary"><div><i class="fas fa-edit text-black"></i></div>Edit</a> | 
                                 <!-- Delete product modal trigger -->
-                                <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#reviewModal">
+                                <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ review.id }}">
                                     <div><i class="fas fa-trash fa-lg text-black"></i></div>
                                     Delete
                                 </button>
                                 <!-- Delete product modal -->
-                                <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="delete_{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">

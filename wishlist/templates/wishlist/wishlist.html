@@ -58,12 +58,12 @@
                                 </td>
                                 <td class="py-3">
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#wishlistModal">
+                                    <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ product.id }}">
                                         <div><i class="fas fa-trash fa-lg text-black"></i></div>
                                         Remove from Wishlist
                                     </button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="wishlistModal" tabindex="-1" role="dialog" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="delete_{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="wishlistModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
