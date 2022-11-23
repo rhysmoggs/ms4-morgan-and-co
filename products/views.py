@@ -80,6 +80,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
     reviews_by_user = None
+    check_wishlist = None
 
     if request.user.is_authenticated:
         reviews_by_user = Review.objects.filter(
@@ -87,19 +88,18 @@ def product_detail(request, product_id):
             review_author=get_object_or_404(User, username=request.user)
         )
 
-    # for wishlist info
-    user = get_object_or_404(UserProfile, user=request.user)
-    print(user)
-    check_wishlist = None
-    print(check_wishlist)
-    try:
-        get_user_wishlist = Wishlist.objects.get(user=user)
-        print(get_user_wishlist)
-        check_wishlist = get_user_wishlist.products.all()
-        print(check_wishlist)
-    except Wishlist.DoesNotExist:
-        pass
-    check_wishlist = Wishlist.objects.filter(user=user, products=product)
+        # for wishlist info
+        user = get_object_or_404(UserProfile, user=request.user)
+        print(user)
+        # print(check_wishlist)
+        try:
+            get_user_wishlist = Wishlist.objects.get(user=user)
+            print(get_user_wishlist)
+            check_wishlist = get_user_wishlist.products.all()
+            print(check_wishlist)
+        except Wishlist.DoesNotExist:
+            pass
+        check_wishlist = Wishlist.objects.filter(user=user, products=product)
 
     form = ReviewForm()
 

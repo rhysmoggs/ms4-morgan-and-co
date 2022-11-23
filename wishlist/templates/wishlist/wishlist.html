@@ -26,9 +26,9 @@
             <div>
             {% if wishlist.count %}
                 {% if wishlist.count == 1 %}
-                    <p class="text-muted">You have {{ wishlist.count }} item in your Wishlist</p>
+                    <p class="text-muted text-center">You have {{ wishlist.count }} item in your Wishlist</p>
                 {% else %}
-                    <p class="text-muted">You have {{ wishlist.count }} items in your Wishlist</p>
+                    <p class="text-muted text-center">You have {{ wishlist.count }} items in your Wishlist</p>
                 {% endif %}
                 <div class="table-responsive rounded d-md-block">
                     <table class="table table-sm table-borderless">
@@ -90,11 +90,10 @@
                     </table>
                 </div>
             {% else %}
-                <p class="text-muted">You have 0 items in your Wishlist</p>
+                <!-- <p class="text-muted">Your Wishlist is empty.</p> -->
                 <br>
-                <!-- <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a> -->
-                <p>Take a look at our 
-                    <a href="{% url 'products' %}"><strong>products page</strong></a>
+                <p class="text-center">Take a look at our 
+                    <a href="{% url 'products' %}" class="text-uppercase"><strong>products page</strong></a>
                 </p>
             {% endif %}
             </div>
