@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Review
 from .forms import ReviewForm
 from products.models import Product
-from profiles.models import UserProfile
+# from profiles.models import UserProfile
 from django.contrib.auth.models import User
 
 
@@ -53,7 +53,8 @@ def edit_review(request, review_id):
             messages.success(request, 'Successfully updated review!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update your review. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update your review. Please ensure the form is valid.')
     else:
         form = ReviewForm(instance=review)
         messages.info(request, f'You are editing {product.name}')

@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.models import AnonymousUser
+from django.shortcuts import get_object_or_404
+# from django.contrib.auth.models import AnonymousUser
 
-from products.models import Product
+# from products.models import Product
 from wishlist.models import Wishlist
 from profiles.models import UserProfile
 
