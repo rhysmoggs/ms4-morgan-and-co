@@ -1,54 +1,56 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+    <!-- <ul class="navbar-nav w-auto"> -->
         <li class="nav-item d-block d-md-none">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <!-- <a href="" class="dropdown-item ">By Rating</a> -->
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}?sort=room&direction=asc" class="dropdown-item">By Room</a>
-                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">By Name</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="furniture-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Furniture
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="furniture-link">
-                <a href="{% url 'products' %}?category=chair" class="dropdown-item">Chairs</a>
-                <a href="{% url 'products' %}?category=sofa" class="dropdown-item">Sofas</a>
-                <a href="{% url 'products' %}?category=table" class="dropdown-item">Tables</a>
-                <a href="{% url 'products' %}?category=chair,sofa,table" class="dropdown-item">All Furniture</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="rooms-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Rooms
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="rooms-link">
-                <a href="{% url 'products' %}?room=living_room" class="dropdown-item">Living Room</a>
-                <a href="{% url 'products' %}?room=bedroom" class="dropdown-item">Bedroom</a>
-                <a href="{% url 'products' %}?room=dining_room" class="dropdown-item">Dining Room</a>
-                <a href="{% url 'products' %}?room=kitchen" class="dropdown-item">Kitchen</a>
-                <a href="{% url 'products' %}?room=living_room,bedroom,dining_room,kitchen" class="dropdown-item">All Rooms</a>
-            </div>
-        </li>
-        
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=new_arrivals" id="new-arrivals-link" aria-expanded="false">
                 New Arrivals
             </a>
         </li>
+        <!-- <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=room&direction=asc" class="dropdown-item">By Room</a>
+                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">By Name</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            </div>
+        </li> -->
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="shop-item-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop by Item
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="shop-item-link">
+                <a href="{% url 'products' %}?category=chair,sofa,table,cabinet" class="dropdown-item">All Furniture</a>
+                <a href="{% url 'products' %}?category=chair" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=sofa" class="dropdown-item">Sofas</a>
+                <a href="{% url 'products' %}?category=table" class="dropdown-item">Tables</a>
+                <a href="{% url 'products' %}?category=cabinet" class="dropdown-item">Cabinets</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="shop-rooms-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop by Room
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="shop-rooms-link">
+                <a href="{% url 'products' %}?room=living_room,bedroom,dining_room,kitchen" class="dropdown-item">All Rooms</a>
+                <a href="{% url 'products' %}?room=bedroom" class="dropdown-item">Bedroom</a>
+                <a href="{% url 'products' %}?room=kitchen" class="dropdown-item">Kitchen</a>
+                <a href="{% url 'products' %}?room=dining_room" class="dropdown-item">Dining Room</a>
+                <a href="{% url 'products' %}?room=living_room" class="dropdown-item">Living Room</a>
+            </div>
+        </li>
+        
 
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-danger" href="{% url 'products' %}?category=clearance" id="clearance-link" aria-expanded="false">

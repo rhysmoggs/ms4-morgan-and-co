@@ -14,6 +14,10 @@ body {
     flex-direction: column;
 }
 
+.nav-link {
+    padding: 0.2rem;
+}
+
 footer {
     margin-top: 100vh;
 }
@@ -27,7 +31,17 @@ footer {
     width: 1.5rem;
 }
 
+.company-font {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
 .logo-font {
+    text-transform: uppercase;
+}
+
+.hero-text {
+    font-size: 2.5rem;
     text-transform: uppercase;
 }
 
@@ -83,6 +97,10 @@ footer {
     border: 1px solid black !important;
 }
 
+.bg-green {
+    background: #aac6c6 !important;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -115,6 +133,13 @@ a.room-badge > span.badge:hover {
 
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+/* ------------------------------- navbar link effects */
+
+.nav-item:hover {
+    text-decoration: underline solid;
+    text-underline-offset: 0.5rem;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -305,13 +330,13 @@ input[name='q']::placeholder {
         top: 64px;
     }
 
-    .display-4.logo-font.text-black {
+    .hero-text {
         font-size: 2rem;
     }
 
-    .nav-link {
+    /* .nav-link {
         padding: 0.15rem;
-    }
+    } */
 
     .nav-link i.fa-lg {
         font-size: 1rem;
@@ -320,6 +345,10 @@ input[name='q']::placeholder {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
     }
 
     .btn.btn-outline-black.rounded-0,
@@ -338,7 +367,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* increase product size */
+/* increase product image size  on screens up to 768px */
 @media (max-width: 768px) {
     .card-img-top {
         height: 40vw;
