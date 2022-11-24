@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4 text-center">Wishlist</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 order-lg-last mb-5">
+            <div>
+            {% if wishlist.count %}
+                {% if wishlist.count == 1 %}
+                    <p class="text-muted text-center">You have {{ wishlist.count }} item in your Wishlist</p>
+                {% else %}
+                    <p class="text-muted text-center">You have {{ wishlist.count }} items in your Wishlist</p>
+                {% endif %}
+                <div class="table-responsive rounded d-md-block">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        {% for product in wishlist %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        {% if product.image %}
+                                        <img class="w-100" src="{{ product.image.url }}" alt="{{ product.product.name }}">
+                                        {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        {% endif %}
+                                    </a>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ product.name }}</strong></p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="lead mb-0 font-weight-bold">£{{ product.price }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ product.id }}">
+                                        <div><i class="fas fa-trash fa-lg text-black"></i></div>
+                                        Remove from Wishlist
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="delete_{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="wishlistModalLabel">Wait...</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete <strong>{{ product.name }}</strong> from your Wishlist? 
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <a class="text-black" href="{% url 'remove_from_wishlist' product.id %}">
+                                                        Remove from Wishlist
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% else %}
+                <!-- <p class="text-muted">Your Wishlist is empty.</p> -->
+                <br>
+                <p class="text-center">Take a look at our 
+                    <a href="{% url 'products' %}" class="text-uppercase"><strong>products page</strong></a>
+                </p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+{% endblock %}

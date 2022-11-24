@@ -1,0 +1,7 @@
+<a href="{% url 'product_detail' product.id %}">
+    {% if product.image %}
+    <img class="w-100" src="{{ product.image.url }}" alt="{{ product.product.name }}">
+    {% else %}
+    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+    {% endif %}
+</a>

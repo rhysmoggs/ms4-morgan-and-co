@@ -30,7 +30,27 @@
                 {% else %}
                     <p class="text-muted text-center">You have {{ wishlist.count }} items in your Wishlist</p>
                 {% endif %}
-                <div class="table-responsive rounded d-md-block">
+                <div class="d-block d-md-none">
+                    {% for product in wishlist %}
+                        <div class="row">
+                            <col class="col-12 col-sm-6 mb-2">
+                                {% include "wishlist/wishlist-image.html" %}
+                            </col>
+                            <col class="col-12 col-sm-6 mb-2">
+                                <p><strong>{{ product.name }}</strong></p>
+                            </col>
+                            <col class="col-12 col-sm-6 mb-2">
+                                <p><strong> £{{ product.price }}</strong></p>
+                            </col>
+                            <col class="col-12 col-sm-6 mb-2"></col>
+                        </div>
+                        <div class="center">
+                            {% include "wishlist/wishlist-buttons.html" %}
+                        </div>
+                        <div class="row"><div class="col"><hr></div></div>
+                    {% endfor %}
+                </div>
+                <div class="table-responsive rounded d-none d-md-block">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
                             <tr>
@@ -42,13 +62,7 @@
                         {% for product in wishlist %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    <a href="{% url 'product_detail' product.id %}">
-                                        {% if product.image %}
-                                        <img class="w-100" src="{{ product.image.url }}" alt="{{ product.product.name }}">
-                                        {% else %}
-                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                        {% endif %}
-                                    </a>
+                                    {% include "wishlist/wishlist-image.html" %}
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ product.name }}</strong></p>
@@ -57,33 +71,7 @@
                                     <p class="lead mb-0 font-weight-bold">£{{ product.price }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ product.id }}">
-                                        <div><i class="fas fa-trash fa-lg text-black"></i></div>
-                                        Remove from Wishlist
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="delete_{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="wishlistModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="wishlistModalLabel">Wait...</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Are you sure you want to delete <strong>{{ product.name }}</strong> from your Wishlist? 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <a class="text-black" href="{% url 'remove_from_wishlist' product.id %}">
-                                                        Remove from Wishlist
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {% include "wishlist/wishlist-buttons.html" %}
                                 </td>
                             </tr>
                         {% endfor %}
