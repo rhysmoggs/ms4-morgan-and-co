@@ -1,0 +1,27 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#mobile_delete_{{ product.id }}">
+    <div><i class="fas fa-trash fa-lg text-black"></i></div>
+    Remove from Wishlist
+</button>
+<!-- Modal -->
+<div class="modal fade" id="mobile_delete_{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="wishlistMobileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="wishlistMobileModalLabel">Wait...</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete <strong>{{ product.name }}</strong> from your Wishlist? 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a class="text-black" href="{% url 'remove_from_wishlist' product.id %}">
+                    Remove from Wishlist
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

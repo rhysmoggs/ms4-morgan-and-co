@@ -32,20 +32,17 @@
                 {% endif %}
                 <div class="d-block d-md-none">
                     {% for product in wishlist %}
-                        <div class="row">
+                    <p><strong>{{ product.name }}</strong></p>
+                        <div class="row mx-1 my-1">
                             <col class="col-12 col-sm-6 mb-2">
                                 {% include "wishlist/wishlist-image.html" %}
                             </col>
                             <col class="col-12 col-sm-6 mb-2">
-                                <p><strong>{{ product.name }}</strong></p>
-                            </col>
-                            <col class="col-12 col-sm-6 mb-2">
                                 <p><strong> £{{ product.price }}</strong></p>
                             </col>
-                            <col class="col-12 col-sm-6 mb-2"></col>
                         </div>
                         <div class="center">
-                            {% include "wishlist/wishlist-buttons.html" %}
+                            {% include "wishlist/wishlist-buttons-mobile.html" %}
                         </div>
                         <div class="row"><div class="col"><hr></div></div>
                     {% endfor %}
