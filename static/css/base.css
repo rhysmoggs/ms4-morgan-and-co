@@ -321,7 +321,7 @@ input[name='q']::placeholder {
     }
 
     .company-text {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -339,19 +339,11 @@ input[name='q']::placeholder {
         top: 64px;
     }
 
-    .company-text {
-        font-size: 2.5rem;
-    }
-
-    .hero-text {
-        font-size: 2rem;
-    }
-
     /* .nav-link {
         padding: 0.15rem;
     } */
 
-    .nav-link i.fa-lg {
+    .nav-link i.fas {
         font-size: 1rem;
     }
 
@@ -384,5 +376,16 @@ input[name='q']::placeholder {
 @media (max-width: 768px) {
     .card-img-top {
         height: 40vw;
+    }
+}
+
+/* responsive styling for under 481px */
+@media (max-width: 481px) {
+    .nav-link i.fas {
+        font-size: 0.8rem;
+    }
+
+    .company-text {
+        font-size: 1.5rem;
     }
 }
