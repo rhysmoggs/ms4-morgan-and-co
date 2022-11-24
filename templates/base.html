@@ -37,9 +37,15 @@
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h1 class="company-font text-black my-0"><strong>Morgan</strong> &amp; Co</h1>
+        <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+          <a href="{% url 'home' %}" class="nav-link main-logo-link company-logo">
+            <h1 class="company-text text-black my-0"><strong>Morgan</strong> &amp; Co</h1>
+            <hr>
+          </a>
+        </div> -->
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 center text-center">
+          <a href="{% url 'home' %}" class="nav-link">
+            <h1 class="company-text text-black my-0"><strong>Morgan</strong> &amp; Co</h1>
             <hr>
           </a>
         </div>
@@ -105,7 +111,7 @@
             aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a href="{% url 'home' %}" class="nav-link main-logo-link d-block d-lg-none">
+          <a href="{% url 'home' %}" class="nav-link d-block d-lg-none">
             <h2 class="logo-font text-black my-0"><strong>Morgan</strong> &amp; Co</h2>
           </a>
           {% include 'includes/mobile-top-header.html' %}

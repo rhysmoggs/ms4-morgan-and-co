@@ -31,8 +31,8 @@ footer {
     width: 1.5rem;
 }
 
-.company-font {
-    font-size: 3rem;
+.company-text {
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -45,9 +45,10 @@ footer {
     text-transform: uppercase;
 }
 
-/* .main-logo-link {
-    width: fit-content;
-} */
+.center {
+    margin: auto;
+    width: 50%;
+}
 
 .shop-now-button {
     background: black;
@@ -217,6 +218,10 @@ input[name='q']::placeholder {
   .container {
     max-width: 80%;
   }
+
+  .company-text {
+    font-size: 3.5rem;
+  }
 }
 
 /* Allauth form formatting */
@@ -314,6 +319,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 210px;
     }
+
+    .company-text {
+        font-size: 3rem;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -328,6 +337,10 @@ input[name='q']::placeholder {
 
     .message-container {
         top: 64px;
+    }
+
+    .company-text {
+        font-size: 2.5rem;
     }
 
     .hero-text {
