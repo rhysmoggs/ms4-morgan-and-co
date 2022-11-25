@@ -41,8 +41,10 @@ footer {
 }
 
 .hero-text {
+    color: black;
     font-size: 2.5rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .center {
@@ -51,9 +53,11 @@ footer {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: rgb(170,198,198);
+    color: black;
     min-width: 260px;
+    border: 2.75px solid white;
+    border: 2.75px solid black;
 }
 
 .card-img-top {
@@ -63,8 +67,8 @@ footer {
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: #aac6c6;
+    color: black;
 }
 
 .btn-outline-black {
