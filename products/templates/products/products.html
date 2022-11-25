@@ -25,6 +25,11 @@
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ r.friendly_name }}</span>
                     </a>
                 {% endfor %}
+                {% for r in current_specials %}
+                    <a class="special-badge text-decoration-none" href="{% url 'products' %}?special={{ s.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ s.friendly_name }}</span>
+                    </a>
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -48,7 +53,7 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
-                            {% if search_term or current_categories or current_rooms or current_sorting != 'None_None' %}
+                            {% if search_term or current_categories or current_rooms or current_specials or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
@@ -70,7 +75,7 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <h4 class="mb-0">{{ product.name }}</h4>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -87,6 +92,13 @@
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'products' %}?room={{ product.room.name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ product.room.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
+                                            {% if product.special %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-danger" href="{% url 'products' %}?special={{ product.special.name }}">
+                                                    <i class="fas fa-tag mr-1"></i><strong>{{ product.special.friendly_name }}</strong>
                                                 </a>
                                             </p>
                                             {% endif %}

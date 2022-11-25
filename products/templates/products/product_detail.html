@@ -28,7 +28,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
+                    <h3 class="mb-0"><strong>{{ product.name }}</strong></h3>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     {% if reviews.count %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ average_rating|floatformat:2 }} / 5</small>
@@ -46,6 +46,13 @@
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?room={{ product.room.name }}">
                             <i class="fas fa-tag mr-1"></i>{{ product.room.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
+                    {% if product.special %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-danger" href="{% url 'products' %}?special={{ product.special.name }}">
+                            <i class="fas fa-tag mr-1"></i><strong>{{ product.special.friendly_name }}</strong>
                         </a>
                     </p>
                     {% endif %}

@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Room
+from .models import Product, Category, Room, Special
 from .forms import ProductForm
 
 from django.contrib.auth.models import User
@@ -21,6 +21,7 @@ def all_products(request):
     query = None
     categories = None
     rooms = None
+    specials = None
     sort = None
     direction = None
 
@@ -35,6 +36,8 @@ def all_products(request):
                 sortkey = 'category__name'
             if sortkey == 'room':
                 sortkey = 'room__name'
+            if sortkey == 'special':
+                sortkey = 'special__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -50,6 +53,11 @@ def all_products(request):
             rooms = request.GET['room'].split(',')
             products = products.filter(room__name__in=rooms)
             rooms = Room.objects.filter(name__in=rooms)
+
+        if 'special' in request.GET:
+            specials = request.GET['special'].split(',')
+            products = products.filter(special__name__in=specials)
+            specials = Special.objects.filter(name__in=specials)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -68,6 +76,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_rooms': rooms,
+        'current_specials': specials,
         'current_sorting': current_sorting,
     }
 
