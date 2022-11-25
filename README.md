@@ -91,6 +91,7 @@ Model breakdown:
 - Product =  
 - Category =  
 - Room =  
+- Special =  
 - Review =  
 - Wishlist =  
 

@@ -113,7 +113,8 @@ footer {
 }
 
 a.category-badge > span.badge:hover,
-a.room-badge > span.badge:hover {
+a.room-badge > span.badge:hover,
+a.special-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }

@@ -25,7 +25,7 @@
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ r.friendly_name }}</span>
                     </a>
                 {% endfor %}
-                {% for r in current_specials %}
+                {% for s in current_specials %}
                     <a class="special-badge text-decoration-none" href="{% url 'products' %}?special={{ s.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ s.friendly_name }}</span>
                     </a>
@@ -48,6 +48,8 @@
                                 <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                                 <option value="room_asc" {% if current_sorting == 'room_asc' %}selected{% endif %}>Room (A-Z)</option>
                                 <option value="room_desc" {% if current_sorting == 'room_desc' %}selected{% endif %}>Room (Z-A)</option>
+                                <option value="special_asc" {% if current_sorting == 'special_asc' %}selected{% endif %}>Special (A-Z)</option>
+                                <option value="special_desc" {% if current_sorting == 'special_desc' %}selected{% endif %}>Special (Z-A)</option>
                             </select>
                         </div>
                     </div>
