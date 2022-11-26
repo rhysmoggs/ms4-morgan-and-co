@@ -41,7 +41,6 @@ footer {
 }
 
 .hero-text {
-    color: black;
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -56,8 +55,7 @@ footer {
     background: rgb(170,198,198);
     color: black;
     min-width: 260px;
-    border: 2.75px solid white;
-    border: 2.75px solid black;
+    border: 1.5px solid black;
 }
 
 .card-img-top {
@@ -84,14 +82,19 @@ footer {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background: none;
+    color: white;
+    border: 2.75px solid white;;
 }
 
 .text-black {
@@ -152,8 +155,8 @@ input[name='q']::placeholder {
 
 .message-container {
     position: fixed;
-    top: 108px;
-    right: 28px;
+    top: 95px;
+    right: 10px;
     z-index: 99999999999;
 }
 
@@ -253,15 +256,15 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
 	display: inline-block;
-    font-weight: 400;
-    color: #fff;
+    /* font-weight: 400; */
+    color: black;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
+    background-color: #aac6c6;
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -277,10 +280,14 @@ input[name='q']::placeholder {
 	color: #fff;
     background-color: #222;
     border-color: #222;
+    transform: scale(1.01);
+    transition: all 0.1s ease-in-out 0.2s;
 }
 
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
+	font-weight: bold;
+    text-decoration: none;
 }
 
 /* Product Form */
@@ -326,7 +333,11 @@ input[name='q']::placeholder {
     }
 
     .company-text {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+    }
+
+    #main-nav {
+        font-size: 0.8rem;
     }
 }
 
@@ -382,9 +393,20 @@ input[name='q']::placeholder {
     .card-img-top {
         height: 40vw;
     }
+
+    .hero-text {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    /* toast */
+    .message-container {
+        top: 75px;
+        right: 9px;
+    }
 }
 
-/* responsive styling for under 481px */
+/* responsive styling for under 449px */
 @media (max-width: 481px) {
     .nav-link i.fas {
         font-size: 0.8rem;
@@ -392,5 +414,29 @@ input[name='q']::placeholder {
 
     .company-text {
         font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .nav-link i.fas {
+        font-size: 1.1rem;
+    }
+
+    .shop-icons li {
+        padding: 0.5rem 0 0 1.2rem;
+    }
+
+    /* toast */
+    .message-container {
+        top: 125px;
+        right: 8px;
+        left: 5px;
+    }
+
+    .arrow-up {
+        right: 63px;
     }
 }
