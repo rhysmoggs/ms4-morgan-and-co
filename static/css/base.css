@@ -41,6 +41,7 @@ footer {
 }
 
 .hero-text {
+    text-align: center;
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -64,7 +65,49 @@ footer {
     object-fit: contain;
 }
 
-.btn-black {
+/* edited the following */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
+.fade-img {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.fade-container:hover .fade-img {
+opacity: 0.7;
+}
+
+.fade-container:hover .middle {
+opacity: 1;
+}
+
+.text {
+background-color: #aac6c6;
+color: black;
+font-size: 0.8rem;
+padding: 1rem 1.2rem;
+}
+
+.text:hover {
+background-color: #aac6c6;
+color: black;
+border: 1.5px solid black;
+}
+
+/* end */
+
+.btn-green {
     background: #aac6c6;
     color: black;
 }
@@ -82,9 +125,9 @@ footer {
     color: white !important;
 }
 
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
     background: #222;
     color: white;
 }
@@ -373,18 +416,32 @@ input[name='q']::placeholder {
     }
 
     .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
+    .btn.btn-green.rounded-0 {
         padding: .375rem .375rem;
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn.btn-green.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+
+    /* hover image */
+    .middle {
+        top: 40%;
+    }
+
+    .text {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.9rem;
+    }
+
+    .text:hover {
+    border: 1.25px solid black;
     }
 }
 
@@ -403,6 +460,20 @@ input[name='q']::placeholder {
     .message-container {
         top: 75px;
         right: 9px;
+    }
+
+    /* hover image */
+    .middle {
+        top: 35%;
+    }
+
+    .text {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.9rem;
+    }
+
+    .text:hover {
+    border: 1.25px solid black;
     }
 }
 
@@ -426,7 +497,8 @@ input[name='q']::placeholder {
     }
 
     .shop-icons li {
-        padding: 0.5rem 0 0 1.2rem;
+        /* padding: 0.5rem 0 0 1.2rem; */
+        padding: 0 1.1rem 0 0;
     }
 
     /* toast */
@@ -438,5 +510,18 @@ input[name='q']::placeholder {
 
     .arrow-up {
         right: 63px;
+    }
+
+    .middle {
+        top: 25%;
+    }
+
+    .text {
+    font-size: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    }
+
+    .text:hover {
+    border: 1px solid black;
     }
 }

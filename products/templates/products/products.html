@@ -64,16 +64,21 @@
                 </div>
                 <div class="row">
                     {% for product in products %}
-                        <!-- <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3"> -->
                         <div class="col-sm-6 col-md-6 col-lg-4">
-                            <div class="card h-100 border-0">
+                            <div class="card h-100 border-0 fade-container">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid fade-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <div class="middle">
+                                        <div class="text">More Info</div>
+                                    </div>
                                 </a>
                                 {% else %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid fade-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <div class="middle">
+                                        <div class="text">More Info</div>
+                                    </div>
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
