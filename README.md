@@ -14,9 +14,11 @@ Morgan & Co is a family-run furniture retailer based in Wales, UK. The company s
 * [Website Concept](#website-concept)
 * [Project Goals](#project-goals)
 * [User Stories](#user-stories)
-    - [As a New User](#as-a-new-user)
-    - [As a Returning User](#as-a-returning-user)
-    - [As an Admin](#as-an-admin)
+    - [As a New Visitor](#as-a-new-visitor)
+    - [As an Unregistered User](#as-an-unregistered-user-including-all-prior-stories)
+    - [As a Shopper](#as-a-shopper-including-all-prior-stories)
+    - [As a Registered User](#as-a-registered-user-including-all-prior-stories)
+    - [As a Store Owner](#as-a-store-owner-including-all-prior-stories)
 * [Aesthetic Design](#aesthetic-design)
     - [Wireframes](#wireframes)
         - [Desktop](#desktop)
@@ -63,6 +65,87 @@ This is the final project for Code Institute's Web Development Diploma course. T
 [Back to table of contents](#table-of-contents)
 
 # User Stories
+
+Following are the goals that the website should provide for each user.
+
+### As a New Visitor
+| User Story ID | I want to: | So that I can: |
+| ------------- | ----------| ------------- |
+| 001           | Be able to access and view the website on the device I'm using. | View the website without having to change my device. |
+| 002           | Immediately understand the purpose of the website. | Decide if it's something I'm interested in. |
+| 003           | Be able to navigate the website with ease. | Discover what the website is about and find all that I need. |
+| 004           | Find the website design visually pleasing. | Have a pleasant experience. |
+| 005           | Be able to find help and information about the website and company. | Decide if the company is trustworthy and reputable. |
+| 006           | Be able to contact the company if I wish to, by my prefer method. | Easily contact the company and better understand any further queries I have. |
+| 007           | Have a reason to return. | Explore the website further. |
+
+### As an Unregistered User (including all prior stories)
+| User Story ID | I want to: | So that I can: |
+| ------------- | ----------| ------------- |
+| 101           | Access and view the website on a number of different devices. | Visit the website from any device I'm currently using or would like to use in the future. |
+| 102           | Be able to easily register for an account. | Have my own profile, manage all that I wish from there and make it easier to return to the website. | 
+| 103           | Buy products without registering. | Save time without needing or wanting to create an account. |
+
+### As a Shopper (including all prior stories)
+| User Story ID | I want to: | So that I can: |
+| ------------- | ----------| ------------- |
+| 201           | View a list of all products. | See every item that the company sells. |
+| 202           | View specific product details. | To gather all information that I need about a certain product e.g price, description, rating and reviews. |
+| 203           | To quickly search for products by my preferred criteria e.g. name, description. | So that I can quickly find products that suit my desires. |
+| 204           | Easily see what I've searched for and the number of results found. | Quickly see whether the product I want is available. |
+| 205           | Easily sort products by name, price and more. | To save time and better my decision-making. |
+| 206           | Be able to filter products by items. | Find specific items I need without searching the entire product range. |
+| 207           | Be able to filter products by different rooms. | Find a range of items that suit a specific room. |
+| 208           | Find new items. | So that I can find what products are new to the store. |
+| 209           | Find sale items. | So that I can find what products are on sale and take advantage of the savings. |
+| 210           | Quickly find out about delivery details. | So that I gather information about cost and when I should receive my order. |
+| 211           | Read product reviews. | So that I make a better decision about each product. |
+| 212           | Select the quantity of items I wish to purchase. | Easily make changes without unnecessary steps/clicks to alter the quantity. |
+| 213           | Be informed of my bag total. | So that I can be easily informed of how much I'm spending and control that. |
+| 214           | Easily view my bag. | So that I can see what products I have in my bag, the cost and the quantity before checkout. |
+| 215           | Know that my information and payment details are safe and secure. | So that I can shop with confidence and feel safe about giving my personal details. |
+| 216           | Easily enter my payment information. | Check out quickly without needing to create an account or following numerous steps. |
+| 217           | Choose whether to save my info. | For ease of future use and security reasons. |
+| 218           | Recieve an order review after checkout. | So that I can quickly see my purchase and check if I purchased all that I needed. |
+| 219           | Recieve a confirmation via email of my order. | Keep the order confirmation as proof of purchase. |
+
+### As a Registered User (including all prior stories)
+| User Story ID | I want to: | So that I can: |
+| ------------- | ----------| ------------- |
+| 301           | Have my own personal profile with some management options. | Manage my own personal information. |
+| 302           | Have access to more features. | Justfiy registering to the website. |
+| 303           | Recieve an email confirmation after registering. | Verify that my account registration was successful. |
+| 303           | Be able to edit my personal information e.g. address, email. | Manage my own personal information in case they change. |
+| 304           | Easily log in and log out of my account. | Quickly access or leave my personal profile when using the website. |
+| 305           | Be able to recover my password in case I forget it. | Recover access to my account and all my personal information. |
+| 306           | Have access to my order history. | Can view all previous orders. |
+| 307           | Add product reviews. | Leave reviews on specific products. |
+| 308           | Edit product reviews. | Edit reviews on specific products. |
+| 309           | Delete product reviews. | Delete reviews on specific products. |
+| 310           | Add items to my wishlist. | Easily access a list of products I'm interested in viewing again and/or purchasing. |
+| 311           | Delete specific products from my wishlist. | Delete specific products that I no longer wish to have. |
+
+### As a Store Owner (including all prior stories)
+| User Story ID | I want to: | So that I can: |
+| ------------- | ----------| ------------- |
+| 401           | Have more control and features than any other user. | Manage my store easily. |
+| 402           | Have access to an admin portal. | Access and manage all store tasks in greater depth. |
+| 403           | Be able to create other super user accounts. | Create super user accounts with advanced control. |
+| 404           | Be able to add a product to my store. | Add new product to my store. |
+| 405           | Be able to edit/update a specific product. | Change product prices, descriptions, images and other product criteria. |
+| 406           | Be able to delete a product from my store. | Remove items that are no longer for sale. |
+| 407           | Be able to add product categories (including basic Catgegory, Room and Specials.) | Add new categories to my store. |
+| 408           | Be able to edit/update product categories (including basic Catgegory, Room and Specials.) | Edit/Update any current store categories. |
+| 409           | Be able to delete product categories (including basic Catgegory, Room and Specials.) | Delete any current categories. |
+| 410           | Be able to add product reviews to any specific product. | Leave storeowner reviews on any specific products. |
+| 411           | Be able to edit/update all product reviews. | Edit/Update any user reviews on any specific products. |
+| 412           | Be able to delete any specific product reviews. | Delete any user reviews on specific products. |
+| 413           | Be able to add user wishlist. | Add new wishlists for any registered user. |
+| 414           | Be able to edit/update all user wishlsts. | Edit/Update any current user wishlist. |
+| 415           | Be able to delete user wishlists. | Delete any user wishlist from their profile. |
+| 416           | Be able to add user account and info. | Create and control user account and info on my website. |
+| 417           | Be able to edit/update all user account and info. | Edit/Update any current user account and info on my website. |
+| 418           | Be able to delete user accounts and info. | Delete any current user account and info from my website. |
 
 [Back to table of contents](#table-of-contents)
 
@@ -184,6 +267,21 @@ Requirements for Installs:
 [Back to table of contents](#table-of-contents)
 
 # Future Updates
+There are many planned updates arranged for the Morgan & Co website that include but are not limited to:
+
+* Blog
+* Introduction of more social features such as:
+    - Social media links to share, comment, link etc
+    - Link email for subscription, mail etc
+* Link social media for signing in/registering, subscription, mail etc
+* Users able to:
+    - Delete profile
+    - Edit profile further
+* More admin/superuser rights from the website:
+    - Create, Edit, Delete Categories
+    - Create, Edit, Delete Rooms
+    - Create, Edit, Delete Specials
+* Quck-buy options directly from the product page
 
 [Back to table of contents](#table-of-contents)
 
