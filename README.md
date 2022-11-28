@@ -46,7 +46,7 @@ This will be achieved by clearly and smartly displaying their products, company 
 
 It will also serve as a ____ and to bring more exposure, from otherwise unknown custom and enter a market they currently aren't in. The website will display all products that the company sells, allowing vistors to browse through their vast range. There Visitors can seamlessly browse through the website, through the product range and through specific categories and ranges.
 
-Visitors can sign up for free whcih in turn allows for more features. although sales are not limited to users - a decision that will help easy the sales process - member/signed up users will have features and possibilities that will enhance their experience and decision making - including raising the chances of return custom e.g wishlists, saving profile info and review posting.  
+Visitors can register for free whcih in turn allows for more features. although sales are not limited to users - a decision that will help easy the sales process - member/signed up users will have features and possibilities that will enhance their experience and decision making - including raising the chances of return custom e.g wishlists, saving profile info and review posting.  
 All website features will be documented in this README document.
 
 The website will clearly display information for first-time visitors, returning visitors and customers including the company contact information via social media links and ______ (visible address/About us/Contact us/Contact form). The website is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit the website.
@@ -97,7 +97,7 @@ Following are the goals that the website should provide for each user.
 | 206           | Be able to filter products by items. | Find specific items I need without searching the entire product range. |
 | 207           | Be able to filter products by different rooms. | Find a range of items that suit a specific room. |
 | 208           | Find new items. | So that I can find what products are new to the store. |
-| 209           | Find sale items. | So that I can find what products are on sale and take advantage of the savings. |
+| 209           | Find clearance items. | So that I can find what products are on sale to be cleared and take advantage of the savings. |
 | 210           | Quickly find out about delivery details. | So that I gather information about cost and when I should receive my order. |
 | 211           | Read product reviews. | So that I make a better decision about each product. |
 | 212           | Select the quantity of items I wish to purchase. | Easily make changes without unnecessary steps/clicks to alter the quantity. |
@@ -105,9 +105,8 @@ Following are the goals that the website should provide for each user.
 | 214           | Easily view my bag. | So that I can see what products I have in my bag, the cost and the quantity before checkout. |
 | 215           | Know that my information and payment details are safe and secure. | So that I can shop with confidence and feel safe about giving my personal details. |
 | 216           | Easily enter my payment information. | Check out quickly without needing to create an account or following numerous steps. |
-| 217           | Choose whether to save my info. | For ease of future use and security reasons. |
-| 218           | Recieve an order review after checkout. | So that I can quickly see my purchase and check if I purchased all that I needed. |
-| 219           | Recieve a confirmation via email of my order. | Keep the order confirmation as proof of purchase. |
+| 217           | Recieve an order review after checkout. | So that I can quickly see my purchase and check if I purchased all that I needed. |
+| 218           | Recieve a confirmation via email of my order. | Keep the order confirmation as proof of purchase. |
 
 ### As a Registered User (including all prior stories)
 | User Story ID | I want to: | So that I can: |
@@ -115,15 +114,15 @@ Following are the goals that the website should provide for each user.
 | 301           | Have my own personal profile with some management options. | Manage my own personal information. |
 | 302           | Have access to more features. | Justfiy registering to the website. |
 | 303           | Recieve an email confirmation after registering. | Verify that my account registration was successful. |
-| 303           | Be able to edit my personal information e.g. address, email. | Manage my own personal information in case they change. |
-| 304           | Easily log in and log out of my account. | Quickly access or leave my personal profile when using the website. |
-| 305           | Be able to recover my password in case I forget it. | Recover access to my account and all my personal information. |
-| 306           | Have access to my order history. | Can view all previous orders. |
-| 307           | Add product reviews. | Leave reviews on specific products. |
-| 308           | Edit product reviews. | Edit reviews on specific products. |
-| 309           | Delete product reviews. | Delete reviews on specific products. |
-| 310           | Add items to my wishlist. | Easily access a list of products I'm interested in viewing again and/or purchasing. |
-| 311           | Delete specific products from my wishlist. | Delete specific products that I no longer wish to have. |
+| 304           | Be able to edit my personal information e.g. address, email. | Manage my own personal information in case they change. |
+| 305           | Easily sign in and sign out of my account. | Quickly access or leave my personal profile when using the website. |
+| 306           | Be able to recover my password in case I forget it. | Recover access to my account and all my personal information. |
+| 307           | Have access to my order history. | Can view all previous orders. |
+| 308           | Add product reviews. | Leave reviews on specific products. |
+| 309           | Edit product reviews. | Edit reviews on specific products. |
+| 310           | Delete product reviews. | Delete reviews on specific products. |
+| 311           | Add items to my wishlist. | Easily access a list of products I'm interested in viewing again and/or purchasing. |
+| 312           | Delete specific products from my wishlist. | Delete specific products that I no longer wish to have. |
 
 ### As a Store Owner (including all prior stories)
 | User Story ID | I want to: | So that I can: |
