@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100 mt-2">
+            <div class="col-12">
+                <h2 class="logo-font text-white mt-3 text-center">
+                    Returns &amp; Refunds
+                </h2>
+            </div>
+            <div class="col-12">
+                <div class="mt-4 text-center text-black">
+                    <p>All items have a 30 days return policy</p>
+                    <p>Please Contact Us to arrange any returns and refunds</p>
+                    <p><a href="{% url 'contact' %}" class="text-reset">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
