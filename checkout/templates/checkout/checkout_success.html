@@ -17,7 +17,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 <hr>
                 <h2 class="logo-font mb-4">Thank You</h2>
                 <hr>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-7">
+            <div class="col-8 center">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -39,9 +39,11 @@
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.order_number }}</p>
+                            <!-- <p class="mb-0">{{ order.order_number }}</p> -->
+                            <p class="mb-0">{{ order.order_number|truncatechars:12 }}</p>
                         </div>
                     </div>
+                    <p class="mx-2 text-muted text-center">Your complete order number can be found in your confirmation e-mail.</p>
 
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -191,7 +193,7 @@
             </div>
         </div>
         <div class="row">
-			<div class="col-12 col-lg-7 text-right">
+			<div class="col-12 text-center">
                 {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-green rounded-0 my-2">
                         <span class="icon mr-2">
@@ -204,7 +206,7 @@
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>
                         </span>
-                        <span class="text-uppercase">Now check out the latest deals!</span>
+                        <span class="text-uppercase">Latest deals</span>
                     </a>
                 {% endif %}
 			</div>

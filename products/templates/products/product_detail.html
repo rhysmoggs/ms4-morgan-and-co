@@ -59,11 +59,11 @@
                     {% if request.user.is_superuser %}
                     <div class="my-3 p-2">
                         <small class="ml-3">
-                            <a href="{% url 'edit_product' product.id %}" class="btn btn-light text-primary"><div><i class="fas fa-edit text-black"></i></div>Edit</a> | 
+                            <a href="{% url 'edit_product' product.id %}" class="btn btn-light text-primary"><div><i class="fas fa-edit text-black"></i></div>Edit Product</a> | 
                             <!-- Delete product modal trigger -->
                             <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ product.id }}">
                                 <div><i class="fas fa-trash fa-lg text-black"></i></div>
-                                Delete
+                                Remove Product
                             </button>
                             <!-- Delete product modal -->
                             <div class="modal fade" id="delete_{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -76,12 +76,12 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            Are you sure you want to delete <strong>{{ product.name }}</strong> from your products range? 
+                                            Are you sure you want to remove <strong>{{ product.name }}</strong> from your products range? 
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                             <a class="text-black" href="{% url 'delete_product' product.id %}">
-                                                Remove
+                                                Remove Product
                                             </a>
                                         </div>
                                     </div>
@@ -198,11 +198,11 @@
                     {% if request.user == review.review_author or request.user.is_superuser %}
                         <div class="my-3 p-2">
                             <small class="ml-3">
-                                <a href="{% url 'edit_review' review.id %}" class="btn btn-light text-primary"><div><i class="fas fa-edit text-black"></i></div>Edit</a> | 
+                                <a href="{% url 'edit_review' review.id %}" class="btn btn-light text-primary"><div><i class="fas fa-edit text-black"></i></div>Edit Review</a> | 
                                 <!-- Delete product modal trigger -->
                                 <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ review.id }}">
                                     <div><i class="fas fa-trash fa-lg text-black"></i></div>
-                                    Delete
+                                    Remove Review
                                 </button>
                                 <!-- Delete product modal -->
                                 <div class="modal fade" id="delete_{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -215,10 +215,10 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                Are you sure you want to delete your review? 
+                                                Are you sure you want to remove your review? 
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 <a class="text-black" href="{% url 'delete_review' review.id %}">
                                                     Remove Review
                                                 </a>
@@ -257,9 +257,19 @@
             {% endif %}
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

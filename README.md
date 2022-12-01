@@ -154,6 +154,19 @@ Following are the goals that the website should provide for each user.
 ### Tablet
 ### Mobile
 ## Colour Palette
+
+The Morgan & Co website colour palette is predominantley a dark against light and vice versa approach. Black and white. There is some range of brighter colours for the interactive elements in an effort to highlight these and make a drastic contrast between interactive elements and non-interactive content. This contrasted well with what is predicted to be a fairly vast range of imagery - with products covering a range of colours with their materials/wood etc. The main background image (background-blue.jpg) provides a complimentary pastel colour, which fits with the text and button styling colours chosen. It evokes a relaxing and gentle mood - helped by the opacity level neutralizng the vividty of the image - this is to distinguish depth, and to allow headings, text and buttons to pop at the forefront.
+
+By default, all buttons have a consistent style, size and layout throughout the website. See more in the buttons Features section.
+
+The text colour is white (rgb(255,255,255)) for the website's footer and navbar and also when placed upon larger images and cocktail imagery. This ensures a constant and obvious contrast between text and any background content or colours. When the background is much lighter, the text colour is reversed to black (rgb(0,0,0)), again to ensure clarity.
+
+The headings are white text, allowing the background image to be seen, but not interfere too much with the flow and visibility of the content. When text appears on top of product images and recipes, the black text is contrasted by a slightly transparent white background to help readability and highlight the text.
+
+Some shadows (slightly opaque black) are added to interactive elements and cards to help with depth and contrast. When the animation appears on cursor hover, they serve as hints to the user that that element can be interacted with.
+
+It was decided early on in the design stage that the black colour would be important for the website. Some of the other colours were chosen around having this colour in mind, especially to ensure the imagery and text was the focal point.
+
 ## Images
 ## Font
 

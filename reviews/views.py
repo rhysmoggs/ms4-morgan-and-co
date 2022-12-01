@@ -80,7 +80,7 @@ def delete_review(request, review_id):
 
     review.delete()
 
-    messages.success(request, f'{product.name} review deleted!')
+    messages.success(request, f'{product.name} review removed!')
 
     return redirect(
         # reverse('product_detail', kwargs={"product_id": product.id}))
