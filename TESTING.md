@@ -99,7 +99,7 @@ Following are the original User Stories set out in the early design stages of th
 | 214           | Easily view my bag. | So that I can see what products I have in my bag, the cost and the quantity before checkout. |
 | 214 Result    | Simply click on the shopping bag icon within the navigation bar at the top of the webiste at any time. |
 | 215           | Know that my information and payment details are safe and secure. | So that I can shop with confidence and feel safe about giving my personal details. |
-| 215 Result    | All company information and contact information is provided. Payment details and methods are handled via Stripes secure system. |
+| 215 Result    | All company information and contact information is provided. Payment details and methods are handled via Stripes secure system. See [here](https://stripe.com/docs/security) for more information. |
 | 216           | Easily enter my payment information. | Check out quickly without needing to create an account or following numerous steps. |
 | 216 Result    | Users can buy products without creating an account by just filling in the necessary delivery and payment information. |
 | 217           | Recieve an order review after checkout. | So that I can quickly see my purchase and check if I purchased all that I needed. |
