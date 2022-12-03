@@ -204,7 +204,7 @@ Here is the Database Schema layout for the Morgan & Co website:
 
 <img src="docs/data-schema.png">
 
-It shows each table and module, what data is kept, their type and how they are linked together.
+It shows each table and model, what data is kept, their type and how they are linked together.
 This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
 
 The data schema shows how all data is connected. Morgan & Co uses a relational database.
@@ -285,9 +285,12 @@ toast_success = Success!
 admin?
 
 toast_error = Error!
+attempt to manually access the checkout page, without any items in the shopping bag
 
 
 toast_info = Alert!
+Edit Review - You are editing the review
+Edit Product - You are editing the review
 -edit, update? - you are editing review/preoduc/etc?
 
 toast_warning = Warning!
@@ -314,6 +317,15 @@ As long as there is an id linking the modal trigger button and modal popup itsel
 id="delete_{{ review.id }}"
 ```
 
+## Email
+The website uses Gmail to send company infromation and account related emails
+
+new account reigstration - users must click the link in email to confirm and have access to their account
+reset password links
+order confirmations are sent as a backup to the customers inbbox once a purcahse has been made
+
+
+
 ## Stripe
 Stripe is used to handle payments.
 
@@ -335,6 +347,173 @@ Extremely important aspect.
 [Back to table of contents](#table-of-contents)
 
 # Features
+There are universal features that are present throughout the Morgan & Co website. These feature are:
+- Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
+- Fully-responsive nav bar (including mobile nav bar)
+- Mobile hamburger menu, toggles to show/hide the product menu optoins. Link to the homepage.
+- Mobile-friendly, adusting automatically at specific breakpoints thanks to Bootstraps's easy-to-use framework and custom overriding style classes.
+- The Morgan & Co logo/name is seen at all times whether centrally on larger screens or adjusted to reduced screen-sizes. This is vital for brand consistency and serves as a simple way of reminding the user of the company's name. The logo/name is clickable and always takes the user to the Morgan & Co homepage.
+- The delivery banner promoting free delivery on all orders over £100.
+- Clear and obvious navbar links to other pages within the website, including hover effects to enhance the users experience.
+- Search bar. Used for quick, easy access for user preferred searches within the product range.
+- Fully responsive footer which closely matches the design and colour palette of the top navbar.
+- Important links in footer, including quick product list and customer information for contact, delivery, refunds etc.
+- Social links in footer, linking to the company social media accounts and provides alternative ways to contact them. Address with full contact info too.
+- Name of website along with copyright info in footer.
+- All clickable images, buttons, links etc have a hovering cursor to signify that that element can be interacted with. The majority of these elements being visually promted either through a short animation, colour change or highlighting.
+- Messages appearing at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. They are informed of this.
+
+sort-by price, name, category? etc
+
+
+mention store owner management, superuser capabilities, registered user exclusive features, and whats available to all
+
+Here's a breakdown of all the design features on each of the main webpages within the Morgand and Co website:
+
+### - Morgan & Co home page
+<img src="docs/screenshots/home-page.png">
+
+The home page for the Morgan & Co website. All visitors will be welcomed by this webpage. The features include:
+- The user is met with a full-screen background-image (background-blueg.jpg), a promotion/brief message and then a button that leads to the products page.
+
+- My Account logo, which includes 'Sign In', 'Sign Out' if the user is already signed in.
+
+### - The Products pages
+<img src="docs/screenshots/products-page.png">
+
+This is where every product on the Morgan & Co website is listed. All visitors to the website can view this webpage, whether they are registered or not. The features include:
+
+- A search bar is located just under the image, for quick, easy access for user preferred searches. The user can search by name, ingredients, alcohol, as suggested by the placeholder and either use a keyboard ENTER entry, or use the 'Search' button to search though the entire websites database of products.
+
+- A list of every product on the website presented in card format, with purposefully limited but relavant information related to each product.
+- Ability to click on each product image to advance to the full product detail (/product_detail/product_id/).
+
+
+### - Filter Products by Category, Room and Special
+<img src="docs/screenshots/.png">
+
+The Filter Products by Category pages are where site users can view every product listed in a certain product category (depending on which product category they choose on the nav bar menu options) All visitors to the website can view this webpage. The features include:
+
+- Name of the selected product Category displayed as the page title in large text at top of page.
+- A list of every product within the selected product Category presented in card format, with purposefully limited but relavant information related to each product.
+- Ability to click on each product image to advance to the full product detail page (/product_detail/product_id/).
+
+### - My Profile page
+<img src="docs/screenshots/profile-page.png">
+
+My Profile. This is where the users personal information is stored. Only registered users can view this page. The features include:
+- Page title to include the users username at the top of the page
+- An editable form that is either empty or contains previously saved user information including delivery address.
+- A table of previously made orders through the Morgan & Co website.
+- The 'Wishlist' button at the bottom of the page, when clicked advances to the users 'Wishlist' (/wishlist/) page.
+
+### Product Management - Add Product page (.html)
+<img src="docs/screenshots/add-product-page.png">
+
+The Add Product page is for the admin/store owner to add their products website via a form. Only superusers/admin/store owners can use this feature. The product is added to the main products page and is avaiable on all relevant pages that they categories, rooms and specials apply to. It will also be searchable in the search bar for a more custom user-inputted query. The features include:
+
+- Validation on all inputs (see code breakdown again? validate class).
+- Several inputs linked to the database (see data schema, code breakdown etc for explanation of inputs, types, data links etc.)
+- Product Name - The product name that will be presented for all to see on the product pages.
+- Product Price - The product price that will be presented for all to see on the product pages.
+
+
+- SKU
+
+
+- Dropdown select options for admin to choose the Category the product belongs to. Admin has control over which categories are added to the website/database.
+- Dropdown select options for admin to choose the Room the product belongs to. Admin has control over which categories are added to the website/database.
+- Dropdown select options for admin to choose the Special the product belongs to. Admin has control over which categories are added to the website/database.
+
+- Ability for admin to upload a product image. This is validated and has some error handling linked to it (see code breakdown, error handling)
+- Product Description - A text input to accept the admins description of their product.
+
+
+- 'Add Product'. This button submits the form to the website/database if all inputs are valid and met.
+- 'Cancel' button. Leaves the page and returns ..........
+
+### Product Management - Edit Product page (.html)
+<img src="docs/screenshots/edit-product-page.png">
+
+The Edit Product page is for admin to edit the chosen product via a form. Only the store owner/admin can use this feature. The edited product is updated when the form is submitted and found in the same places as the original product. The information expected from the admin is the same as the Add Product page. The features include:
+
+- Validation on all user inputs (see code breakdown again? validate class).
+- 'Edit Product'. This button submits the form to the database if all inputs are valid and met and updates that specific product.
+- 'Cancel' button. Leaves the page and returns to The Bar page.
+
+### - Product Detail page
+<img src="docs/screenshots/product-detail-page.png">
+
+The Product Detail page is where the visitor can see the full product details for the product they selected. All visitors to the website can view this webpage. The features include:
+- Product Name in large, bold text.
+- All product information presented.
+rating, that automatically update
+
+
+- If the admin/store owneris signed in, the 'Edit Product' button appears besides the product detail information and forwards the admin/store owner to the 'Edit Product' (/edit/product_id/) page.
+- If the admin/store owneris signed in, the 'Remove Product' button besides the product detail ifnormation and once clicked allows the admin/store owner to delete the product from the website. Before doing so, the admin/store owner is met with a modal that asks for confirmation on whether they want to delete that product or not. Admin/store owner must click 'Remove Product' again to confirm this (which will then delete the product from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and return to the product detail page, with no change taken place and the product remaining on the website. 
+- The 'Edit Product' and 'Remove Product' are both hidden if not the admin/store owner.
+
+
+Reviews
+- If the review was submitted by the current user, the 'Edit Review' button besides that review forwards the user to the 'Edit Review' (/edit/review_id/) page.
+- If the review was submitted by the current user, the 'Remove Review' button under the besides that review allows the user to delete their review. The user is met with a modal that asks for confirmation on whether they want to delete that review or not. User must click 'Remove Review' again to confirm this (which will then remove the review from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
+- The 'Edit Review' and 'Remove Review' buttons are hidden for all users who are not signed-in to the website. They are only visisble to admin and if the registered user is signed in and submitted that review.
+
+
+
+reviews
+
+wishlist button - only for users, logic responds to if in wishlist or not. hidde if not registered
+
+
+- A large image of the product.
+- 'Edit' and 'Delete' buttons shown to store owner only.
+- 'Return to The Bar' button, which redirects the user to The Bar page.
+
+### - Edit Review??
+<img src="docs/screenshots/edit-review-page.png">
+
+
+### - Wishlist page
+<img src="docs/screenshots/wishlist-page.png">
+
+### - Shopping Bag page
+<img src="docs/screenshots/shopping-bag-page.png">
+
+### - Checkout page
+<img src="docs/screenshots/checkout-page.png">
+
+### - Checkout Success page
+<img src="docs/screenshots/checkout-success-page.png">
+
+### - Sign In page
+<img src="docs/screenshots/sign-in-;age.png">
+
+The Log In page is where visitors can enter their details and log in to their account. All visitors to the website can view this webpage. The features include:
+- 'Log In' title on top of the page.
+- Username input with placeholder and validation applied.
+- Password input with placeholder and validation applied.
+- 'Log In' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
+
+### - Sign Out page
+<img src="docs/screenshots/.png">
+
+The Sign Out page is where visitors are asked to confirm if they'd like to Sign Out of the Morgan & Co website, having already clicked on the Sign Out link from the My Account menu.
+Features include:
+- Sign Out title on top of the page.
+- Text above buttons to ask if user is sure they'd like to sign out.
+- 'Sign Out' button. When clicked, will sign user out of their account and lead them back to the home page.
+- 'Cancel' button. When clicked, the user is taken to the homepage, but remains signed in to their account.
+
+### - Sign Up page
+<img src="docs/screenshots/.png">
+
+The Sign Up page is where visitors can enter their details for the first time to register their new account. All visitors to the website can view this webpage. The features include:
+- 'Sign Up' title on top of the page.
+- Username input with placeholder and validation applied.
+- Password input with placeholder and validation applied.
+- 'Register' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
 
 [Back to table of contents](#table-of-contents)
 
@@ -442,5 +621,9 @@ There are many planned updates arranged for the Morgan & Co website that include
 [Back to table of contents](#table-of-contents)
 
 # Credits
+## Code
+## Inspiration
+## Content & Media
+## Acknowledgements
 
 [Back to table of contents](#table-of-contents)
