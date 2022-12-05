@@ -152,8 +152,12 @@ Following are the goals that the website should provide for each user.
 ## Wireframes
 Wireframes were drawn using Balsamiq at the beginning of the project. They were referenced throughout the design and building of the website. Following are a series of images showing the Morgan & Co website on the three main screen sizes: mobile, tablet and desktop. Every major section of the website is also included.
 ### Mobile
+[Mobile Wireframes here](docs/wireframes/mobile-wireframes.pdf)
 ### Tablet
+[Tablet Wireframes here](docs/wireframes/tablet-wireframes.pdf)
 ### Desktop
+[Desktop Wireframes here](docs/wireframes/desktop-wireframes.pdf)
+
 ## Colour Palette
 
 The Morgan & Co website colour palette is predominantly a dark against light and vice versa approach. Black and white. Dashes of brighter colours are present for the interactive elements in an effort to highlight these and to make a drastic contrast between said interactive elements and other non-interactive content. This concept was decided on early in the projects inception, with a light background providing an ideal canvas to build content upon. The predicted range of colours that comes with furniture and their images - brown/red/black dark leathers, lighter shades with fabric, brown woods, plastics etc. - would all add to a vast range of colours that brought life to the website. It was important to not drown users in an abundence of colour or clutter, and to allow the focus to be on the products.

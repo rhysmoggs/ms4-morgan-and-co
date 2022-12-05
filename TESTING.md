@@ -25,6 +25,9 @@ The Full Testing documentation, following on from the README [found here](README
 [Back to table of contents](#table-of-contents)
 
 # Features Testing
+Manual features testing was coverd on all pages of the website. These are covered in the pdf tables below:
+
+[Manual Features Testing here](docs/testing/manual-testing.pdf)
 
 [Back to table of contents](#table-of-contents)
 
