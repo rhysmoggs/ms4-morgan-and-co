@@ -13,11 +13,12 @@ The Full Testing documentation, following on from the README [found here](README
     - [As a Shopper](#as-a-shopper-including-all-prior-stories)
     - [As a Registered User](#as-a-registered-user-including-all-prior-stories)
     - [As a Store Owner](#as-a-store-owner-including-all-prior-stories)
-5. [Lighthouse](#lighthouse)
-6. [Further Testing](#further-testing)
-7. [Bug Fixes](#bug-fixes)
-8. [Known Bugs](#known-bug)
-9. [Testing Credits](#testing-credits)
+5. [Automated Testing](#automated-testing)
+6. [Lighthouse](#lighthouse)
+7. [Further Testing](#further-testing)
+8. [Bug Fixes](#bug-fixes)
+9. [Known Bugs](#known-bug)
+10. [Testing Credits](#testing-credits)
     - [Reading and Guidence](#reading-and-guidence)
     - [Code](#code)
 
@@ -177,6 +178,19 @@ Following are the original User Stories set out in the early design stages of th
 | 417 Result    | This can be done from the admin portal by selecting the Users option, then choosing the user from the list. Edit the form and Save. Emails can be edited by selecting 'Email addresses' from the main admin menu, then choosing the email from the list and edit the form. Save. |
 | 418           | Be able to delete user accounts and info. | Delete any current user account and info from my website. |
 | 418 Result    | This can be done from the admin portal by selecting the Users option, then choosing the user from the list. Press the 'Delete' button and confirm. Alternatively, you can select multiple users from the list and clicking the dropdown to delete all at once and confirming this. Emails can be edited by selecting 'Email addresses' from the main admin menu, then choosing the email from the list and Delete button from the form. Confirm it. Alternatively, you can select multiple email addressed from the list and clicking the dropdown to delete all at once and confirming this. |
+
+[Back to table of contents](#table-of-contents)
+
+# Automated Testing
+
+Used Django's built in testing framekwork to create automatic testing for the Morgan & Co website. This was done to ensure the written code was working as expected, on top of the manual testing and validation done.
+
+import TestCase class, then used all of its functionality to create custom classes to test the following in each app, if present:
+tested forms through the test_forms.py
+tested views through the test_views.py
+tested models through the test_models.py
+
+[Coverage](link?) was then used to check how much of the code was tested
 
 [Back to table of contents](#table-of-contents)
 

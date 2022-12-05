@@ -37,6 +37,13 @@ class TestCheckoutViews(TestCase):
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 302)
 
+    def test_checkout_url_is_accessible_by_name(self):
+        """
+        Test to see if checkout url is accessible by name
+        """
+        response = self.client.get(reverse('checkout'))
+        self.assertEqual(response.status_code, 302)
+
     def test_checkout_url_template(self):
         """
         Test checkout uses correct template when bag is empty

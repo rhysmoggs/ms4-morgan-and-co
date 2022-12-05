@@ -588,6 +588,8 @@ Requirements for Installs:
 - sqlparse==0.4.3
 - stripe==4.2.0
 
+coverage - used for automated testing, to check how much of the code is tested
+
 
 [Back to table of contents](#table-of-contents)
 
