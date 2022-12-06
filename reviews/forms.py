@@ -20,4 +20,5 @@ class ReviewForm(forms.ModelForm):
 
         for field in self.fields:
             self.fields[field].label = labels[field]
-        self.fields['review_text'].widget.attrs['placeholder'] = placeholder['review_text']
+        self.fields['review_text'].widget.attrs['placeholder'] = (
+            placeholder['review_text'])

@@ -45,11 +45,8 @@
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                                 <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <!-- <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option> -->
                                 <option value="room_asc" {% if current_sorting == 'room_asc' %}selected{% endif %}>Room (A-Z)</option>
-                                <!-- <option value="room_desc" {% if current_sorting == 'room_desc' %}selected{% endif %}>Room (Z-A)</option> -->
                                 <option value="special_asc" {% if current_sorting == 'special_asc' %}selected{% endif %}>Special (A-Z)</option>
-                                <!-- <option value="special_desc" {% if current_sorting == 'special_desc' %}selected{% endif %}>Special (Z-A)</option> -->
                             </select>
                         </div>
                     </div>
@@ -115,25 +112,14 @@
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <!-- <hr> -->
-                            </div>
+                            <div class="col-12 d-sm-none mb-5"></div>
                         {% endif %}                        
                         {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <!-- <hr> -->
-                            </div>
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5"></div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
-                            <!-- <div class="col-12 d-none d-lg-block d-xl-none mb-5"> -->
-                            <div class="col-12 d-none d-lg-block mb-5">
-                                <!-- <hr> -->
-                            </div>
+                            <div class="col-12 d-none d-lg-block mb-5"></div>
                         {% endif %}
-                        <!-- {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                            </div>
-                        {% endif %} -->
                     {% endfor %}
                 </div>
             </div>
@@ -148,13 +134,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);

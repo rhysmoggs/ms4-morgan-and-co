@@ -36,6 +36,90 @@ Manual features testing was coverd on all pages of the website. These are covere
 [Back to table of contents](#table-of-contents)
 
 # Validation
+The W3C Markup Validator, W3C CSS Validator and JSHint tools were used to validate every page of the project to ensure there were no syntax errors in the project. If any were found during development, they were addressed, or expalined below.
+
+# W3C Markup Validator - HTML Testing
+
+[W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+
+HTML validation was tested on all pages of the website. Due to Django's templating, the source code was taken from the live website. This was done by right-clicking and selecting 'View Page Source' (on Google Chrome, Windows). All page results are as follows:
+
+JavaScript type
+
+<img src="docs/testing/type-unnecessary.png">
+
+This warning was found throughout the HTML code where javasvript was used. It was addressed by deleting the ```type="text/javascript"``` and tested again. Cleared.
+
+Wishlist Logo issue in navbar
+
+<img src="docs/testing/wishlist-error.png">
+
+Error affecting all pages on the website due to the Wishlist navbar icon nestling block level elements within p tags. The error was fixed by replacing the ```<p>``` tags with ```<div>```. Fix source [here](#https://stackoverflow.com/questions/21084870/no-p-element-in-scope-but-a-p-end-tag-seen-w3c-validation)
+
+Wishlist page
+
+<img src="docs/testing/wishlist-error2.png">
+
+Simple mistake. Changed "col" tag div.
+
+Buttons
+
+<img src="docs/testing/div-error.png">
+
+Divs were removed and then br tag added to create button shape.
+Found on wishlst and product detail page with buttons.
+edit product, edit review and remove product and remove review. divs inside buttons. deleted divs and just added br for button shape.
+
+Pass all custom HTML
+
+<img src="docs/testing/pass.png">
+
+After checking all custom pages and leaving some of the original code (from the Boutiqe Ado tutorial), the HTML cleared all errors.
+
+# W3C CSS Validator - CSS Testing
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+CSS Validation was tested on the base.css file found within the static folder.
+
+base.css - returned no errors
+
+<img src="docs/testing/css.png">
+
+checkout.css - returned no errors
+
+<img src="docs/testing/css-checkout.png">
+
+# JSHint - JavaScript Testing
+
+[JSHint](https://jshint.com/) found one issue with a missing semicolon. That was addressed and cleared once ran through JSHint again.
+
+stripe-elements.js
+
+One undefined error on line 21 - "Stripe". This can be ignored as it comes from another script.
+
+<img src="docs/testing/jshint-stripe-elements.png">
+
+countryfield.js - no errors found
+
+<img src="docs/testing/jshint-countryfield.png">
+
+## PEP8CI - Python Testing
+
+Using Code Institite's [PEP8CI](https://pep8ci.herokuapp.com/) to lint the code. Tested all Python code present. All clear.
+
+bag app = all clear
+checkout app = all clear - some lines too long, fixed.
+home app = all clear
+contact app = all clear
+info app = all clear
+morgan_and_co = all clear
+products app = some lines too long in views.py, cleared
+profiles app = some lines too long, cleared
+reviews app = some lines too long, cleared
+
+By typing ```python3 -m flake8``` in the terminal, this checked all again. Migrations and automatically generated files were ignored.
+Other linting issues are for unused apps found in test and other files after craeting apps. These can be ignored.
 
 [Back to table of contents](#table-of-contents)
 

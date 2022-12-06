@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.conf import settings
 
 from .models import Order
 from products.models import Product

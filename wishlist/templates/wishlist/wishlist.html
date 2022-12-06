@@ -34,12 +34,12 @@
                     {% for product in wishlist %}
                     <p><strong>{{ product.name }}</strong></p>
                         <div class="row mx-1 my-1">
-                            <col class="col-12 col-sm-6 mb-2">
+                            <div class="col-12 col-sm-6 mb-2">
                                 {% include "wishlist/wishlist-image.html" %}
-                            </col>
-                            <col class="col-12 col-sm-6 mb-2">
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2">
                                 <p><strong> £{{ product.price }}</strong></p>
-                            </col>
+                            </div>
                         </div>
                         <div class="center">
                             {% include "wishlist/wishlist-buttons-mobile.html" %}
@@ -96,7 +96,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })

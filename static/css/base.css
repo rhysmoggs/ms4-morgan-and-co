@@ -4,7 +4,6 @@ html {
 
 body {
     background: no-repeat center center fixed;
-    /* background-image: linear-gradient(rgba(241, 236, 236, 0.5), rgba(0, 0, 0, 0.5)), url("/media/background-lg.jpg"); */
     background-image: linear-gradient(rgba(241, 236, 236, 0.5), rgba(0, 0, 0, 0.5)), url("/media/background-blue.jpg");
     background-size: cover;
     height: calc(100vh - 210px);
@@ -61,7 +60,6 @@ footer {
 
 .card-img-top {
     height: 20vw;
-    /* object-fit: cover; */
     object-fit: contain;
 }
 
@@ -299,7 +297,6 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
 	display: inline-block;
-    /* font-weight: 400; */
     color: black;
     text-align: center;
     vertical-align: middle;
@@ -398,10 +395,6 @@ input[name='q']::placeholder {
         top: 64px;
     }
 
-    /* .nav-link {
-        padding: 0.15rem;
-    } */
-
     .nav-link i.fas {
         font-size: 1rem;
     }
@@ -497,7 +490,6 @@ input[name='q']::placeholder {
     }
 
     .shop-icons li {
-        /* padding: 0.5rem 0 0 1.2rem; */
         padding: 0 1.1rem 0 0;
     }
 
