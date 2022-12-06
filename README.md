@@ -291,6 +291,8 @@ Toasts
 
 test these
 
+<img src="docs/screenshots/toast-success.png">
+
 toast_success = Success!
 - geenrally positive, or to confirm an action the user requested and has succeeding in doing so
 - add product
@@ -302,9 +304,12 @@ toast_success = Success!
 -edit, update?
 admin?
 
+<img src="docs/screenshots/toast-error.png">
+
 toast_error = Error!
 attempt to manually access the checkout page, without any items in the shopping bag
 
+<img src="docs/screenshots/toast-alert.png">
 
 toast_info = Alert!
 Edit Review - You are editing the review
@@ -365,13 +370,21 @@ Extremely important aspect.
 [Back to table of contents](#table-of-contents)
 
 # Features
+
 ## Interactive Elements and Features
+
 Following is a list of all interactive elements and features found on the Morgan & Co website:
 
 ### Navbar
+
+Larger screens navbar:
+
 <img src="docs/screenshots/navbar.png">
 
+Mobile navbar:
+
 <img src="docs/screenshots/mobile-navbar.png">
+<img src="docs/screenshots/mobile-navbar2.png">
 
 - Fully-responsive nav bar (including mobile nav bar) accessible on all pages of the website
 - Clear and obvious navbar links to other pages within the website, including mouse-hover effects to enhance the users experience.
@@ -383,15 +396,28 @@ Following is a list of all interactive elements and features found on the Morgan
 - The delivery banner promoting free delivery on all orders over £100.
 
 ### Search Bar
+
+Larger screens search bar:
+
+<img src="docs/screenshots/search.png">
+
+Mobile search bar:
+
+<img src="docs/screenshots/mobile-search.png">
+
 - A search bar is located just under the page logo links - built into the navbar, so always present. Quick, easy access for user preferred searches. The user can search by name, description or any keyword they choose and either use a keyboard ENTER entry, or use the 'Search' logo button to search though the entire websites database of products.
 
 ### Footer
+
 - Fully responsive footer which closely matches the design and colour palette of the top navbar.
 - Important links in footer, including quick product list and customer information for contact, delivery, refunds etc.
 - Social links in footer, linking to the companys social media accounts and provides alternative forms of contact. Address with full contact info too.
 - Name of website along with copyright info in footer.
 
+<img src="docs/screenshots/footer.png">
+
 ### Sort-by filtering
+
 <img src="docs/screenshots/sort-by.png">
 
 - A 'sort-by' feature on all product listing pages to sort products by specific criteria, which are:
@@ -399,16 +425,52 @@ Following is a list of all interactive elements and features found on the Morgan
     - Price (high to low) - filters current products by their highest price (shown first) to lowest price
     - Name (A-Z) - filters current products by their alphabetical order based on product name (products beginning with A shown first)
     - Name (A-Z) - filters current products by their alphabetical order based on product name (products beginning with Z shown first)
-    - Category - 
+    - Category - filters current products into their Category order based on category name (showing in alphabetical order, with A first)
+    - Room - filters current products into their Room order based on room name (showing in alphabetical order, with A first)
+    - Special - filters current products into their Special order based on special name (showing in alphabetical order, with A first)
 
 ### Buttons
-- The buttons predominantly serve as triggers for users to achieve something they wish. An action is called on those buttons and are linked on the back-end.
+
+The buttons predominantly serve as triggers for users to achieve something they wish. An action is called on those buttons and are linked on the back-end.
+
+The buttons have an uniform and simple design to create consistency in their functions and to make it easy for the user to understand and use the website.
+Buttons are either green, white or black, with the 'Edit' and 'Remove' buttons reserved for blue and red respecitbely, a choice purposefully made so that they stand out amongst the normal links and buttons.
+
+<img src="docs/screenshots/buttons.png">
+
+The vast majority of buttons have a hover state of black background colour and white text colour. This is to easily notice the change in button style state when hovering a mouse over the screen, making it clear that the link/button can be interacted with.
+
+<img src="docs/screenshots/button-hover-dark.png">
+
+### Quantity Selector
+
+This feature is present on the Product Ddetail page and the Shopping Bag page. It serves as a way to quickly and easily change the number of each products that the shopper wishes to purchase. Features are:
+- Minus (-) button signifies subtracting one item at a time when clicked.
+- Plus (-) button signifies adding one item at a time when clicked.
+- Type the number, use the +/- buttons or use the up/down quantity selector inside the input to decide on the chosen number.
+- Validation to only allow a minimum of 1 item and a maximum of 99 items before updating the total. Users are informed of any issues with on-screen validation prompts.
+
+<img src="docs/screenshots/quantity.png">
+
+### Shopping Bag Preview
+
+- This is a popup that appears at the top of the page when users make any adjustments to the items in their product. It serves as a handy reminder of what their shopping bag contains, wthout the need to visit the shoppubng bag page on eachg adjustment. Features incliude:
+- A toast message informing users of the chnage in their bag (add/remove/update)
+- Number to signify the total number of items in the bag.
+- Small images of the products chosen.
+- Quantity of each item in bag.
+- The cost of those items, excluding delivery charge.
+- How much to spend before the free delivery promotion is activated.
+- 'Go To Secure Checkout' a button when clicked will take the user straight to the Checkout page.
+
+<img src="docs/screenshots/bag-preview.png">
 
 ### Interactive Toasts
-- Messages appearing at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. They are informed of this.
 
+- Messages appearing at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. Toats also appear when website navigation isn't possible e.g. accessing checkout with no items in bag. They are informed of this.
 
 ## Page Features
+
 There are universal features that are present throughout the Morgan & Co website. These features are:
 - Navbar, explained [here](#navbar)
 - Footer, explained [here](#footer)
@@ -422,12 +484,14 @@ There are universal features that are present throughout the Morgan & Co website
 Here's a breakdown of all the design features on each of the main webpages within the Morgan & Co website:
 
 ### - Morgan & Co home page
+
 <img src="docs/screenshots/homepage.png">
 
 The home page for the Morgan & Co website. All visitors will be welcomed by this page. The features include:
 - A full-screen background image (background-blueg.jpg), a promotion/brief message and then a button that leads to the products page.
 
 ### - The Products pages
+
 <img src="docs/screenshots/products.png">
 
 This is where every product on the Morgan & Co website is listed. All visitors to the website can view this webpage, whether they are registered or not. The features include:
@@ -438,6 +502,7 @@ This is where every product on the Morgan & Co website is listed. All visitors t
 
 
 ### - Filter Products by Category, Room and Special
+
 <img src="docs/screenshots/filter.png">
 
 The Filter Products by Category Room and Special pages are where users can view every product listed in a certain product range (depending on which product range they choose on the nav bar menu options, or product links page) All visitors to the website can view this webpage. The features include:
@@ -445,12 +510,14 @@ The Filter Products by Category Room and Special pages are where users can view 
 - A list of every product within the selected product Category/Room/Special presented just as products from the main products page would. Same related product info and interactions available.
 
 ### - Product Detail page
+
 <img src="docs/screenshots/product-detail.png">
 
 The Product Detail page is where the user can see the full product details for the product they selected. All visitors to the website can view this webpage. The features include:
 - Product Name in large, bold text.
 - A large image of the product, that can be clicked on again to see it's original quality and size.
 - All product information presented, which includes product price, rating, category, room, special, sku, description.
+- [Quantity selector](#quantity-selector) to choose how many items to add to the Shopping Bag.
 - Current product rating, that automatically updates whenever a user or admin adds/edits/removes a review with rating.
 - If the admin/store owneris signed in, the 'Edit Product' button appears besides the product detail information and forwards the admin/store owner to the 'Edit Product' (/edit/product_id/) page.
 - If the admin/store owner is signed in, the 'Remove Product' button appears besides the product detail information and once clicked allows the admin/store owner to remove the product from the website. Before doing so, the admin/store owner is met with a modal that asks for confirmation on whether they want to delete that product or not. Admin/store owner must click 'Remove Product' again to confirm this (which will then remove the product from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and return to the product detail page, with no change taken place and the product remaining on the website. 
@@ -476,10 +543,27 @@ Review section
 - If user is not signed in, they will see a message asking them to Sign In (linked the Sign In page when clicked) to leave a review.
 
 ### - Edit Review
+
 <img src="docs/screenshots/edit-review.png">
+
+The Edit Review page is where the user is direct to after clicking on the 'Edit Review' button on a product detail page. Users must be registered to access this page. Admin has total control on editing all website reviews. Registered users can only edit their own reviews. The features include:
+- Page title at top of page.
+- Alert! toast informing user that they are editing the review for a specific product.
+- 'Product Review' input with current user review text populating the text area.
+- 'Rating' dropdown menu with current user rating.
+- Validation on all inputs.
+- 'Edit Review' button. This button submits the form to the database if all inputs are valid and met and updates that specific product review. User is taken back to that product detail page.
+- 'Cancel' button. Leaves the page and returns to main products page.
 
 ### - Wishlist page
 <img src="docs/screenshots/wishlist.png">
+
+Th Wishlist page is where the users Wishlist items are stored. Users would have to click 'Add to Wishlist' button on items on the product page to be able to add products here. Every user has the choice to create their own Wishlist and add all items from the website to their own Wishlist. It is a feature that allows users to keep tracks on current products and allows for them to easily find the products they would be interested in purchasing. Only registered users can view this page. The features include:
+- Page title, including the users username at the top of the page.
+- A message informing user that their Wishlist is empty if no products currently in it. Clickable 'Products Page' link directs user to main products page.
+- A message at the top informing the registered user of how many items are in their Wishlist.
+- A list of items with relevant image, name, price besides each one.
+- A 'Remove from Wishlist' button. When clicked, this will ask the user if they wish to confirm or cancel the action of removing the item from their wishlist. If they confirm, the item will be removed and the Wishlist to reflect this. Cancel button click will stop this action.
 
 ### - My Profile page
 <img src="docs/screenshots/profile.png">
@@ -492,6 +576,7 @@ My Profile. This is where the users personal information is stored. Only registe
 - The 'Wishlist' button at the bottom of the page, when clicked directs user to their 'Wishlist' (/wishlist/) page.
 
 ### Product Management - Add Product page
+
 <img src="docs/screenshots/add-product.png">
 
 The Add Product page is for the admin/store owner to add their products website via a form. Only admin/store owners can use this feature. The product is added to the main products page and is avaiable on all relevant pages that the categories, rooms and specials apply to. It will also be searchable in the search bar for user-inputted queries. The features include:
@@ -511,33 +596,95 @@ The Add Product page is for the admin/store owner to add their products website 
 - 'Cancel' button. Leaves the page and returns to the main products page.
 
 ### Product Management - Edit Product page
+
 <img src="docs/screenshots/edit-product.png">
 
 The Edit Product page is for admin to edit the chosen product via a form. Only the store owner/admin can use this feature. The edited product is updated when the form is submitted and found in the same places as the original product. The information expected from the admin is the same as the Add Product page. The features include:
 - Validation on all user inputs.
 - All inputs seen on Add Product page, with all inputs presented again. The current product details will be populated in each input, ready to be edited.
-- 'Edit Product'. This button submits the form to the database if all inputs are valid and met and updates that specific product.
+- 'Update Product'. This button submits the form to the database if all inputs are valid and met and updates that specific product.
 - 'Cancel' button. Leaves the page and returns to main products page.
 
 ### - Shopping Bag page
+
+The Shopping Bag is the page where users add their products to, before advancing to the checkout. The features include:
+- Page title at top of page.
+- 'Continue Shopping' button that when clicked will direct users back to the main products page if there are not items in their shopping bag. A text message on screen also informs users of this.
+- A list of products with each product info containing the image, the name, the sku number, the price, the quantity and subtotal.
+- A [quantity selector](#quantity-selector) which then updates the bag total, deliery cost and grand total once updated/ or items are removed from bag.
+- 'Remove' button, when clicked will update the number of items the user has chosen.
+- 'Update' button, when clicked will remove the item from the shopping bag instantly.
+- Bag Total - the total amount in GBP (£) of the items in the bag.
+- Delivery - the delivery cost in GBP (£). Charged at 10% of the bag total at time of development.
+- Grand total - the grand total of bag total and the delivery in GBP (£).
+- A message about free delivery and how much to spend to activate the promotion in red text. This is hidden if shopper has a bag total of +£100 (the current free delivery threshold).
+- 'Keep Shopping' button which directs user back to the main products page when clicked.
+- 'Secure Checkout' button which directs user to the Checkout page when clicked.
+
 <img src="docs/screenshots/bag.png">
 
 ### - Checkout page
+
+The Checkout page is the where users give their delivery information and payment details before confirming the purchase. The features include:
+- Page title at top of page.
+- Form for user details that includes Full Name and Email.
+- Form for delivery information that includes 'Phone Number', 'Street Address 1', 'Street Address 1', 'Town or City, County', 'State or Locality', 'Postal Code', 'Country'.
+- 'Country' dropdown input to choose country for delivery.
+- Save Delivery checkbox. Feature only avaiable to those signed in. Feature to save current form details for future use. Links to Sign In or Sing Up if user not signed in.
+- Payment input for card payment and validation. Uses Stripe to check. Takes long card number, expiry date and CVC secure number.
+- Form with full validation.
+- Order Summary with details of products and cost.
+- Order Total - the total amount in GBP (£) of the items to purcahse.
+- Delivery - the delivery cost in GBP (£). Charged at 10% of the order total at time of development.
+- Grand total - the grand total of bag total and the delivery in GBP (£).
+- 'Adust Bag' button, to return to Shopping Bag on click.
+- 'Complete Order' button. Users will click this button to confirm all and authorize the purchase. Take them to Checkout Success page if valid, otherwise returns here.
+- Text message underneath buttons to infom user of the charge to their card when processed.
+
 <img src="docs/screenshots/checkout.png">
 
 ### - Checkout Success page
+The Checkout Success page is the where users get a confirmation of their order details after a successful purchase. The features include:
+- 'Thank You' page title at top of page.
+- A message to say that all details are forwarded to the given email.
+- Order info including order number limited in size, for security purposes. Message informing customer that full number will be in their email.
+- Order Date, details of products bought, address, phone number, costing.
+- 'Latest Deals' button when clicked will take user to the Special filtered products (currently New Arrivals and Clearance at time of development).
+
 <img src="docs/screenshots/checkout-success.png">
 
+### - About Us page
+
+This page contains a small back-story on the Morgan & Co company. Page title and text against the background image found on the homepage.
+
+### - Contact Us page
+
+This page contains the Morgan & Co company contact information and social media links. Page title, text and links against the background image found on the homepage.
+
+### - Delivery page
+
+This page contains the Morgan & Co delivery details. Page title and text against the background image found on the homepage.
+
+### - Returns & Refunds page
+
+This page contains the Morgan & Co policy on returns and refunds. Page title and text against the background image found on the homepage.
+
 ### - Sign In page
+
 <img src="docs/screenshots/sign-in.png">
 
-The Log In page is where visitors can enter their details and log in to their account. All visitors to the website can view this webpage. The features include:
-- 'Log In' title on top of the page.
-- Username input with placeholder and validation applied.
+The Sign In page is where visitors can enter their details and sign in to their account. All visitors to the website can view this webpage. The features include:
+- 'Sign In' title on top of the page.
+- A link to Sign Up if the are not a registered user.
+- Username or email input with placeholder and validation applied.
 - Password input with placeholder and validation applied.
-- 'Log In' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
+- A 'Remember Me' checkbox that can be checked/ticked. This feature saves the users details, and will auto-populate the inputs for the next time they visit this page. 
+- 'Sign In' button. When clicked, the user is signed in to the website and forwarded to homepage, with a Success! toast informing them of their successful sign in.
+- 'Home' button. When clicked, the user is signed in to the website and forwarded to homepage.
+- 'Forgot Password?' link. When clicked, the user is directed to the [Password Reset](#password-reset) page.
 
 ### - Sign Out page
+
 <img src="docs/screenshots/sign-out.png">
 
 The Sign Out page is where visitors are asked to confirm if they'd like to Sign Out of the Morgan & Co website, having already clicked on the Sign Out link from the My Account menu.
@@ -548,17 +695,37 @@ Features include:
 - 'Cancel' button. When clicked, the user is taken to the homepage, but remains signed in to their account.
 
 ### - Sign Up page
+
 <img src="docs/screenshots/sign-up.png">
 
 The Sign Up page is where visitors can enter their details for the first time to register their new account. All visitors to the website can view this webpage. The features include:
 - 'Sign Up' title on top of the page.
-- Username input with placeholder and validation applied.
-- Password input with placeholder and validation applied.
-- 'Register' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
+- 'Sign in' link underneath. Directs users to Sign In page on click. Useful link for those who want to sign in, and already have an account.
+- 'Email address' input with placeholder and validation applied.
+- 'Email address confirmation' input with placeholder and validation applied.
+- 'Username' input with placeholder and validation applied.
+- 'Password' input with placeholder and validation applied.
+- 'Password (again)' input with placeholder and validation applied.
+- 'Sign Up' button. When clicked, the user is forwarded to the 'Verify Your E-mail Address' page. They must verifiy the link in their inbox to access their account.
+- 'Back to Sign In' button. When clicked, the user is taken to the Sign In page.
+
+### - Verify Your E-mail Address
+
+<img src="docs/screenshots/verify-email.png">
+
+The 'Verify Your E-mail Address' page is where visitors are forwarded to after they Sing Up for the first time. Users must verify their email address before they are able to access their account. If they attempt to Sign In without verifying this, they will always be re-directed back to this page, with an Alert! toast informing them of the process. The features include:
+- 'Verify Your E-mail Address' title on top of the page.
+- Text to inform user of the process.
 
 ### - Password Reset
+
 <img src="docs/screenshots/password-reset.png">
 
+The Password Reset page is where visitors enter their email address to reset their password. A link will be sent out to the uses email inbox. The user must click that link to reset their password, allowing them to regain access to their account. All visitors to the website can view this webpage. The features include:
+- 'Password Reset' title on top of the page.
+- Email address input with placeholder and validation applied.
+- 'Reset Password' button. When clicked, will activated the rest password process.
+- 'Back to Sign In' button. When clicked, the user is taken to the Sign In page.
 
 [Back to table of contents](#table-of-contents)
 
