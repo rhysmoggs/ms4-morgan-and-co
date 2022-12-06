@@ -286,19 +286,75 @@ tested models through the test_models.py
 Following are the Google Chrome Lighthouse results for each page.
 
 Changes were made due to the results of the Lighthouse tests. These were:
+- Adeed a meta description and content to boost overall SEO website score.
+- Added aria-label to buttons to boost accesibility further.
+- Fixed sequential headings.
+- Improved contrasting.
 
+## Homepage
+
+<img src="docs/testing/lighthouse-home.png">
+
+## Products
+
+<img src="docs/testing/lighthouse-products.png">
+
+## Product Detail
+
+Accessibility below 90% due to label missing on the quantity selector form.
+
+<img src="docs/testing/lighthouse-detail.png">
+
+SEO and overall score higher when no reviews present on page.
+
+<img src="docs/testing/lighthouse-detail-no-reviews.png">
+
+## My Profile
+
+<img src="docs/testing/lighthouse-profile.png">
+
+## Wishlist
+
+<img src="docs/testing/lighthouse-wishlist.png">
+
+## Edit Review
+
+<img src="docs/testing/lighthouse-edit-review.png">
+
+## Shopping Bag
+
+<img src="docs/testing/lighthouse-bag.png">
+
+## Checkout
+
+<img src="docs/testing/lighthouse-checkout.png">
+
+## Checkout Success
+
+<img src="docs/testing/lighthouse-checkout-success.png">
 
 [Back to table of contents](#table-of-contents)
 
 # Further Testing
 
+- Testing was constantly done using Google Chrome's own developer tools and 'Inspect Mode', although testing was done sporadically on alternative browsers with each major addition to the website e.g new content, style updates and responsive changes via media queries.
+- The browser console was used for error finding and print() in code development.
+- All interactive elements of the website were tested. Button functions, clicking, hiding/showing content, user input, links and general flow of the website. Database CRUD functionality and testing were made in real-time. Known bugs were fixed as they arose or as a whole with media queries.
+- The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Opera browsers and ran efficiently on each one. There were slight stylistic differences when testing between browsers, but these were resolved afterwards.
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPad & iPhoneX.
+- Feedback from friends and family, testing the website with no prior instruction or expectations. Adjustments were made if necessary to satisfy the User Stories targets.
+
+## Stripe Testing
+
+## Webhooks
+
 [Back to table of contents](#table-of-contents)
 
 # Bug Fixes
 
-Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). Resolved by adding a favicon image to the static/images folder and linking it in the templates/base.html file.
+Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). Resolved by adding a favicon image, created [here](https://favicon.io/favicon-generator/). Added image to the static/images folder and linking it in the templates/base.html file.
 
-<img src="docs/testing/pass.png">
+<img src="docs/testing/favicon-error.png">
 
 [Back to table of contents](#table-of-contents)
 

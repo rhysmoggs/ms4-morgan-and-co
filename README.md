@@ -838,6 +838,40 @@ There are many planned updates arranged for the Morgan & Co website that include
 ## Code
 ## Inspiration
 ## Content & Media
+
+All images are copyright-free as required by the project brief.
+
+Unsplash
+
+background image / background-blue.jp - by Virender Singh found [here](https://unsplash.com/photos/hE0nmTffKtM)
+Green Suede Sofa - ()
+
+Black Relaxing Chair / behnam-norouzi-phXwnWWz-BM-unsplash.jpg - by Behnam Norouzi found [here](https://unsplash.com/photos/phXwnWWz-BM)
+Yellow Fabric Sofa / bence-balla-schottner-vFwjD8JLP4M-unsplash_rVA84pg.jpg - by Bence Balla-Schottner [here](https://unsplash.com/photos/vFwjD8JLP4M)
+Pair of Stools / charlesdeluvio-0Y1qUg1w2bs-unsplash_fBcHoqY.jpg - by charlesdeluvio [here](https://unsplash.com/photos/0Y1qUg1w2bs)
+Brown Leather Sofa / martin-pechy-bpg-ngqrPc8-unsplash.jpg - by Paul Weaver [here](https://unsplash.com/photos/nWidMEQsnAQ)
+
+green luxury sofa found [here](https://unsplash.com/photos/fZuleEfeA1Q)
+blue fabric sofa found [here](https://unsplash.com/photos/2dcYhvbHV-M)
+Cabinet found [here](https://unsplash.com/photos/3fFBoEHee28)
+orange Sofa found [here](https://unsplash.com/photos/bpg-ngqrPc8)
+black stool found [here](https://unsplash.com/photos/3neSwyntbQ8)
+brown leather chair found [here](https://unsplash.com/photos/9KXhSAL_0ps)
+nest 3 set tables found [here](https://unsplash.com/photos/xej3GOtAQ-o)
+orange plastic chair found [here](https://unsplash.com/photos/4iwG8QD17AE)
+grey wooden stool found [here](https://unsplash.com/photos/4kTbAMRAHtQ)
+pink chair found [here](https://unsplash.com/photos/1JJJIHh7-Mk)
+brown leather sofa found [here](https://unsplash.com/photos/Vfml26Iy4mI)
+small blue chair found [here](https://unsplash.com/photos/ItMggD0EguY)
+
 ## Acknowledgements
+
+- Stack Overflow [website](https://stackoverflow.com/) for general problem solving.
+
+- Code Institute Room Slack community.
+
+- Mentor Antonio Rodriguez for helpful feedback and input.
+
+- Tutor support at Code Institute
 
 [Back to table of contents](#table-of-contents)
