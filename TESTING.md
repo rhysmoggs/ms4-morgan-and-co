@@ -283,6 +283,11 @@ tested models through the test_models.py
 
 # Lighthouse
 
+Following are the Google Chrome Lighthouse results for each page.
+
+Changes were made due to the results of the Lighthouse tests. These were:
+
+
 [Back to table of contents](#table-of-contents)
 
 # Further Testing
@@ -290,6 +295,10 @@ tested models through the test_models.py
 [Back to table of contents](#table-of-contents)
 
 # Bug Fixes
+
+Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). Resolved by adding a favicon image to the static/images folder and linking it in the templates/base.html file.
+
+<img src="docs/testing/pass.png">
 
 [Back to table of contents](#table-of-contents)
 
