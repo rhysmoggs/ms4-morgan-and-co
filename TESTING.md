@@ -2,7 +2,7 @@
 
 The Full Testing documentation, following on from the README [found here](README.md)
 
-# Testing Table of Contents
+# Table of Contents
 
 1. [Features Testing](#features-testing)
 2. [User-Related Image Testing](#user-related-image-testing)
@@ -277,7 +277,7 @@ tested forms through the test_forms.py
 tested views through the test_views.py
 tested models through the test_models.py
 
-[Coverage](link?) was then used to check how much of the code was tested
+[Coverage](https://pypi.org/project/coverage/) was then used to check how much of the code was tested
 
 [Back to table of contents](#table-of-contents)
 
@@ -346,7 +346,34 @@ SEO and overall score higher when no reviews present on page.
 
 ## Stripe Testing
 
+Testing was done using their recommended practices. It was vital that these tests worked successfully, as obviously an integral part of any e-commerce store is the payment functionality and security. All tests passed with expected results.
+
+All Stripe testing documentation can be found [here](https://stripe.com/docs/testing)
+
+Input the following card payment details and the checkout page to test and emulate the process of a successful payment:
+
+Long Card Number: 4242 4242 4242 4242  
+Expiry Date: Enter any date in the future with mm/yy  
+CVC (3-digit securiity number): Enter any 3 digits  
+ZIP: Enter any 5 digits
+
+Testing for authentication was handled by their [3D Secure Authentication](https://stripe.com/docs/testing#regulatory-cards) tool. This link gives different card details for further testing.
+
 ## Webhooks
+
+Webhooks were tested during development abnd followed the same practice covered in Code Institute's 'Boutique Ado' tutorial, which this project used as guidence.
+
+Common errors found and fixed during the development process: 
+
+error code: 404? 400s?
+200
+, which are usually associated with server errors,
+
+All tests returned successful and expected results.
+
+Final testing was done on the deployed Heroku website, as this ensures the webhook url remain constant and matches that of the Morgan & Co address.
+
+<img src="docs/testing/webhook.png">
 
 [Back to table of contents](#table-of-contents)
 

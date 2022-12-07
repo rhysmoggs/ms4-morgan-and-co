@@ -2,11 +2,9 @@
 
 [View the live project here.](https://morgan-and-co.herokuapp.com/)
 
-Welcome to the brand new Morgan & Co furniture website.
+Welcome to the brand new Morgan & Co website.
 
-<!-- <h2 align="center"><img src=""></h2> -->
-
-Milestone Project 4, for [Code Institute](https://codeinstitute.net/)'s Diploma in Web App Development.
+<h2 align="center"><img src="docs/screenshots/homepage.png"></h2>
 
 Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables and other home furnishings. For many ficticious years, the company has succesfully operated through word-of-mouth and profiting from a respected family reputation, with steady growth eventually leading them to becoming a leader in their industry - proudly displaying thier motto of "If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge". After a recent family intervention, the company has decided to take a leap of faith into the last century and launch their brand new website to further boost sales.
 
@@ -39,7 +37,7 @@ Morgan & Co is a family-run furniture retailer based in Wales, UK. The company s
     - [Frameworks, Libraries, Programs and Tools Used](#frameworks-libraries-programs-and-tools-used)
 * [Testing](#testing)
 * [Future Updates](#future-updates)
-* [Initial Setup and Deployment](#initial-setup-and-deployment)
+* [Deployment](#deployment)
 * [Credits](#credits)
 
 # Website Concept
@@ -60,7 +58,7 @@ The website is easily maintainable through the admin portal, but also allows adm
 [Back to table of contents](#table-of-contents)
 
 # Project Goals
-This is the fourth and final project submission for Code Institute's 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback prodvided to the website's users upon successful or unsuccesful payments.
+This is the fourth and final project submission for [Code Institute](https://codeinstitute.net/)'s 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback prodvided to the website's users upon successful or unsuccesful payments.
 
 
 The project will implement CRUD features on all levels (visitor, registered user, admin), on a relational database management sytem. The project can serve multiple approches to database management and CRUD functionality.
@@ -446,7 +444,7 @@ The vast majority of buttons have a hover state of black background colour and w
 
 This feature is present on the Product Ddetail page and the Shopping Bag page. It serves as a way to quickly and easily change the number of each products that the shopper wishes to purchase. Features are:
 - Minus (-) button signifies subtracting one item at a time when clicked.
-- Plus (-) button signifies adding one item at a time when clicked.
+- Plus (+) button signifies adding one item at a time when clicked.
 - Type the number, use the +/- buttons or use the up/down quantity selector inside the input to decide on the chosen number.
 - Validation to only allow a minimum of 1 item and a maximum of 99 items before updating the total. Users are informed of any issues with on-screen validation prompts.
 
@@ -807,7 +805,7 @@ coverage - used for automated testing, to check how much of the code is tested
 
 # Testing
 
-Due to the extensive testing necessary for the Morgan & Co website, the full documentation can be found [TESTING](TESTING.md).
+Due to the extensive testing necessary for the Morgan & Co website, the full documentation can be found here - [TESTING](TESTING.md).
 
 [Back to table of contents](#table-of-contents)
 
@@ -830,7 +828,9 @@ There are many planned updates arranged for the Morgan & Co website that include
 
 [Back to table of contents](#table-of-contents)
 
-# Initial Setup and Deployment
+# Deployment
+
+Due to the extensive development and depolyment process for the Morgan & Co website, the full documentation can be found here - [DEPLOYMENT](DEPLOYMENT.md).
 
 [Back to table of contents](#table-of-contents)
 
@@ -863,14 +863,15 @@ grey wooden stool found [here](https://unsplash.com/photos/4kTbAMRAHtQ)
 pink chair found [here](https://unsplash.com/photos/1JJJIHh7-Mk)
 brown leather sofa found [here](https://unsplash.com/photos/Vfml26Iy4mI)
 small blue chair found [here](https://unsplash.com/photos/ItMggD0EguY)
+noimage - taken from boutique ado tutorial repo
 
 ## Acknowledgements
 
 - Stack Overflow [website](https://stackoverflow.com/) for general problem solving.
 
-- Code Institute Room Slack community.
+- Code Institute's Slack community.
 
-- Mentor Antonio Rodriguez for helpful feedback and input.
+- Mentor Antonio Rodriguez for helpful feedback and input throughout the course.
 
 - Tutor support at Code Institute
 
