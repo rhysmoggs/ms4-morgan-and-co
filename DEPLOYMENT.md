@@ -49,7 +49,7 @@ Here's a list of all necessary services where account registation is required:
 
     The `"STRIPE_PUBLIC_KEY"`, `"STRIPE_SECRET_KEY"` and `"STRIPE_WH_SECRET"` are expalined in the Stripe Setup below.  
 
-    `"YOUR_DATABASE_URL_HERE"` points to the ElephantSQl databse link to be created.  
+    `"YOUR_DATABASE_URL_HERE"` points to the ElephantSQL databse link to be created.  
 
 [Back to table of contents](#table-of-contents)
 
@@ -119,7 +119,7 @@ DATABASES = {
     'default': dj_database_url.parse('your_elephantSQL_db_URL_here')
 }
 ```
-- to avoid adding it to version control. 
+- This is to avoid adding it to version control. 
 
 - git add, commit, git push.
 
@@ -144,21 +144,21 @@ else:
 ```
 - ```pip3 install gunicorn pip3 freeze > requirements.txt```
 
-- create a file named "Procfile" (outside of all the apps. so, create it where requirements.txt, gitignore etc are) and add this to it, making sure you use your gitpod repo name: ```web: gunicorn your_gipod_repo_name.wsgi:application``` (no empty space below) so: ```web: gunicorn morgan_and_co.wsgi:application``` (no empty space below).
+- Create a file named "Procfile" (outside of all the apps. so, create it where requirements.txt, gitignore etc are) and add this to it, making sure you use your gitpod repo name: ```web: gunicorn your_gipod_repo_name.wsgi:application``` (no empty space below) so: ```web: gunicorn morgan_and_co.wsgi:application``` (no empty space below).
 
-- in CLI ```heroku login -i```, and log in with ```heroku info heroku config:set DISABLE_COLLECTSTATIC=1``` (if only one heroku app) OR ```heroku config:set DISABLE_COLLECTSTATIC=1 --app your-heroku-app-name-here``` (if more than one heroku app on website) e.g. ```heroku config:set DISABLE_COLLECTSTATIC=1 --app morgan-abd-co```, for this example
+- in CLI ```heroku login -i```, and log in with ```heroku info heroku config:set DISABLE_COLLECTSTATIC=1``` (if only one heroku app) OR ```heroku config:set DISABLE_COLLECTSTATIC=1 --app your-heroku-app-name-here``` (if more than one heroku app on website) e.g. ```heroku config:set DISABLE_COLLECTSTATIC=1 --app morgan-abd-co```, for this example.
 
 - morgan_and_co > "settings.py", update ```ALLOWED_HOSTS = []``` to be  
 ```ALLOWED_HOSTS = ['your-heroku-app-name-here.herokuapp.com', 'localhost']```  
 e.g. ```ALLOWED_HOSTS = ['morgan-and-co.herokuapp.com', 'localhost']``` for this example.
 
-```ACCOUNT_EMAIL_VERIFICATION = 'none'``` (make sure to change this back to ```ACCOUNT_EMAIL_VERIFICATION = 'mandatory'``` before production/launching website)
+- ```ACCOUNT_EMAIL_VERIFICATION = 'none'``` (make sure- to change this back to ```ACCOUNT_EMAIL_VERIFICATION = 'mandatory'``` before production/launching website)
 
 - git add, commit, push.
 
 - Click 'Open App' in Heroku, and your project will be displayed here - no styling, but will add static files later.
 
-- For automatic deployment: in Heroku > Deploy > Deployment Method, choose GitHub Connect to Github, search for your repo e.g. m4-morgan-and-co.. then select it and click Connect. Enable Automatic Deploys.
+- For automatic deployment: in Heroku > Deploy > Deployment Method, choose GitHub Connect to Github, search for your repository e.g. m4-morgan-and-co, then select it and click Connect. Enable Automatic Deploys.
 
 - Google django secret key generator website, generate one then copy it. Go to Heroku website > Settings > Reveal Config Vars, add a new one: "SECRET_KEY": "paste-your-django-secret-key-here".
 
@@ -317,7 +317,6 @@ in morgan_and_co > settings.py, add the following on top of ```# Bucket Config``
         'CacheControl': 'max-age=94608000',
     }
 ```
-
 - add, commit, push.
 
 - In AWS > s3, choose your bucket, then click 'Create folder' button. Name it "media".
@@ -338,7 +337,7 @@ morgan_and_co > settings.py, make sure `ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 - Next, go to Stripe website > Developers > API keys.
 - Copy the Publishable Key token.
 - Go to your Heroku Config Vars and add STRIPE_PUBLIC_KEY and the copied token.
-- Then, repeat the same process but for copyng the Secret key token and create the STRIPE_SECRET_KEY variable in Heroku.
+- Then, repeat the same process but for copying the Secret key token and create the STRIPE_SECRET_KEY variable in Heroku.
 
 [Back to table of contents](#table-of-contents)
 
@@ -423,27 +422,39 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 ## Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+- Log in to GitHub and locate the [GitHub Repository](https://github.com/rhysmoggs/ms4-morgan-and-co)
+- Under the repository name, click the "code" dropdown menu.
+- To clone the repository using HTTPS, under "HTTPS", copy the link.
+- Open Git Bash
+- Change the current working directory to the location where you want the cloned directory to be made.
+- Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/rhysmoggs/ms4-morgan-and-co
 ```
 
-7. Press Enter. Your local clone will be created.
+- Press Enter. Your local clone will be created.
+- Create "env.py" file.
+- Add `env.py` and the soon to be generated `__pyache__/` to it. All hidden and sensitive files/folders to be added here.
+- In "env.py", add the following:
+    ```
+    import os
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+    os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY_HERE")
+    os.environ.setdefault("STRIPE_PUBLIC_KEY", "YOUR_STRIPE_PUBLIC_KEY_HERE")
+    os.environ.setdefault("STRIPE_SECRET_KEY", "YOUR_STRIPE_SECRET_KEY_HERE")
+    os.environ.setdefault("STRIPE_WH_SECRET", "YOUR_STRIPE_WH_SECRET_HERE")
+    os.environ.setdefault("DATABASE_URL", "YOUR_DATABASE_URL_HERE")
+    ```
+
+    The `SECRET_KEY` was created using a django secret key generator found [here](https://miniwebtool.com/django-secret-key-generator/).  
+
+    The `"STRIPE_PUBLIC_KEY"`, `"STRIPE_SECRET_KEY"` and `"STRIPE_WH_SECRET"` are expalined in the Stripe Setup below.  
+
+    `"YOUR_DATABASE_URL_HERE"` points to the ElephantSQL databse URL address (explained [here](#elephantsql-setup)).  
+
+- In the CLI, type ```pip3 install -r requirements.txt``` to install the redquired dependencies.
+
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 

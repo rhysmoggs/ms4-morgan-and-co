@@ -18,6 +18,7 @@ Morgan & Co is a family-run furniture retailer based in Wales, UK. The company s
     - [As a Registered User](#as-a-registered-user-including-all-prior-stories)
     - [As a Store Owner](#as-a-store-owner-including-all-prior-stories)
 * [Aesthetic Design](#aesthetic-design)
+    - [Site Flow](#site-flow)
     - [Wireframes](#wireframes)
         - [Desktop](#desktop)
         - [Tablet](#tablet)
@@ -163,6 +164,17 @@ Following are the goals that the website should provide for each user.
 [Back to table of contents](#table-of-contents)
 
 # Aesthetic Design
+Once the User Stories and the projects intentions were set out, the next step was to design the aesthetic aspects of the the Morgan & Co website.
+
+## Site Flow
+
+The linked pdf document ( view them [here](docs/site-flow.pdf) ) shows the websites flow for three main possibilities.
+1. Not Signed In
+2. Signed In.
+3. Admin Signed In.
+
+This is covered in greater depth throughout this README and the TESTING documentation. This is to give a quick idea on what features are available for each level from 1 (Not Signed In) having the least amount of accessibility and features to 3 (Admin Signed In) having the most.
+
 ## Wireframes
 Wireframes were drawn using Balsamiq at the beginning of the project. They were referenced throughout the design and building of the website. Following are a series of images showing the Morgan & Co website on the three main screen sizes: mobile, tablet and desktop. Every major section of the website is also included.
 ### Mobile
@@ -186,12 +198,10 @@ By default, all buttons have a consistent style, size and layout throughout the 
 
 Some text colour changes are seen throughout the website - red, usually reserved for error or validation purposes to grab the users attention. It is also used for the Clearnace and New Arrivals specials category - something the company wishes to promote and for users to be drawn in by. Otherwise, blue is used very very rarely and reserved for Edit buttons to again help with contrast. Gold band on toast free delivery promotion. This is obviously to entice users to keep spending to trigger their free delivery thrreshold - beneficial for shoppers and the company alike.
 
-
-!!!!!!!!!!!??????????CONTAST CHECKER HERE????!!!!!!!!!!!!!!!!!!!
 Here is the [Contrast Checker](https://webaim.org/resources/contrastchecker/) tool used to show just how powerful something so simple can be:
 
-<img src="docs/screenshots/contrast.png">
-img
+<img src="docs/contrast.png">
+
 Further contrast checks were made in the [Testing](TESTING.md) documentation, especially during Lighthouse checks. Adjustments were made to favour readability.
 
 ## Images
@@ -211,29 +221,33 @@ When the underline animation appears underneath the navbar text on cursor hover,
 [Back to table of contents](#table-of-contents)
 
 # Database
-The database is setup via a model template.  
-Locally, using Django's built-in sqlite.  
-Initially using Heroku's postgres add-on database, which eventually was changed to use elephantSQL due to Heroku's announcement to end some of their free-tier services.
+Morgan & Co uses a relational database.
+
+Locally, Django's built-in SQLite database was used during development.  
+
+For the deployed live version, initially the website was setup to use Heroku's postgres Add-On database, but due to the change in their [service](https://blog.heroku.com/next-chapter) and their free tier options it was decided that a change in direction was necessary during the development period.
+
+With Code Institute's help, the Heroku database was migrated to use ElephantSQL's postgres database instead.
 
 ## Data Schema Design
 Here is the Database Schema layout for the Morgan & Co website:
 
-<img src="docs/data-schema.png">
+<img src="docs/schema.png">
 
-It shows each table and model, what data is kept, their type and how they are linked together.
+It shows each model present in the project and the relationship between them.  
 This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
 
-The data schema shows how all data is connected. Morgan & Co uses a relational database.
-Model breakdown:  
-- UserProfile = extends through django's User model.  
-- Order =  
-- OrderLineItem =  
-- Product =  
-- Category =  
-- Room =  
-- Special =  
-- Review =  
-- Wishlist =  
+### Model breakdown:  
+- User - django's built-in [User](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/#user-model) model.
+- UserProfile - extends through django's User model. It contains user information that will be stored on the My Profile page and made avaiable for the user when filling in the Checkout form. 
+- Order - It contains all the information relating to the users order and history.
+- OrderLineItem - It contains information relating to an order and its the items.
+- Product - It contains all of the information relating to a product found on the website.
+- Category - It contains all of the information relating to a category. Related to prodcts for filtering and sorting.
+- Room - It contains all of the information relating to a room. Related to prodcts for filtering and sorting.
+- Special - It contains all of the information relating to a special. Related to prodcts for filtering and sorting.
+- Review - It contains all of the information relating to a review. 
+- Wishlist - It contains all of the information relating to the wishlist feature.
 
 [Back to table of contents](#table-of-contents)
 
@@ -316,7 +330,6 @@ Edit Product - You are editing the review
 
 toast_warning = Warning!
 - leaves checkout_success and no items in bag?
-
 
 
 ## Modal
