@@ -112,7 +112,6 @@ bag app = all clear
 checkout app = all clear - some lines too long, fixed.
 home app = all clear
 contact app = all clear
-info app = all clear
 morgan_and_co = all clear
 products app = some lines too long in views.py, cleared
 profiles app = some lines too long, cleared

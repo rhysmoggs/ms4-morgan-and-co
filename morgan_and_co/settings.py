@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'profiles',
     'reviews',
     'wishlist',
-    'info',
     'contact',
 
     # Other
