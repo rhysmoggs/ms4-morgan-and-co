@@ -225,7 +225,7 @@ Morgan & Co uses a relational database.
 
 Locally, Django's built-in SQLite database was used during development.  
 
-For the deployed live version, initially the website was setup to use Heroku's postgres Add-On database, but due to the change in their [service](https://blog.heroku.com/next-chapter) and their free tier options it was decided that a change in direction was necessary during the development period.
+For the deployed live version, initially the website was setup to use Heroku's postgres Add-On database, but due to the change in their [service](https://blog.heroku.com/next-chapter) and their free tier options it was decided that a change in direction was necessary.
 
 With Code Institute's help, the Heroku database was migrated to use ElephantSQL's postgres database instead.
 
@@ -771,20 +771,22 @@ The Password Reset page is where visitors enter their email address to reset the
     - This tool was used to to setup the colour palette [here](#colour-palette).
 1. [TinyPNG:](https://tinypng.com/)
     - TinyPNG is used to optimize images used in the website and documentation.
+1. [iLoveIMG:](https://www.iloveimg.com/)
+    - iLoveIMG is used for further image optimization.
 1. [Miscrosoft Paint:](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
     - Microsoft Paint is used to crop and resize images and editing photos for the project.
 1. [WPS Office:](https://www.wps.com/)
-    - WPS Office is used to create the flow charts, the tables found in the [Testing](TESTING.md) and for spell-checking.
+    - WPS Office is used to create the tables found in the [Testing](TESTING.md) document and for spell-checking.
 1. [Am I Responsive?:](http://ami.responsivedesign.is/)
     - Used to create the image at the very top of this document.
 
 Other:
-- PostgreSQL database - initially though heroku's postgres add-on, then elephantSQL
+
 - PsycoPG2 - database adapter. library for connecting Python to PostgreSQL.
-- bootstrap
+- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - version 4.6. Used for building responsive font-end content and styling.
 - heroku
 - 
-
+[ElephantSQL](https://www.elephantsql.com/) - ElephantSQL is used for hosting the PostgreSQL database. 
 
 stripe, aws
 website to create logo

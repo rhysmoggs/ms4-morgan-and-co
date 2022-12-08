@@ -4,34 +4,31 @@ The Full Testing documentation, following on from the README [found here](README
 
 # Table of Contents
 
-1. [Features Testing](#features-testing)
-2. [User-Related Image Testing](#user-related-image-testing)
-3. [Validation](#validation)
-4. [Testing Original User Stories](#testing-original-user-stories)
+* [Features Testing](#features-testing)
+* [Validation](#validation)
+* [Testing Original User Stories](#testing-original-user-stories)
     - [As a New Visitor](#as-a-new-visitor)
     - [As an Unregistered User](#as-an-unregistered-user-including-all-prior-stories)
     - [As a Shopper](#as-a-shopper-including-all-prior-stories)
     - [As a Registered User](#as-a-registered-user-including-all-prior-stories)
     - [As a Store Owner](#as-a-store-owner-including-all-prior-stories)
-5. [Automated Testing](#automated-testing)
-6. [Lighthouse](#lighthouse)
-7. [Further Testing](#further-testing)
-8. [Bug Fixes](#bug-fixes)
-9. [Known Bugs](#known-bug)
-10. [Testing Credits](#testing-credits)
+* [Automated Testing](#automated-testing)
+* [Lighthouse](#lighthouse)
+* [Further Testing](#further-testing)
+* [Bug Fixes](#bug-fixes)
+* [Known Bugs](#known-bugs)
+* [Testing Credits](#testing-credits)
     - [Reading and Guidence](#reading-and-guidence)
     - [Code](#code)
 
 [Back to table of contents](#table-of-contents)
 
 # Features Testing
-Manual features testing was coverd on all pages of the website. These are covered in the pdf tables below:
+Manual features testing was coverd on all pages of the website. These are covered in the pdf tables below.
 
-[Manual Features Testing here](docs/testing/manual-testing.pdf)
+[Manual Features Testing](docs/testing/manual-testing.pdf) here.
 
-[Back to table of contents](#table-of-contents)
-
-# User-Related Image Testing
+( please click to view the link above )
 
 [Back to table of contents](#table-of-contents)
 
@@ -60,7 +57,7 @@ Wishlist page
 
 <img src="docs/testing/wishlist-error2.png">
 
-Simple mistake. Changed "col" tag div.
+Simple mistake. Changed "col" tag `<div>`.
 
 Buttons
 
@@ -106,19 +103,30 @@ countryfield.js - no errors found
 
 ## PEP8CI - Python Testing
 
-Using Code Institite's [PEP8CI](https://pep8ci.herokuapp.com/) to lint the code. Tested all Python code present. All clear.
+Using Code Institite's [PEP8CI](https://pep8ci.herokuapp.com/) to lint the code. Tested all Python code present. Here are the outcomes of those test:
 
-bag app = all clear
-checkout app = all clear - some lines too long, fixed.
-home app = all clear
-contact app = all clear
-morgan_and_co = all clear
-products app = some lines too long in views.py, cleared
-profiles app = some lines too long, cleared
-reviews app = some lines too long, cleared
+1. bag app - All clear.
+1. checkout app - Some lines too long. Addressed. All clear.
+1. home app - All clear.
+1. contact app - All clear.
+1. morgan_and_co - All clear.
+1. products app - Some lines too long in `views.py`. Addressed. All clear.
+1. profiles app - Some lines too long. Addressed. All clear.
+1. reviews app - Some lines too long. Addressed. All clear.
+1. wishlist app - All Clear.
 
-By typing ```python3 -m flake8``` in the terminal, this checked all again. Migrations and automatically generated files were ignored.
-Other linting issues are for unused apps found in test and other files after craeting apps. These can be ignored.
+By typing `python3 -m flake8` in the terminal, this checked for all linting issues accross the project. Further fixes were made:
+
+<img src="docs/testing/flake8.png">
+
+- Automatically generated files such as migrations were ignored.
+
+- The files created during the Boutique Ado tutorial were also left alone, such as the `./checkout/webhooks.py:28:5: F841 local variable 'e' is assigned to but never used` linting issue.
+
+- The majority of issues left were for usused imports left in test, app and model files, after creating apps for the project. These were claered, but for one:
+`./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused` - which was ignored as per the Code Institute's Boutique Ado tutorial suggestions.
+
+- The `env.py` 'line too long' issues were also ignored, as this is a hidden file and would not be pushed to GitHub.
 
 [Back to table of contents](#table-of-contents)
 
@@ -269,14 +277,31 @@ Following are the original User Stories set out in the early design stages of th
 
 # Automated Testing
 
-Used Django's built in testing framekwork to create automatic testing for the Morgan & Co website. This was done to ensure the written code was working as expected, on top of the manual testing and validation done.
+Django's built in testing framework was used to create automatic testing for the Morgan & Co website. This was done to ensure the written code was working as expected, on top of the manual testing and validation checks. 
 
-import TestCase class, then used all of its functionality to create custom classes to test the following in each app, if present:
-tested forms through the test_forms.py
-tested views through the test_views.py
-tested models through the test_models.py
+Django's TestCase class was imported to each test file, then its functionality was used to create custom classes to test. The `checkout` and `bag` apps were tested, as these were the most important apps due to the security associated with them.
+The tests checked for:
+- correct names.
+- views.
+- urls.
+- templates.
+- required fields.
+- error handling.
+- basic functionality.
 
-[Coverage](https://pypi.org/project/coverage/) was then used to check how much of the code was tested
+[Coverage](https://pypi.org/project/coverage/) was installed and used to check how much of the code was tested. A total of 17 automated tests were setup. 
+
+Checkout coverage report:
+- tested forms through the test_forms.py - All of 7 tests passed.
+- tested views through the test_views.py - All of 5 tests passed.
+- tested models through the test_models.py - All of 3 tests passed.
+
+<img src="docs/testing/coverage-checkout.png">
+
+Bag coverage report:
+- tested views through the test_views.py - All of 2 tests passed.
+
+<img src="docs/testing/coverage-bag.png">
 
 [Back to table of contents](#table-of-contents)
 
@@ -286,8 +311,8 @@ Following are the Google Chrome Lighthouse results for each page.
 
 Changes were made due to the results of the Lighthouse tests. These were:
 - Adeed a meta description and content to boost overall SEO website score.
-- Added aria-label to buttons to boost accesibility further.
-- Fixed sequential headings.
+- Added aria-label to links.
+- Improved sequential headings.
 - Improved contrasting.
 
 ## Homepage
@@ -300,7 +325,7 @@ Changes were made due to the results of the Lighthouse tests. These were:
 
 ## Product Detail
 
-Accessibility below 90% due to label missing on the quantity selector form.
+Accessibility below 90% due to label missing on the quantity selector form. The quantity selector code is taken from the Boutique Ado tutorial and so it was decided to leave it be after previously having issues with duplicate id's when validating the HTML code.
 
 <img src="docs/testing/lighthouse-detail.png">
 
@@ -347,14 +372,14 @@ SEO and overall score higher when no reviews present on page.
 
 Testing was done using their recommended practices. It was vital that these tests worked successfully, as obviously an integral part of any e-commerce store is the payment functionality and security. All tests passed with expected results.
 
-All Stripe testing documentation can be found [here](https://stripe.com/docs/testing)
+All Stripe testing documentation can be found [here](https://stripe.com/docs/testing).
 
 Input the following card payment details and the checkout page to test and emulate the process of a successful payment:
 
-Long Card Number: 4242 4242 4242 4242  
-Expiry Date: Enter any date in the future with mm/yy  
-CVC (3-digit securiity number): Enter any 3 digits  
-ZIP: Enter any 5 digits
+Long Card Number: 4242 4242 4242 4242.  
+Expiry Date: Enter any date in the future with mm/yy.  
+CVC (3-digit securiity number): Enter any 3 digits.  
+ZIP: Enter any 5 digits.
 
 Testing for authentication was handled by their [3D Secure Authentication](https://stripe.com/docs/testing#regulatory-cards) tool. This link gives different card details for further testing.
 
@@ -362,15 +387,9 @@ Testing for authentication was handled by their [3D Secure Authentication](https
 
 Webhooks were tested during development abnd followed the same practice covered in Code Institute's 'Boutique Ado' tutorial, which this project used as guidence.
 
-Common errors found and fixed during the development process: 
+Common errors found and fixed during the development processes stemmed from the GitPod workplace URL changing and then causing issues due the Enpoint URL being different. This was fixed by updating the URL in the endpoint. Development issues also occured when the GitPod workspace was not set to 'Shared'. 
 
-error code: 404? 400s?
-200
-, which are usually associated with server errors,
-
-All tests returned successful and expected results.
-
-Final testing was done on the deployed Heroku website, as this ensures the webhook url remain constant and matches that of the Morgan & Co address.
+These issues were not present on the final deployed website, as the Morgan & Co URL remains constant.
 
 <img src="docs/testing/webhook.png">
 
@@ -378,9 +397,11 @@ Final testing was done on the deployed Heroku website, as this ensures the webho
 
 # Bug Fixes
 
-Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). Resolved by adding a favicon image, created [here](https://favicon.io/favicon-generator/). Added image to the static/images folder and linking it in the templates/base.html file.
+Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). This was resolved by adding a favicon image, created [here](https://favicon.io/favicon-generator/). It was `static/images` folder and linked in the `templates/base.html` file.
 
 <img src="docs/testing/favicon-error.png">
+
+<img src="docs/testing/favicon-fix.png">
 
 [Back to table of contents](#table-of-contents)
 
