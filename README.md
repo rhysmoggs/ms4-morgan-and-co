@@ -1,12 +1,12 @@
 <h1 align="center">Morgan & Co</h1>
 
-[View the live project here.](https://morgan-and-co.herokuapp.com/)
+[View the live project here](https://morgan-and-co.herokuapp.com/).
 
 Welcome to the brand new Morgan & Co website.
 
 <h2 align="center"><img src="docs/screenshots/homepage.png"></h2>
 
-Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables and other home furnishings. For many ficticious years, the company has succesfully operated through word-of-mouth and profiting from a respected family reputation, with steady growth eventually leading them to becoming a leader in their industry - proudly displaying thier motto of "If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge". After a recent family intervention, the company has decided to take a leap of faith into the last century and launch their brand new website to further boost sales.
+Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables and other home furnishings. For many ficticious years, the company has succesfully operated through word-of-mouth and profiting from a respected family reputation. Steady growth eventually lead Morgan & Co to becoming a leader in their industry - proudly displaying thier motto of <strong>"If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge"</strong>. After a recent family intervention, the company has decided to take a leap of faith into the last century and launch their brand new website to further boost sales.
 
 # Table of Contents
 * [Website Concept](#website-concept)
@@ -43,39 +43,34 @@ Morgan & Co is a family-run furniture retailer based in Wales, UK. The company s
 
 # Website Concept
 The website will be a fully-interactive e-commerce website, with the main purpose to drive sales for the company.  
-This will be achieved by clearly and smartly displaying their products, company information and further necessary information.
+This will be achieved by clearly and smartly displaying their products, company information and any further necessary information.
 
-It will also serve as a place to bring more exposure, from otherwise unknown custom and enter a market they currently aren't in. The website will display all products that the company sells, allowing vistors to browse through their vast range. Visitors can seamlessly browse through the website, through the product range and through specific categories and ranges.
+It will also serve as a place to bring more exposure to their company, from previously unnatainable custom and to enter a new market. Visitors can seamlessly browse through the websites vast range of products, through specific categories or even through personalized searches. They are welcome to Sign Up for free, which allows them access to more of the websites features.
 
-Visitors can register for free which in turn allows for more features to be accessible. Although sales are not limited to users - a decision that will help ease the sales process - registered users will have features and possibilities that will enhance their experience and decision making - including raising the chances of return custom e.g wishlists, saving profile info and review posting.  
+Vitally, sales are not limited to just registered users - a decision that will help ease the sales process for all vistors to the website, which increases the likelyhood of generating sales. 
+
+Having said that, registered users will have features and possibilities that will enhance their experience and decision making - including raising the chances of return custom. These include but are not limited to:
+- Personal wishlists.
+- Personal profile.
+- Review posting.
 All website features will be documented in this README document.
 
-The website will clearly display information for first-time visitors, returning visitors and customers including the company contact information via social media links and relevant customer information pages (About us, Contact Us and the relevant delivery and returns pages). The website is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit and use the website.
+The website will clearly display information for all visitors, including the company contact information via social media links and helpful customer information pages (About us, Contact Us and the relevant delivery and returns pages). The website is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit and use the website.
 
-The website is welcoming to a range of visitors, and gives a very nice user-experience with plenty of on-screen prompts on dispaly and a whole host of intuitive, secure technology in the background to ensure a smooth, safe, efficent user-friendly experince.
+The website is welcoming to a range of visitors, and gives a very nice user-experience with plenty of on-screen prompts on dispaly and a whole host of intuitive features, matched with secure technology working in the background to ensure a smooth, safe, efficent user-friendly experince.
 
-The website is easily maintainable through the admin portal, but also allows admin/superusers to manage some aspects from the website itself. This is obviously of huge importance. To have a self-manageable store for the store owner to easily update and manage their own store online, without having to contact the website developer. The website and the features built in to design, will allow the website to be scalable as the store owners add more products and in turn more user interactivity.
+The website is easily maintainable through the admin portal, but also allows admin/store owners to manage aspects of their store by just signing in to the website itself. This is obviously of huge importance and allows the store owner to easily update their store and any time, without having to contact their website developer or miss out on business opportunities. The website and the features built in to the design means it's adaptive and scalable - the store owners can add more products and in turn more user interactivity. This means that Morgan & Co is very much future-proofed.
 
 [Back to table of contents](#table-of-contents)
 
 # Project Goals
-This is the fourth and final project submission for [Code Institute](https://codeinstitute.net/)'s 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback prodvided to the website's users upon successful or unsuccesful payments.
+This is the fourth and final project submission for [Code Institute](https://codeinstitute.net/)'s 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback prodvided to the websites users.
 
+The projects goals are to emulate an application that's as close-to-ready to launch - intending for the website to be able to be passed over to the store owners and for them to manage the rest. 
 
-The project will implement CRUD features on all levels (visitor, registered user, admin), on a relational database management sytem. The project can serve multiple approches to database management and CRUD functionality.
+This project provides an opportunity for the developer to showcase the backend and frontend skills aquired during the length of the course. 
 
-The projects goals are to emulate an application that's as close-to-ready to launch - intending for the website to be ablt o passed over to the store owners and for them to manage the rest. , with manual and automated testing covering all aspects of the project. An opportunity to  showcase showcase the creators backend and frontend development skills learned during the enture course, to show more proficency in aspects already exposed to (HTML, CSS, JS, Bootstrap, Python to name a few) and to also fully embrace the practice of the 4th projects main study-material - being, Django, Stripe. The goals are to keep building on the skillset aquired throughout this course. Code Institute's brief was to develop a project that utilized a conventional relational database with a focus on CRUD functionality.
-
-
-
-CRUD functionality
-Admin portal, user and superuser, allauth, stripe, testing
-Relational database
-
-
-mention store owner management, superuser capabilities, registered user exclusive features, and whats available to all
-admin portal breakdown?
-
+The project will display proficency in technical aspects already exposed to (HTML, CSS, JS, Bootstrap, Python to name a few) and to also fully embrace the practice of the 4th projects main study-material - being, Django, advanced deployment methods and security. The goals are to keep building on the skillset aquired throughout this course. Morgan & Co will utilize a conventional relational database with a focus on CRUD functionality, implementing features avaiable for all levels (visitor, registered user, admin). These will be apparent throughout the website, but also well covered throughout this README, TESTING & DEPLOYMENT documentation.
 
 [Back to table of contents](#table-of-contents)
 
@@ -238,16 +233,16 @@ It shows each model present in the project and the relationship between them.
 This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
 
 ### Model breakdown:  
-- User - django's built-in [User](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/#user-model) model.
-- UserProfile - extends through django's User model. It contains user information that will be stored on the My Profile page and made avaiable for the user when filling in the Checkout form. 
-- Order - It contains all the information relating to the users order and history.
-- OrderLineItem - It contains information relating to an order and its the items.
-- Product - It contains all of the information relating to a product found on the website.
-- Category - It contains all of the information relating to a category. Related to prodcts for filtering and sorting.
-- Room - It contains all of the information relating to a room. Related to prodcts for filtering and sorting.
-- Special - It contains all of the information relating to a special. Related to prodcts for filtering and sorting.
-- Review - It contains all of the information relating to a review. 
-- Wishlist - It contains all of the information relating to the wishlist feature.
+- User - django's built-in [User](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/#user-model) model. Uses Django's [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) application to deal with account authentication, registration and management. Contains user information such as username, password, email.
+- UserProfile - extends through django's User model. It contains user information that will be stored on the My Profile page and made available for the user when filling in the Checkout form. Connects to the User model.
+- Order - It contains all the information relating to the users order and history. Connects to the UserProfile and OrderLineItem model.
+- OrderLineItem - It contains information relating to an order and its items. Connects to the Product and Order model.
+- Product - It contains all of the information relating to a product found on the website. Connects to the OrderLineItem, Review, Wishlist, Category, Room and Special models.
+- Category - It contains all of the information relating to a category. Related to prodcts for filtering and sorting. Connects to the Product model.
+- Room - It contains all of the information relating to a room. Related to prodcts for filtering and sorting. Connects to the Product model.
+- Special - It contains all of the information relating to a special. Related to prodcts for filtering and sorting. Connects to the Product model.
+- Review - It contains all of the information relating to a review. Connects to the Product and User model.
+- Wishlist - It contains all of the information relating to the wishlist feature. Connects to the Product model.
 
 [Back to table of contents](#table-of-contents)
 
@@ -255,26 +250,12 @@ This schema is vital in developing the website's functionality, its features and
 
 Once the user goals and the projects intentions were set out, the next step was to design the technical aspects of the the Morgan & Co website.
 
-apps = individual apps, custom built, models, templates, urls and views here
-morgan_and_co = main setup, main settings, main urls and link to all website and other apps etc
-model.py within apps = 
-views.py within apps = main CRUD functions and data manipulation are written here. Server-side control for the back-end.
-
-
-media = images
-static = 
-templates folder = contains all html webpages found on the Morgan and Co website
-includes
-
-Procfile - to link to Heroku
-
-
 ## Defensive Programming
 Used throughout the Morgan & Co website. By linking the session cookie to the UserProfile or User modules, the security levels and accessibility can be controlled:
 ```
 if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+    messages.error(request, 'Sorry, only store owners can do that.')
+    return redirect(reverse('home'))
 ```
 When not met, the current user/visitor is presented with a toast message to inform them.
 
@@ -282,6 +263,8 @@ When not met, the current user/visitor is presented with a toast message to info
 Alternative content and routes are used to present the user with information when trying to access restricted website content
 
 logic in templating, front end, back-end, validation etc. covers all aspects. security.
+
+Django's authentication system found [here](https://docs.djangoproject.com/en/4.1/topics/auth/default/).
 
 @login_required
 try/excpet
@@ -306,13 +289,13 @@ test these
 <img src="docs/screenshots/toast-success.png">
 
 toast_success = Success!
-- geenrally positive, or to confirm an action the user requested and has succeeding in doing so
-- add product
-- add review
-- add item to wishlist
-- add item to bag
-- user signs in
-- user signs out
+- genrally positive, or to confirm an action the user requested and has succeeding in doing so.
+- add product.
+- add review.
+- add item to wishlist.
+- add item to bag.
+- user signs in.
+- user signs out.
 -edit, update?
 admin?
 
@@ -352,13 +335,22 @@ id="delete_{{ review.id }}"
 ```
 
 ## Email
-The website uses Gmail to send company infromation and account related emails
+The website uses Gmail to send company information and account related emails. These emails use Django's template language to personalize each email from a basic txt document:
+```
+Hello {{ order.full_name }}.
 
-new account reigstration - users must click the link in email to confirm and have access to their account
-reset password links
-order confirmations are sent as a backup to the customers inbbox once a purcahse has been made
+This is a confirmation of your order at Morgan & Co. Your order information is below:
 
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+```
+Emails are sent for:
+- New account reigstration - users must click the link in email to confirm and have access to their account.
+- Reset password links.
+- Allauth's vast range of other account-related emails. See [here](https://github.com/pennersr/django-allauth/tree/master/allauth/templates/account/email) for the repository.
+- Morgan & Co order confirmations - sent as a backup to the customers inbox once a purcahse has been made.
 
+Gmail setup and linking it to the website's functionality can be found in the deployment documentation [here](DEPLOYMENT.md).
 
 ## Stripe
 Stripe is used to handle payments.
@@ -483,11 +475,11 @@ This feature is present on the Product Ddetail page and the Shopping Bag page. I
 ## Page Features
 
 There are universal features that are present throughout the Morgan & Co website. These features are:
-- Navbar, explained [here](#navbar)
-- Footer, explained [here](#footer)
-- Buttons, explained [here](#buttons)
-- Toasts, explained [here](#interactive-toats)
-- Search Bar, explained [here](#search-bar)
+- Navbar, explained [here](#navbar).
+- Footer, explained [here](#footer).
+- Buttons, explained [here](#buttons).
+- Toasts, explained [here](#interactive-toats).
+- Search Bar, explained [here](#search-bar).
 - Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
 - All clickable images, buttons, links etc have a hovering cursor to signify that the element can be interacted with. The majority of these elements being visually promted either through a short animation, colour change or highlighting.
 - Back-to-top button. Guides the user back to the top of the page once interacted with. Userful for pages with lengthy content.
@@ -751,6 +743,10 @@ The Password Reset page is where visitors enter their email address to reset the
 
 ## Frameworks, Libraries, Programs and Tools Used
 
+1. [Django:](https://docs.djangoproject.com/en/4.1/releases/3.2/)
+    - Django is the framework. Version 3.2.
+1. [Django-allauth:](https://www.intenct.nl/projects/django-allauth/)
+    - Django app that allows for both local and social authentication.
 1. [Google Fonts:](https://fonts.google.com/)
     - Google fonts is used to import the 'Poppins' font into the style.css file which is used on all fonts within the website.
 1. [Font Awesome:](https://fontawesome.com/)
@@ -776,45 +772,27 @@ The Password Reset page is where visitors enter their email address to reset the
 1. [Miscrosoft Paint:](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
     - Microsoft Paint is used to crop and resize images and editing photos for the project.
 1. [WPS Office:](https://www.wps.com/)
-    - WPS Office is used to create the tables found in the [Testing](TESTING.md) document and for spell-checking.
+    - WPS Office is used to create the tables found in the [testing](TESTING.md) document and for spell-checking.
 1. [Am I Responsive?:](http://ami.responsivedesign.is/)
     - Used to create the image at the very top of this document.
+1. [PsycoPG2:](https://pypi.org/project/psycopg2/)
+    - PsycoPG2 is a database adapter. Library for connecting Python to PostgreSQL.
+1. [Bootstrap:](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+    - Bootstrap version 4.6. Used for building responsive font-end content and styling.
+1. [Heroku:](https://www.heroku.com/)
+    - Used to deploy the website. Initially used for it's database capabilities too.
+1. [ElephantSQL:](https://www.elephantsql.com/)
+    - ElephantSQL is used for hosting the PostgreSQL database. 
+1. [Stripe:](https://stripe.com/gb)
+    - Stripe. Card payment processing, security features and webhooks.
+1. [AWS:](https://aws.amazon.com/)
+    - AWS is used for storing images and static files.
+1. [favicon.io:](https://favicon.io/favicon-generator/)
+    - Favicon.io was used to generate the favicon for Morgan & Co's website.
+1. [pip:](https://pip.pypa.io/en/stable/)
+    - An installer for Python.
 
-Other:
-
-- PsycoPG2 - database adapter. library for connecting Python to PostgreSQL.
-- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - version 4.6. Used for building responsive font-end content and styling.
-- heroku
-- 
-[ElephantSQL](https://www.elephantsql.com/) - ElephantSQL is used for hosting the PostgreSQL database. 
-
-stripe, aws
-website to create logo
-
-Requirements for Installs:
-- asgiref==3.5.2
-- boto3==1.26.14
-- botocore==1.29.14
-- dj-database-url==0.5.0
-- Django==3.2.16
-- django-allauth==0.41.0
-- django-countries==7.2.1
-- django-crispy-forms==1.14.0
-- django-storages==1.13.1
-- gunicorn==20.1.0
-- jmespath==1.0.1
-- oauthlib==3.2.2
-- Pillow==9.3.0
-- psycopg2-binary==2.9.5
-- python3-openid==3.2.0
-- pytz==2022.5
-- requests-oauthlib==1.3.1
-- s3transfer==0.6.0
-- sqlparse==0.4.3
-- stripe==4.2.0
-
-coverage - used for automated testing, to check how much of the code is tested
-
+A full list of the requirements necessary to install is covered in the [deployment](#deployment) section.
 
 [Back to table of contents](#table-of-contents)
 
@@ -827,19 +805,17 @@ Due to the extensive testing necessary for the Morgan & Co website, the full doc
 # Future Updates
 There are many planned updates arranged for the Morgan & Co website that include but are not limited to:
 
-* Blog
+* Blog.
 * Introduction of more social features such as:
-    - Social media links to share, comment, link etc
-    - Link email for subscription, mail etc
-* Link social media for signing in/registering, subscription, mail etc
-* Users able to:
-    - Delete profile
-    - Edit profile further
-* More admin/superuser rights from the website:
-    - Create, Edit, Delete Categories
-    - Create, Edit, Delete Rooms
-    - Create, Edit, Delete Specials
-* Quick-buy options directly from the product page
+    - Social media links to share, comment and link.
+    - Link email for subscription, email, newsletters etc.
+* Link social media for signing in/signing up, subscription, e-mail etc.
+* More user features.
+* More admin/superuser rights from the website itself (not just the admin portal):
+    - Create, Edit, Delete Categories.
+    - Create, Edit, Delete Rooms.
+    - Create, Edit, Delete Specials.
+* Quick-Buy options directly from the product pages.
 
 [Back to table of contents](#table-of-contents)
 
@@ -851,34 +827,44 @@ Due to the extensive development and depolyment process for the Morgan & Co webs
 
 # Credits
 ## Code
+
+
+
 ## Inspiration
+
+
+
 ## Content & Media
 
-All images are copyright-free as required by the project brief.
+All images are copyright-free as were made clearby the projects brief.
 
-Unsplash
+Home page background image / `background-blue.jp` - by Virender Singh found [here](https://unsplash.com/photos/hE0nmTffKtM)  
+Black Relaxing Chair / `behnam-norouzi-phXwnWWz-BM-unsplash.jpg` - by Behnam Norouzi found [here](https://unsplash.com/photos/phXwnWWz-BM)  
+Yellow Fabric Sofa / `bence-balla-schottner-vFwjD8JLP4M-unsplash_rVA84pg.jpg` - by Bence Balla-Schottner [here](https://unsplash.com/photos/vFwjD8JLP4M)  
+Pair of Stools / `charlesdeluvio-0Y1qUg1w2bs-unsplash_fBcHoqY.jpg` - by charlesdeluvio [here](https://unsplash.com/photos/0Y1qUg1w2bs)  
+Blue Fabric Sofa / `naomi-hebert-2dcYhvbHV-M-unsplash.jpg` - Naomi Hébert [here](https://unsplash.com/photos/2dcYhvbHV-M)  
+Brown Leather Sofa / `paul-weaver-nWidMEQsnAQ-unsplash.jpg` - Paul Weaver [here](https://unsplash.com/photos/nWidMEQsnAQ)  
+Green Suede Sofa / `phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg` - Phillip Goldsberry [here](https://unsplash.com/photos/fZuleEfeA1Q)  
+Orange Leather Sofa / `martin-pechy-bpg-ngqrPc8-unsplash.jpg` - Martin Péchy [here](https://unsplash.com/photos/bpg-ngqrPc8)  
+Large Cabinet / `rumman-amin-3fFBoEHee28-unsplash.jpgI` - Rumman Amin [here](https://unsplash.com/photos/3fFBoEHee28)  
+Grey Breakfast Stool / `ruslan-bardash-4kTbAMRAHtQ-unsplash.jpg` - Ruslan Bardash [here](https://unsplash.com/photos/4kTbAMRAHtQ)  
+Set of 3 Nest Tables / `sam-moghadam-khamseh-xej3GOtAQ-o-unsplash.jpg` - Sam Moghadam Khamseh [here](https://unsplash.com/photos/xej3GOtAQ-o)  
+Used during testing - Blue Chair / `virender-singh-hE0nmTffKtM-unsplash.jpg` - by Virender Singh found [here](https://unsplash.com/photos/hE0nmTffKtM)  
+Used during testing / `christian-kaindl-4uD9w-pxBTA-unsplash.jpg` - Christian Kaindl [here](https://unsplash.com/photos/4uD9w-pxBTA)  
+Used during testing / `dylan-shoemaker-P5tHZv-QTCA-unsplash.jpg` - Dylan Shoemaker [here](https://unsplash.com/photos/P5tHZv-QTCA)  
+Used during testing / `eugene-chystiakov-3neSwyntbQ8-unsplash.jpg` - Eugene Chystiakov [here](https://unsplash.com/photos/3neSwyntbQ8)  
+Used during testing / `eugenivy_now-1JJJIHh7-Mk-unsplash.jpg` - Євгенія Височина [here](https://unsplash.com/photos/1JJJIHh7-Mk)  
+Used during testing / `hal-gatewood-Vfml26Iy4mI-unsplash.jpg` - Hal Gatewood [here](https://unsplash.com/photos/Vfml26Iy4mI)  
+Used during testing / `kari-shea-ItMggD0EguY-unsplash.jpg` - Kari Shea [here](https://unsplash.com/photos/ItMggD0EguY)  
+Used during testing / `khloe-arledge-9KXhSAL_0ps-unsplash.jpg` - khloe arledge [here](https://unsplash.com/photos/9KXhSAL_0ps)  
+Used during testing / `rabie-madaci-4iwG8QD17AE-unsplash.jpg` - Rabie Madaci [here](https://unsplash.com/photos/4iwG8QD17AE)  
+Used during testing / `sam-moghadam-khamseh-kvmdsTrGOBM-unsplash.jpg` - Sam Moghadam Khamseh [here](https://unsplash.com/photos/kvmdsTrGOBM)  
+Used during testing / `sam-moghadam-khamseh-ofxbaFNFNmo-unsplash.jpg` - Sam Moghadam Khamseh [here](https://unsplash.com/photos/ofxbaFNFNmo)  
+Used during testing / `scopic-ltd-NLlWwR4d3qU-unsplash.jpg` - SCOPIC LTD [here](https://unsplash.com/photos/NLlWwR4d3qU)  
+Used during testing / `vincent-botta-J41ffLK_OSM-unsplash.jpg` - Vincent Botta [here](https://unsplash.com/photos/J41ffLK_OSM)  
+noimage `noimage.png`- taken from Code Institute's Boutique Ado tutorial repository.  
 
-background image / background-blue.jp - by Virender Singh found [here](https://unsplash.com/photos/hE0nmTffKtM)
-Green Suede Sofa - ()
-
-Black Relaxing Chair / behnam-norouzi-phXwnWWz-BM-unsplash.jpg - by Behnam Norouzi found [here](https://unsplash.com/photos/phXwnWWz-BM)
-Yellow Fabric Sofa / bence-balla-schottner-vFwjD8JLP4M-unsplash_rVA84pg.jpg - by Bence Balla-Schottner [here](https://unsplash.com/photos/vFwjD8JLP4M)
-Pair of Stools / charlesdeluvio-0Y1qUg1w2bs-unsplash_fBcHoqY.jpg - by charlesdeluvio [here](https://unsplash.com/photos/0Y1qUg1w2bs)
-Brown Leather Sofa / martin-pechy-bpg-ngqrPc8-unsplash.jpg - by Paul Weaver [here](https://unsplash.com/photos/nWidMEQsnAQ)
-
-green luxury sofa found [here](https://unsplash.com/photos/fZuleEfeA1Q)
-blue fabric sofa found [here](https://unsplash.com/photos/2dcYhvbHV-M)
-Cabinet found [here](https://unsplash.com/photos/3fFBoEHee28)
-orange Sofa found [here](https://unsplash.com/photos/bpg-ngqrPc8)
-black stool found [here](https://unsplash.com/photos/3neSwyntbQ8)
-brown leather chair found [here](https://unsplash.com/photos/9KXhSAL_0ps)
-nest 3 set tables found [here](https://unsplash.com/photos/xej3GOtAQ-o)
-orange plastic chair found [here](https://unsplash.com/photos/4iwG8QD17AE)
-grey wooden stool found [here](https://unsplash.com/photos/4kTbAMRAHtQ)
-pink chair found [here](https://unsplash.com/photos/1JJJIHh7-Mk)
-brown leather sofa found [here](https://unsplash.com/photos/Vfml26Iy4mI)
-small blue chair found [here](https://unsplash.com/photos/ItMggD0EguY)
-noimage - taken from boutique ado tutorial repo
+[Back to table of contents](#table-of-contents)
 
 ## Acknowledgements
 

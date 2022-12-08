@@ -1,6 +1,6 @@
 <h1 align="center">Morgan & Co</h1>
 
-The Full Testing documentation, following on from the README [found here](README.md)
+The Full Testing documentation, following on from the README found [here](README.md).
 
 # Table of Contents
 
@@ -402,6 +402,16 @@ Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). Th
 <img src="docs/testing/favicon-error.png">
 
 <img src="docs/testing/favicon-fix.png">
+
+Shopping Bag responsive issues only when bag full and showing total price.
+
+<img src="docs/testing/known-bug-1.png">
+
+<img src="docs/testing/known-bug-2.png">
+
+This was fixed by changing the media queries for smaller screens and targeting the padding for the icons.
+
+<img src="docs/testing/known-bug-fix.png">
 
 [Back to table of contents](#table-of-contents)
 
