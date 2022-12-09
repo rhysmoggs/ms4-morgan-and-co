@@ -251,23 +251,105 @@ This schema is vital in developing the website's functionality, its features and
 Once the user goals and the projects intentions were set out, the next step was to design the technical aspects of the the Morgan & Co website.
 
 ## Defensive Programming
-Used throughout the Morgan & Co website. By linking the session cookie to the UserProfile or User modules, the security levels and accessibility can be controlled:
+Accessibility, authorization and security levels can be controlled by combining django's authentication system found [here](https://docs.djangoproject.com/en/4.1/topics/auth/default/) and a whole host of other technical features written in custom code for the Morgan & Co website.
+
+The UserProfile model (especially for Wishlist possibilities) and django's User model are referenced on the backend in the views.py files and again in the templates:
+
+An example of how the Wishlist feature can be controlled by using the already mentioned methods and using a "Try/Except" approach for error handling - another added level.
+
+A custom `contexts.py` file was created to make the [Wishlist](#wishlist-page) feature available for authenticated users throughout the website:
+
+```
+def wishlist_contents(request):
+
+    """ A view to return the wishlist page """
+    wishlist = None
+
+    if request.user.is_authenticated:
+        user = get_object_or_404(UserProfile, user=request.user)
+        print(user)
+        try:
+            get_user_wishlist = Wishlist.objects.get(user=user)
+            print(get_user_wishlist)
+            wishlist = get_user_wishlist.products.all()
+            print(wishlist)
+        except Wishlist.DoesNotExist:
+            pass
+
+    context = {
+        'wishlist': wishlist,
+    }
+
+    return context
+```
+
+Once the context was made avaiable, it could be controlled in the font-end in templates:
+
+```
+{% if request.user.is_authenticated %}
+    <li class="list-inline-item">
+        <a class="text-black nav-link d-block d-lg-none" href="{% url 'wishlist' %}">
+            <div class="text-center">
+                {% if wishlist %}
+                    <div><i class="fas fa-heart"></i></div>
+                    <p class="my-0 d-none d-sm-block">Wishlist</p>
+                {% else %}
+                    <div><i class="far fa-heart"></i></div>
+                    <p class="my-0 d-none d-sm-block">Wishlist</p>
+                {% endif %}
+            </div>
+        </a>
+    </li>
+{% endif %}
+```
+This code extract above hides the Wishlist icon if the user is not signed in.
+
+<img src="docs/screenshots/wishlist-hide.png">
+
+If the user is signed in, the Wishlist icon is visible. The Wishlist icon will be:
+- A full/black heart `fas fa-heart`, if the user has 1 or more item in their Wishlist.
+- An empty/hollow heart `far fa-heart`, if the user does not have any items in their Wishlist.
+
+<img src="docs/screenshots/wishlist-full.png">
+<img src="docs/screenshots/wishlist-empty.png">
+
+On top of this, the `@login_required` decorator is used as another line of defence (not applicable for the custom Wishlist `contexts.py` file - but present in the Wishlist `views.py`, amongst other site-related views). This decorator limits access and secures these views to only signed in users. It is present for:
+- Adding a product.
+- Editing/Updating a product.
+- Removing a product.
+- Accessing the My Profile page.
+- Adding a review.
+- Editing/Updating a review.
+- Removing a review.
+- Accessing the Wishlist page.
+- Adding an item to the Wishlist (button found on the products "product_detail" page).
+- Removing an item from the Wishlist.
+
+Further accesibility is given to admin/storeowners/superusers, for example:
 ```
 if not request.user.is_superuser:
     messages.error(request, 'Sorry, only store owners can do that.')
     return redirect(reverse('home'))
 ```
-When not met, the current user/visitor is presented with a toast message to inform them.
+The above code applies to adding, editing and removing the products from the website for anyone other than those granted the highest acceibility levels. This stems from the User model by using `is_superuser`.
 
 
-Alternative content and routes are used to present the user with information when trying to access restricted website content
+
+
+
+Users can be redirected to the sign in/sign up pages, or to a custom template chosen. 
+
+
+When not met, the current user/visitor is presented with a [toast](#toasts) message to inform them of this.
+
+Alternative content and routes are used to present the user with information when trying to access restricted website content. Some of these include:
+
+- Hiding the Add Review form if user is not signed in or has already left a review on a product.
+- Hiding the Wishlist icon and 'Add to Wishlist' feature if user is not signed in or already has the item in their Wishlist.
 
 logic in templating, front end, back-end, validation etc. covers all aspects. security.
 
-Django's authentication system found [here](https://docs.djangoproject.com/en/4.1/topics/auth/default/).
 
-@login_required
-try/excpet
 error handling
 if else
 check if annonymous, user, registered, author etc
@@ -275,45 +357,112 @@ e.g. registered users only
 e.g. admin/store owners only
 e.g. if they already have left a review
 e.g. if they already have product in wishlist
-form validation?
-404/error pages
 
-redirect to sign up, sign in, red text message, hide content, show content etc
 
-Toasts
+views - if action/page/content is inaccessible, user redirect-redirect to sign up, sign in, back from page/no access
 
-## Toast
+hide content, show content etc
 
-test these
+## Custom Error Pages
+Django will use the custom `404.html` and `500.html` templates created for the Morgan & Co website whenever an error occurs. These contain a small message informing the user of the issue, and a link back to the home page.
+- 404 page: user is presented with this page when they attempt to access a page that does not exist.
+- 500 page: user is presented with this page when there is an internal error.
+
+## Form validation
+
+Form validation is present throughout the website and meticulously tested in the [testing](TESTING.md) documentation.
+
+Form validation is handled from the very beginning by defining the models fields and then building upon that. Forms are constructed in the `forms.py` files and can be targeted with python code in `views.py`, using the `is_valid()` method to return true or false. Templates with custom validation through HTML and JavaSript/jquery also handles validation and the use of Cross-Site Request Forgery (CSRF) on forms adds security.
+
+Users are prevented from submitting invalid forms and are informed of this in multiple ways:
+- Invalid popup message next to effected input:
+
+<img src="docs/screenshots/invalid-1.png">
+<img src="docs/screenshots/invalid-2.png">
+
+- Red text message appears under or next to input:
+
+<img src="docs/screenshots/invalid-3.png">
+
+- Allauth also handles validation like this:
+
+<img src="docs/screenshots/invalid-4.png">
+
+## Django-Allauth
+
+..coupled with django's authentication system ensured that security was always at the forefront of the design and implementation.
+
+## Image Handling
+
+Using Django's templating language, the page loads and checks to see if an image is present. If that fails, a backup image is used as a default: 
+
+```
+{% if product.image %}
+<a href="{% url 'product_detail' product.id %}">
+    <img class="card-img-top img-fluid fade-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+    <div class="middle">
+        <div class="text">More Info</div>
+    </div>
+</a>
+{% else %}
+<a href="{% url 'product_detail' product.id %}">
+    <img class="card-img-top img-fluid fade-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+    <div class="middle">
+        <div class="text">More Info</div>
+    </div>
+</a>
+{% endif %}
+```
+The store owner has the ability to edit the product from the website or the admin portal incase image issues arise. This is the image used for any image failures:
+
+<img src="media/noimage.png">
+
+## Toasts
+
+Toasts provide a great user experience to inform users of actions accross the website, whilst the logic is handled and wrapped up in code on the backend. They appear at the top of mobile screens and at the top-right of larger screens whenever necessary. They can be easily dismissed by the user by clicking on the small close/x button on the toast itself.
+
+After creating the project, django automatically enables [messaging](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/) functionality in the `settings.py` file, through the `django.contrib.messages` found in the INSTALLED_APPS section. These were linked to custom messages levels, setup in `base.html` and then custom text was added when creating the views:
+
+`messages.success(request, f'{product.name} review removed!')`
+
+Morgan & Co uses 4 levels of toast messaging:
+
+### toast_success = Success!
 
 <img src="docs/screenshots/toast-success.png">
 
-toast_success = Success!
-- genrally positive, or to confirm an action the user requested and has succeeding in doing so.
-- add product.
-- add review.
-- add item to wishlist.
-- add item to bag.
-- user signs in.
-- user signs out.
--edit, update?
-admin?
+To confirm an action the user requested and has succeeding in doing so. These include but are not limited to scenarios where the user has:
+- successfully added a product.
+- successfully edited/updated a product.
+- successfully removed a product.
+- successfully added a review.
+- successfully edited/updated a review
+- successfully removed a review.
+- successfully added an item to wishlist.
+- successfully removed an item from wishlist.
+- successfully added an item to shopping bag.
+- successfully signed in.
+- successfully signed out.
+- successfully signed up.
+
+### toast_error = Error!
+
+- an action was not successful or some other failure occurred e.g. performing and search without any input.
 
 <img src="docs/screenshots/toast-error.png">
 
-toast_error = Error!
-attempt to manually access the checkout page, without any items in the shopping bag
+- user attempts to manually access the checkout page, without any items in the shopping bag.
+
+### toast_info = Alert!
 
 <img src="docs/screenshots/toast-alert.png">
 
-toast_info = Alert!
-Edit Review - You are editing the review
-Edit Product - You are editing the review
--edit, update? - you are editing review/preoduc/etc?
+- inform the user when they are editing a product review.
+- inform the admin when they are editing a product.
 
-toast_warning = Warning!
-- leaves checkout_success and no items in bag?
+### toast_warning = Warning!
 
+- A failure did not occur but may be imminent
 
 ## Modal
 Modals form an integral part of the websites design. They act as a simple reminder to check if the users actions were intended and thus create a great user-friendly experience. Modals prompt the user to think again and to confirm or cancel the action so that they can be certain or even to avoid making a mistake (such as accidentally clicking a button and instantly removing their review from a product). [Bootstraps modal](https://getbootstrap.com/docs/4.0/components/modal/) was used and then tweaked. The button in the modal itself deletes the related data:
@@ -356,7 +505,8 @@ Gmail setup and linking it to the website's functionality can be found in the de
 Stripe is used to handle payments.
 
 ## AWS
-AWS is used to store
+- S3 Bucket service is used to handle static images and styling.
+- IAM is used to handle the authorization and access.
 
 [Back to table of contents](#table-of-contents)
 
@@ -427,7 +577,7 @@ Mobile search bar:
     - Price (low to high) - filters current products by their lowest price (shown first) to highest price
     - Price (high to low) - filters current products by their highest price (shown first) to lowest price
     - Name (A-Z) - filters current products by their alphabetical order based on product name (products beginning with A shown first)
-    - Name (A-Z) - filters current products by their alphabetical order based on product name (products beginning with Z shown first)
+    - Name (Z-A) - filters current products by their alphabetical order based on product name (products beginning with Z shown first)
     - Category - filters current products into their Category order based on category name (showing in alphabetical order, with A first)
     - Room - filters current products into their Room order based on room name (showing in alphabetical order, with A first)
     - Special - filters current products into their Special order based on special name (showing in alphabetical order, with A first)
@@ -828,6 +978,9 @@ Due to the extensive development and depolyment process for the Morgan & Co webs
 # Credits
 ## Code
 
+- Boutique Ado.
+- Code credit is found throughout the documentation whenever possible.
+- Code from official sources related to each service used. e.g. Django Allauth, Stripe, Bootstrap.
 
 
 ## Inspiration
@@ -849,12 +1002,12 @@ Orange Leather Sofa / `martin-pechy-bpg-ngqrPc8-unsplash.jpg` - Martin Péchy [h
 Large Cabinet / `rumman-amin-3fFBoEHee28-unsplash.jpgI` - Rumman Amin [here](https://unsplash.com/photos/3fFBoEHee28)  
 Grey Breakfast Stool / `ruslan-bardash-4kTbAMRAHtQ-unsplash.jpg` - Ruslan Bardash [here](https://unsplash.com/photos/4kTbAMRAHtQ)  
 Set of 3 Nest Tables / `sam-moghadam-khamseh-xej3GOtAQ-o-unsplash.jpg` - Sam Moghadam Khamseh [here](https://unsplash.com/photos/xej3GOtAQ-o)  
+Classic Leather Sofa / `hal-gatewood-Vfml26Iy4mI-unsplash.jpg` - Hal Gatewood [here](https://unsplash.com/photos/Vfml26Iy4mI)  
 Used during testing - Blue Chair / `virender-singh-hE0nmTffKtM-unsplash.jpg` - by Virender Singh found [here](https://unsplash.com/photos/hE0nmTffKtM)  
 Used during testing / `christian-kaindl-4uD9w-pxBTA-unsplash.jpg` - Christian Kaindl [here](https://unsplash.com/photos/4uD9w-pxBTA)  
 Used during testing / `dylan-shoemaker-P5tHZv-QTCA-unsplash.jpg` - Dylan Shoemaker [here](https://unsplash.com/photos/P5tHZv-QTCA)  
 Used during testing / `eugene-chystiakov-3neSwyntbQ8-unsplash.jpg` - Eugene Chystiakov [here](https://unsplash.com/photos/3neSwyntbQ8)  
 Used during testing / `eugenivy_now-1JJJIHh7-Mk-unsplash.jpg` - Євгенія Височина [here](https://unsplash.com/photos/1JJJIHh7-Mk)  
-Used during testing / `hal-gatewood-Vfml26Iy4mI-unsplash.jpg` - Hal Gatewood [here](https://unsplash.com/photos/Vfml26Iy4mI)  
 Used during testing / `kari-shea-ItMggD0EguY-unsplash.jpg` - Kari Shea [here](https://unsplash.com/photos/ItMggD0EguY)  
 Used during testing / `khloe-arledge-9KXhSAL_0ps-unsplash.jpg` - khloe arledge [here](https://unsplash.com/photos/9KXhSAL_0ps)  
 Used during testing / `rabie-madaci-4iwG8QD17AE-unsplash.jpg` - Rabie Madaci [here](https://unsplash.com/photos/4iwG8QD17AE)  

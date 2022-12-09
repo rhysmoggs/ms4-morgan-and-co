@@ -376,10 +376,10 @@ All Stripe testing documentation can be found [here](https://stripe.com/docs/tes
 
 Input the following card payment details and the checkout page to test and emulate the process of a successful payment:
 
-Long Card Number: 4242 4242 4242 4242.  
-Expiry Date: Enter any date in the future with mm/yy.  
-CVC (3-digit securiity number): Enter any 3 digits.  
-ZIP: Enter any 5 digits.
+- Long Card Number: 4242 4242 4242 4242.  
+- Expiry Date: Enter any date in the future with mm/yy.  
+- CVC (3-digit securiity number): Enter any 3 digits.  
+- ZIP: Enter any 5 digits.
 
 Testing for authentication was handled by their [3D Secure Authentication](https://stripe.com/docs/testing#regulatory-cards) tool. This link gives different card details for further testing.
 
