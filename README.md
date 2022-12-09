@@ -4,7 +4,7 @@
 
 Welcome to the brand new Morgan & Co website.
 
-<h2 align="center"><img src="docs/screenshots/homepage.png"></h2>
+<h2 align="center"><img src="docs/screenshots/amiresponsive.png"></h2>
 
 Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables and other home furnishings. For many ficticious years, the company has succesfully operated through word-of-mouth and profiting from a respected family reputation. Steady growth eventually lead Morgan & Co to becoming a leader in their industry - proudly displaying thier motto of <strong>"If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge"</strong>. After a recent family intervention, the company has decided to take a leap of faith into the last century and launch their brand new website to further boost sales.
 
@@ -267,12 +267,9 @@ def wishlist_contents(request):
 
     if request.user.is_authenticated:
         user = get_object_or_404(UserProfile, user=request.user)
-        print(user)
         try:
             get_user_wishlist = Wishlist.objects.get(user=user)
-            print(get_user_wishlist)
             wishlist = get_user_wishlist.products.all()
-            print(wishlist)
         except Wishlist.DoesNotExist:
             pass
 
@@ -302,7 +299,7 @@ Once the context was made avaiable, it could be controlled in the font-end in te
     </li>
 {% endif %}
 ```
-This code extract above hides the Wishlist icon if the user is not signed in.
+The code extract above hides the Wishlist icon if the user is not signed in.
 
 <img src="docs/screenshots/wishlist-hide.png">
 
@@ -331,14 +328,10 @@ if not request.user.is_superuser:
     messages.error(request, 'Sorry, only store owners can do that.')
     return redirect(reverse('home'))
 ```
-The above code applies to adding, editing and removing the products from the website for anyone other than those granted the highest acceibility levels. This stems from the User model by using `is_superuser`.
-
-
-
+The above code applies to adding, editing and removing the products from the website and prevents anyone other than those granted the highest accessibility levels. This stems from the User model by using `is_superuser`.
 
 
 Users can be redirected to the sign in/sign up pages, or to a custom template chosen. 
-
 
 When not met, the current user/visitor is presented with a [toast](#toasts) message to inform them of this.
 

@@ -22,21 +22,16 @@ def add_to_wishlist(request, product_id):
 
     # get current product
     product = get_object_or_404(Product, pk=product_id)
-    print(product)
 
     # get current user
     user = get_object_or_404(UserProfile, user=request.user)
-    print(user)
 
     # get user wishlist otherwise create wishlist
     wishlist, created = Wishlist.objects.get_or_create(user=user)
-    print(wishlist)
-    print(created)
 
     # check if product exists in user wishlist
     check_duplicate = bool(
         Wishlist.objects.filter(user=user, products=product))
-    print(check_duplicate)
 
     # if product exists in user wishlist, inform user, else, add
     #  to user wishlist

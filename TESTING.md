@@ -107,8 +107,6 @@ Using Code Institite's [PEP8CI](https://pep8ci.herokuapp.com/) to lint the code.
 
 1. bag app - All clear.
 1. checkout app - Some lines too long. Addressed. All clear.
-1. home app - All clear.
-1. contact app - All clear.
 1. morgan_and_co - All clear.
 1. products app - Some lines too long in `views.py`. Addressed. All clear.
 1. profiles app - Some lines too long. Addressed. All clear.

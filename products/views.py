@@ -99,12 +99,9 @@ def product_detail(request, product_id):
         )
 
         user = get_object_or_404(UserProfile, user=request.user)
-        print(user)
         try:
             get_user_wishlist = Wishlist.objects.get(user=user)
-            print(get_user_wishlist)
             check_wishlist = get_user_wishlist.products.all()
-            print(check_wishlist)
         except Wishlist.DoesNotExist:
             pass
         check_wishlist = Wishlist.objects.filter(user=user, products=product)

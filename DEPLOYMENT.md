@@ -442,20 +442,20 @@ Follow the steps directly from the Stripe [website](https://stripe.com/docs/paym
 - Heroku > Config Vars > add "EMAIL_HOST_PASS" with the copied app password.
 - add another variable named "EMAIL_HOST_USER" and your email as the value.
 
-- In gitpod, go to boutique-ado > "settings.py", delete `EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
+- In gitpod, go to morgand_and_co > "settings.py", delete `EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
 - Scroll down to the ```#Stripe section```, and update it to be:
 ```
 # Stripe
-FREE_DELIVERY_THRESHOLD = 50
+FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PERCENTAGE = 10
-STRIPE_CURRENCY = 'usd'
+STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+    DEFAULT_FROM_EMAIL = 'morganandco@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
