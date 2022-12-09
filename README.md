@@ -1,10 +1,10 @@
 <h1 align="center">Morgan & Co</h1>
 
-[View the live project here](https://morgan-and-co.herokuapp.com/).
+<h2 align="center"><img src="docs/screenshots/amiresponsive.png"></h2>
 
 Welcome to the brand new Morgan & Co website.
 
-<h2 align="center"><img src="docs/screenshots/amiresponsive.png"></h2>
+[View the live project here](https://morgan-and-co.herokuapp.com/).
 
 Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables and other home furnishings. For many ficticious years, the company has succesfully operated through word-of-mouth and profiting from a respected family reputation. Steady growth eventually lead Morgan & Co to becoming a leader in their industry - proudly displaying thier motto of <strong>"If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge"</strong>. After a recent family intervention, the company has decided to take a leap of faith into the last century and launch their brand new website to further boost sales.
 
@@ -330,31 +330,21 @@ if not request.user.is_superuser:
 ```
 The above code applies to adding, editing and removing the products from the website and prevents anyone other than those granted the highest accessibility levels. This stems from the User model by using `is_superuser`.
 
+Alternative content and routes are used to present the user with information when trying to access restricted website features or pages. Some of these include:
 
-Users can be redirected to the sign in/sign up pages, or to a custom template chosen. 
+- Hiding the Add Review form if user is not signed in.
 
-When not met, the current user/visitor is presented with a [toast](#toasts) message to inform them of this.
+<img src="docs/screenshots/show-hide-1.png">
 
-Alternative content and routes are used to present the user with information when trying to access restricted website content. Some of these include:
+- Hiding the Add Review form if the user has already left a review on a product.
 
-- Hiding the Add Review form if user is not signed in or has already left a review on a product.
-- Hiding the Wishlist icon and 'Add to Wishlist' feature if user is not signed in or already has the item in their Wishlist.
+<img src="docs/screenshots/show-hide-2.png">
 
-logic in templating, front end, back-end, validation etc. covers all aspects. security.
+- Hiding the Wishlist icon and the 'Add to Wishlist' feature if user is not signed (as explained in the [earlier](#defensive-programming)). 
 
+- Hiding the 'Add to Wishlist' button and displaying a message instead, if a signed in user already has the item in their Wishlist.
 
-error handling
-if else
-check if annonymous, user, registered, author etc
-e.g. registered users only
-e.g. admin/store owners only
-e.g. if they already have left a review
-e.g. if they already have product in wishlist
-
-
-views - if action/page/content is inaccessible, user redirect-redirect to sign up, sign in, back from page/no access
-
-hide content, show content etc
+<img src="docs/screenshots/show-hide-3.png">
 
 ## Custom Error Pages
 Django will use the custom `404.html` and `500.html` templates created for the Morgan & Co website whenever an error occurs. These contain a small message informing the user of the issue, and a link back to the home page.
@@ -383,7 +373,7 @@ Users are prevented from submitting invalid forms and are informed of this in mu
 
 ## Django-Allauth
 
-..coupled with django's authentication system ensured that security was always at the forefront of the design and implementation.
+Used for the user account authentication to ensure that security was always at the forefront of the design and implementation.
 
 ## Image Handling
 
@@ -459,12 +449,19 @@ To confirm an action the user requested and has succeeding in doing so. These in
 
 ## Modal
 Modals form an integral part of the websites design. They act as a simple reminder to check if the users actions were intended and thus create a great user-friendly experience. Modals prompt the user to think again and to confirm or cancel the action so that they can be certain or even to avoid making a mistake (such as accidentally clicking a button and instantly removing their review from a product). [Bootstraps modal](https://getbootstrap.com/docs/4.0/components/modal/) was used and then tweaked. The button in the modal itself deletes the related data:
+
+<img src="docs/screenshots/modal.png">
+
 ```
 <a class="text-black" href="{% url 'delete_review' review.id %}">
     Remove Review
 </a>
 ```
+
 Whereas the following is just to trigger the modal itself:
+
+<img src="docs/screenshots/modal-trigger.png">
+
 ```
 <button type="button" class="btn btn-light text-danger" data-toggle="modal" data-target="#delete_{{ review.id }}">
     <div><i class="fas fa-trash fa-lg text-black"></i></div>
@@ -495,11 +492,12 @@ Emails are sent for:
 Gmail setup and linking it to the website's functionality can be found in the deployment documentation [here](DEPLOYMENT.md).
 
 ## Stripe
-Stripe is used to handle payments.
+Stripe is used to securely handle card payments. Further information regarding Stripe's role in this project can be found throughout this documentation, especially in the [TESTING](TESTING.md) and [DEPLOYMENT](DEPLOYMENT.md) sections.
 
 ## AWS
+Further information regarding the AWS (Amazon Web Service) role in this project can be found throughout this documentation, especially in the [TESTING](TESTING.md) and [DEPLOYMENT](DEPLOYMENT.md) sections. A broad oversiht:
 - S3 Bucket service is used to handle static images and styling.
-- IAM is used to handle the authorization and access.
+- IAM is used to handle authorization and access.
 
 [Back to table of contents](#table-of-contents)
 
