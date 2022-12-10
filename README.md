@@ -6,7 +6,7 @@ Welcome to the brand new Morgan & Co website.
 
 [View the live project here](https://morgan-and-co.herokuapp.com/).
 
-Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables and other home furnishings. For many ficticious years, the company has succesfully operated through word-of-mouth and profiting from a respected family reputation. Steady growth eventually lead Morgan & Co to becoming a leader in their industry - proudly displaying thier motto of <strong>"If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge"</strong>. After a recent family intervention, the company has decided to take a leap of faith into the last century and launch their brand new website to further boost sales.
+Morgan & Co is a family-run furniture retailer based in Wales, UK. The company specializes in sofas, chairs, tables, and other home furnishings. For many fictitious years, the company has successfully operated through word-of-mouth and profited from a respected family reputation. Steady growth eventually lead Morgan & Co to become a leader in their industry - proudly displaying their motto of <strong>"If it can fit through your front door, we'll sell it - if not, we'll take the door off - free of charge"</strong>. After a recent family intervention, the company has decided to take a leap of faith into the last century and launch its brand new website to further boost sales.
 
 # Table of Contents
 * [Website Concept](#website-concept)
@@ -45,32 +45,32 @@ Morgan & Co is a family-run furniture retailer based in Wales, UK. The company s
 The website will be a fully-interactive e-commerce website, with the main purpose to drive sales for the company.  
 This will be achieved by clearly and smartly displaying their products, company information and any further necessary information.
 
-It will also serve as a place to bring more exposure to their company, from previously unnatainable custom and to enter a new market. Visitors can seamlessly browse through the websites vast range of products, through specific categories or even through personalized searches. They are welcome to Sign Up for free, which allows them access to more of the websites features.
+It will also serve as a place to bring more exposure to their company, from previously unattainable revenue and to enter a new market. Visitors can seamlessly browse through the websites vast range of products, through specific categories or even through personalized searches. They are welcome to Sign Up for free, which allows them access to more of the websites features.
 
-Vitally, sales are not limited to just registered users - a decision that will help ease the sales process for all vistors to the website, which increases the likelyhood of generating sales. 
+Vitally, sales are not limited to just registered users - a decision that will help ease the sales process for all visitors to the website, which increases the likelihood of generating sales. 
 
-Having said that, registered users will have features and possibilities that will enhance their experience and decision making - including raising the chances of return custom. These include but are not limited to:
+Having said that, registered users will have features and possibilities that will enhance their experience and decision-making - including raising the chances of return revenue. These include but are not limited to:
 - Personal wishlists.
 - Personal profile.
 - Review posting.
 All website features will be documented in this README document.
 
-The website will clearly display information for all visitors, including the company contact information via social media links and helpful customer information pages (About us, Contact Us and the relevant delivery and returns pages). The website is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit and use the website.
+The website will clearly display information for all visitors, including the company contact information via social media links and helpful customer information pages (About us, Contact Us and the relevant delivery and returns pages). The website is fully responsible for a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit and use the website.
 
-The website is welcoming to a range of visitors, and gives a very nice user-experience with plenty of on-screen prompts on dispaly and a whole host of intuitive features, matched with secure technology working in the background to ensure a smooth, safe, efficent user-friendly experince.
+The website is welcoming to a range of visitors and gives a very nice user-experience with plenty of on-screen prompts on display and a whole host of intuitive features, matched with secure technology working in the background to ensure a smooth, safe, efficient user-friendly experience.
 
 The website is easily maintainable through the admin portal, but also allows admin/store owners to manage aspects of their store by just signing in to the website itself. This is obviously of huge importance and allows the store owner to easily update their store and any time, without having to contact their website developer or miss out on business opportunities. The website and the features built in to the design means it's adaptive and scalable - the store owners can add more products and in turn more user interactivity. This means that Morgan & Co is very much future-proofed.
 
 [Back to table of contents](#table-of-contents)
 
 # Project Goals
-This is the fourth and final project submission for [Code Institute](https://codeinstitute.net/)'s 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback prodvided to the websites users.
+This is the fourth and final project submission for [Code Institute](https://codeinstitute.net/)'s 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full-stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback provided to the users of the website.
 
 The projects goals are to emulate an application that's as close-to-ready to launch - intending for the website to be able to be passed over to the store owners and for them to manage the rest. 
 
-This project provides an opportunity for the developer to showcase the backend and frontend skills aquired during the length of the course. 
+This project provides an opportunity for the developer to showcase the backend and frontend skills acquired during the length of the course. 
 
-The project will display proficency in technical aspects already exposed to (HTML, CSS, JS, Bootstrap, Python to name a few) and to also fully embrace the practice of the 4th projects main study-material - being, Django, advanced deployment methods and security. The goals are to keep building on the skillset aquired throughout this course. Morgan & Co will utilize a conventional relational database with a focus on CRUD functionality, implementing features avaiable for all levels (visitor, registered user, admin). These will be apparent throughout the website, but also well covered throughout this README, TESTING & DEPLOYMENT documentation.
+The project will display proficiency in technical aspects already exposed to (HTML, CSS, JS, Bootstrap, Python to name a few) and to also fully embrace the practice of the 4th projects main study-material - being, Django, advanced deployment methods and security. The goals are to keep building on the skillset acquired throughout this course. Morgan & Co will utilize a conventional relational database with a focus on CRUD functionality, implementing features available for all levels (visitor, registered user, admin). These will be apparent throughout the website, but also well covered throughout this README, TESTING & DEPLOYMENT documentation.
 
 [Back to table of contents](#table-of-contents)
 
@@ -86,7 +86,7 @@ Following are the goals that the website should provide for each user.
 | 003           | Be able to navigate the website with ease. | Discover what the website is about and find all that I need. |
 | 004           | Find the website design visually pleasing. | Have a pleasant experience. |
 | 005           | Be able to find help and information about the website and company. | Decide if the company is trustworthy and reputable. |
-| 006           | Be able to contact the company if I wish to, by my prefer method. | Easily contact the company and better understand any further queries I have. |
+| 006           | Be able to contact the company if I wish to, by my preferred method. | Easily contact the company and better understand any further queries I have. |
 | 007           | Have a reason to return. | Explore the website further. |
 
 ### As an Unregistered User (including all prior stories)
@@ -115,15 +115,15 @@ Following are the goals that the website should provide for each user.
 | 214           | Easily view my bag. | So that I can see what products I have in my bag, the cost and the quantity before checkout. |
 | 215           | Know that my information and payment details are safe and secure. | So that I can shop with confidence and feel safe about giving my personal details. |
 | 216           | Easily enter my payment information. | Check out quickly without needing to create an account or following numerous steps. |
-| 217           | Recieve an order review after checkout. | So that I can quickly see my purchase and check if I purchased all that I needed. |
+| 217           | Receieve an order review after checkout. | So that I can quickly see my purchase and check if I purchased all that I needed. |
 | 218           | Recieve a confirmation via email of my order. | Keep the order confirmation as proof of purchase. |
 
 ### As a Registered User (including all prior stories)
 | User Story ID | I want to: | So that I can: |
 | ------------- | ----------| ------------- |
 | 301           | Have my own personal profile with some management options. | Manage my own personal information. |
-| 302           | Have access to more features. | Justfiy registering to the website. |
-| 303           | Recieve an email confirmation after registering. | Verify that my account registration was successful. |
+| 302           | Have access to more features. | Justifiy registering to the website. |
+| 303           | Receieve an email confirmation after registering. | Verify that my account registration was successful. |
 | 304           | Be able to edit my personal information e.g. address, email. | Manage my own personal information in case they change. |
 | 305           | Easily sign in and sign out of my account. | Quickly access or leave my personal profile when using the website. |
 | 306           | Be able to recover my password in case I forget it. | Recover access to my account and all my personal information. |
@@ -159,7 +159,7 @@ Following are the goals that the website should provide for each user.
 [Back to table of contents](#table-of-contents)
 
 # Aesthetic Design
-Once the User Stories and the projects intentions were set out, the next step was to design the aesthetic aspects of the the Morgan & Co website.
+Once the User Stories and the projects intentions were set out, the next step was to design the aesthetic aspects of the Morgan & Co website.
 
 ## Site Flow
 
@@ -171,7 +171,7 @@ The linked pdf document ( view them [here](docs/site-flow.pdf) ) shows the websi
 This is covered in greater depth throughout this README and the TESTING documentation. This is to give a quick idea on what features are available for each level from 1 (Not Signed In) having the least amount of accessibility and features to 3 (Admin Signed In) having the most.
 
 ## Wireframes
-Wireframes were drawn using Balsamiq at the beginning of the project. They were referenced throughout the design and building of the website. Following are a series of images showing the Morgan & Co website on the three main screen sizes: mobile, tablet and desktop. Every major section of the website is also included.
+Wireframes were drawn using Balsamiq at the beginning of the project. They were referenced throughout the design and building of the website. Following is a series of images showing the Morgan & Co website on the three main screen sizes: mobile, tablet and desktop. Every major section of the website is also included.
 ### Mobile
 [Mobile Wireframes here](docs/wireframes/mobile-wireframes.pdf)
 ### Tablet
@@ -181,17 +181,17 @@ Wireframes were drawn using Balsamiq at the beginning of the project. They were 
 
 ## Colour Palette
 
-The Morgan & Co website colour palette is predominantly a dark against light and vice versa approach. Black and white. Dashes of brighter colours are present for the interactive elements in an effort to highlight these and to make a drastic contrast between said interactive elements and other non-interactive content. This concept was decided on early in the projects inception, with a light background providing an ideal canvas to build content upon. The predicted range of colours that comes with furniture and their images - brown/red/black dark leathers, lighter shades with fabric, brown woods, plastics etc. - would all add to a vast range of colours that brought life to the website. It was important to not drown users in an abundence of colour or clutter, and to allow the focus to be on the products.
+The Morgan & Co website colour palette is predominantly a dark against light and vice versa approach. Black and white. Dashes of brighter colours are present for the interactive elements in an effort to highlight these and to make a drastic contrast between said interactive elements and other non-interactive content. This concept was decided on early in the projects inception, with a light background providing an ideal canvas to build content upon. The predicted range of colours that comes with furniture and their images - brown/red/black dark leathers, lighter shades with fabric, brown woods, plastics etc. - would all add to a vast range of colours that brought life to the website. It was important to not drown users in an abundance of colour or clutter, and to allow the focus to be on the products.
 
 <img src="docs/colour-palette.png">
 
-The main background image (background-blue.jpg) provides a complimentary pastel colour, which fits with the font colours and button-styling colours chosen. It evokes a relaxing and gentle mood - helped by the opacity level neutralizng the vividty of the image. This is all to distinguish depth, and to allow headings, text and buttons to blossom at the forefront. Stylistically, this is in keeping with the overall feel of the website and the brand itself, but equally so, it's vital for content readability and the overall user experience.
+The main background image (background-blue.jpg) provides a complimentary pastel colour, which fits with the font colours and button-styling colours chosen. It evokes a relaxing and gentle mood - helped by the opacity level neutralizing the vividity of the image. This is all to distinguish depth, and to allow headings, text and buttons to blossom at the forefront. Stylistically, this is in keeping with the overall feel of the website and the brand itself, but equally so, it's vital for content readability and the overall user experience.
 
-The main text colour throughout the website is black (rgb(0,0,0)). The company name, page headings, product pages and information, the website's navbar and footer are almost all black text, usually set against light or even white backgrounds. This is to ensure maximum readability and to draw the users eyes to focus on what's importannt - the products. This creates a constant and obvious contrast between the text and the the much lighter, white background. Whenever there is a possiblibility of a contrast issue, the text colour is reversed to white (rgb(255,255,255)), again to ensure clarity - e.g. the Morgan & Co homepage - the white text colour stands out clearer than a black text colour would against the background image. For product images found on the product pages, the Opal (rgb(170,198,198)) colour is used as a background colour for the buttons when hovering over them. This creates the necessary platform for the text to be seperated from the image itself and to raise the contrast in a positive manner.
+The main text colour throughout the website is black (rgb(0,0,0)). The company name, page headings, product pages and information, the website's navbar and footer are almost all black text, usually set against light or even white backgrounds. This is to ensure maximum readability and to draw the users eyes to focus on what's important - the products. This creates a constant and obvious contrast between the text and the much lighter, white background. Whenever there is a possibiility of a contrast issue, the text colour is reversed to white (rgb(255,255,255)), again to ensure clarity - e.g. the Morgan & Co homepage - the white text colour stands out clearer than a black text colour would against the background image. For product images found on the product pages, the Opal (rgb(170,198,198)) colour is used as a background colour for the buttons when hovering over them. This creates the necessary platform for the text to be separated from the image itself and to raise the contrast in a positive manner.
 
 By default, all buttons have a consistent style, size and layout throughout the website. See more in the buttons [Features](#features) section.
 
-Some text colour changes are seen throughout the website - red, usually reserved for error or validation purposes to grab the users attention. It is also used for the Clearnace and New Arrivals specials category - something the company wishes to promote and for users to be drawn in by. Otherwise, blue is used very very rarely and reserved for Edit buttons to again help with contrast. Gold band on toast free delivery promotion. This is obviously to entice users to keep spending to trigger their free delivery thrreshold - beneficial for shoppers and the company alike.
+Some text colour changes are seen throughout the website - red, usually reserved for error or validation purposes to grab the users attention. It is also used for the Clearance and New Arrivals specials category - something the company wishes to promote and for users to be drawn in by. Otherwise, blue is used very very rarely and reserved for Edit buttons to again help with contrast. Gold band on toast free delivery promotion. This is obviously to entice users to keep spending to trigger their free delivery threshold - beneficial for shoppers and the company alike.
 
 Here is the [Contrast Checker](https://webaim.org/resources/contrastchecker/) tool used to show just how powerful something so simple can be:
 
@@ -209,7 +209,7 @@ It's vital for the theme to be clear and obvious. The background image makes the
 
 The Morgan & Co website uses the Poppins font. It provides that clean and clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/). Sans Serif is used as a secondary option in case of failure to load the font into the website correctly. Poppins is a font often used in designs, so it is both attractive and appropriate.
 
-There are some stylistic changes to the font (the use of ```<strong>```), but mostly with just colour for impact, attention or contrat and readability purposes.
+There are some stylistic changes to the font (the use of ```<strong>```), but mostly with just colour for impact, attention or contrast and readability purposes.
 
 When the underline animation appears underneath the navbar text on cursor hover, they serve as hints to the user that that element can be interacted with.
 
@@ -220,7 +220,7 @@ Morgan & Co uses a relational database.
 
 Locally, Django's built-in SQLite database was used during development.  
 
-For the deployed live version, initially the website was setup to use Heroku's postgres Add-On database, but due to the change in their [service](https://blog.heroku.com/next-chapter) and their free tier options it was decided that a change in direction was necessary.
+For the deployed live version, initially, the website was set up to use Heroku's postgres Add-On database, but due to the change in their [service](https://blog.heroku.com/next-chapter) and their free tier options it was decided that a change in direction was necessary.
 
 With Code Institute's help, the Heroku database was migrated to use ElephantSQL's postgres database instead.
 
@@ -238,9 +238,9 @@ This schema is vital in developing the website's functionality, its features and
 - Order - It contains all the information relating to the users order and history. Connects to the UserProfile and OrderLineItem model.
 - OrderLineItem - It contains information relating to an order and its items. Connects to the Product and Order model.
 - Product - It contains all of the information relating to a product found on the website. Connects to the OrderLineItem, Review, Wishlist, Category, Room and Special models.
-- Category - It contains all of the information relating to a category. Related to prodcts for filtering and sorting. Connects to the Product model.
-- Room - It contains all of the information relating to a room. Related to prodcts for filtering and sorting. Connects to the Product model.
-- Special - It contains all of the information relating to a special. Related to prodcts for filtering and sorting. Connects to the Product model.
+- Category - It contains all of the information relating to a category. Related to products for filtering and sorting. Connects to the Product model.
+- Room - It contains all of the information relating to a room. Related to products for filtering and sorting. Connects to the Product model.
+- Special - It contains all of the information relating to a special. Related to products for filtering and sorting. Connects to the Product model.
 - Review - It contains all of the information relating to a review. Connects to the Product and User model.
 - Wishlist - It contains all of the information relating to the wishlist feature. Connects to the Product model.
 
@@ -280,7 +280,7 @@ def wishlist_contents(request):
     return context
 ```
 
-Once the context was made avaiable, it could be controlled in the font-end in templates:
+Once the context was made available, it could be controlled in the font-end in templates:
 
 ```
 {% if request.user.is_authenticated %}
@@ -322,7 +322,7 @@ On top of this, the `@login_required` decorator is used as another line of defen
 - Adding an item to the Wishlist (button found on the products "product_detail" page).
 - Removing an item from the Wishlist.
 
-Further accesibility is given to admin/storeowners/superusers, for example:
+Further accessibility is given to admin/storeowners/superusers, for example:
 ```
 if not request.user.is_superuser:
     messages.error(request, 'Sorry, only store owners can do that.')
@@ -355,10 +355,10 @@ Django will use the custom `404.html` and `500.html` templates created for the M
 
 Form validation is present throughout the website and meticulously tested in the [testing](TESTING.md) documentation.
 
-Form validation is handled from the very beginning by defining the models fields and then building upon that. Forms are constructed in the `forms.py` files and can be targeted with python code in `views.py`, using the `is_valid()` method to return true or false. Templates with custom validation through HTML and JavaSript/jquery also handles validation and the use of Cross-Site Request Forgery (CSRF) on forms adds security.
+Form validation is handled from the very beginning by defining the models fields and then building upon that. Forms are constructed in the `forms.py` files and can be targeted with python code in `views.py`, using the `is_valid()` method to return true or false. Templates with custom validation through HTML and JavaSript/jquery also handle validation and the use of Cross Site Request Forgery (CSRF) on forms adds security.
 
 Users are prevented from submitting invalid forms and are informed of this in multiple ways:
-- Invalid popup message next to effected input:
+- Invalid popup message next to affected input:
 
 <img src="docs/screenshots/invalid-1.png">
 <img src="docs/screenshots/invalid-2.png">
@@ -396,13 +396,13 @@ Using Django's templating language, the page loads and checks to see if an image
 </a>
 {% endif %}
 ```
-The store owner has the ability to edit the product from the website or the admin portal incase image issues arise. This is the image used for any image failures:
+The store owner has the ability to edit the product from the website or the admin portal in case image issues arise. This is the image used for any image failures:
 
 <img src="media/noimage.png">
 
 ## Toasts
 
-Toasts provide a great user experience to inform users of actions accross the website, whilst the logic is handled and wrapped up in code on the backend. They appear at the top of mobile screens and at the top-right of larger screens whenever necessary. They can be easily dismissed by the user by clicking on the small close/x button on the toast itself.
+Toasts provide a great user experience to inform users of actions across the website, whilst the logic is handled and wrapped up in code on the backend. They appear at the top of mobile screens and at the top-right of larger screens whenever necessary. They can be easily dismissed by the user by clicking on the small close/x button on the toast itself.
 
 After creating the project, django automatically enables [messaging](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/) functionality in the `settings.py` file, through the `django.contrib.messages` found in the INSTALLED_APPS section. These were linked to custom messages levels, setup in `base.html` and then custom text was added when creating the views:
 
@@ -414,7 +414,7 @@ Morgan & Co uses 4 levels of toast messaging:
 
 <img src="docs/screenshots/toast-success.png">
 
-To confirm an action the user requested and has succeeding in doing so. These include but are not limited to scenarios where the user has:
+To confirm an action the user requested and has succeeded in doing so. These include but are not limited to scenarios where the user has:
 - successfully added a product.
 - successfully edited/updated a product.
 - successfully removed a product.
@@ -430,7 +430,7 @@ To confirm an action the user requested and has succeeding in doing so. These in
 
 ### toast_error = Error!
 
-- an action was not successful or some other failure occurred e.g. performing and search without any input.
+- an action was not successful or some other failure occurred e.g. performing a search without any input.
 
 <img src="docs/screenshots/toast-error.png">
 
@@ -474,7 +474,7 @@ id="delete_{{ review.id }}"
 ```
 
 ## Email
-The website uses Gmail to send company information and account related emails. These emails use Django's template language to personalize each email from a basic txt document:
+The website uses Gmail to send company information and account-related emails. These emails use Django's template language to personalize each email from a basic txt document:
 ```
 Hello {{ order.full_name }}.
 
@@ -484,10 +484,10 @@ Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 ```
 Emails are sent for:
-- New account reigstration - users must click the link in email to confirm and have access to their account.
+- New account registration - users must click the link in email to confirm and have access to their account.
 - Reset password links.
 - Allauth's vast range of other account-related emails. See [here](https://github.com/pennersr/django-allauth/tree/master/allauth/templates/account/email) for the repository.
-- Morgan & Co order confirmations - sent as a backup to the customers inbox once a purcahse has been made.
+- Morgan & Co order confirmations - sent as a backup to the customers inbox once a purchase has been made.
 
 Gmail setup and linking it to the website's functionality can be found in the deployment documentation [here](DEPLOYMENT.md).
 
@@ -495,14 +495,14 @@ Gmail setup and linking it to the website's functionality can be found in the de
 Stripe is used to securely handle card payments. Further information regarding Stripe's role in this project can be found throughout this documentation, especially in the [TESTING](TESTING.md) and [DEPLOYMENT](DEPLOYMENT.md) sections.
 
 ## AWS
-Further information regarding the AWS (Amazon Web Service) role in this project can be found throughout this documentation, especially in the [TESTING](TESTING.md) and [DEPLOYMENT](DEPLOYMENT.md) sections. A broad oversiht:
+Further information regarding the AWS (Amazon Web Service) role in this project can be found throughout this documentation, especially in the [TESTING](TESTING.md) and [DEPLOYMENT](DEPLOYMENT.md) sections. A broad overview:
 - S3 Bucket service is used to handle static images and styling.
 - IAM is used to handle authorization and access.
 
 [Back to table of contents](#table-of-contents)
 
 # Accessibility
-Extremely important aspect.
+An extremely important aspect.
 
 - Semantic design.
 - The use of alt to describe images and other content.
@@ -534,7 +534,7 @@ Mobile navbar:
 - Clear and obvious navbar links to other pages within the website, including mouse-hover effects to enhance the users experience.
 - Mobile hamburger menu, toggles to show/hide the product menu options and a link to the homepage.
 - The Morgan & Co logo/name is seen at all times whether centrally located on larger screens or adjusted to smaller screen-sizes. This is vital for brand consistency and serves as a simple way of reminding the user of the company's name. The logo/name is clickable and always takes the user to the Morgan & Co homepage.
-- 'My Account' logo, which includes 'Sign In', 'Sign Up' or 'Sign Out' depending on if user is signed in our not. 'Product Management' (for admin only) and 'My Profile'. All clickable and direct to the relvant pages.
+- 'My Account' logo, which includes 'Sign In', 'Sign Up' or 'Sign Out' depending on if user is signed in our not. 'Product Management' (for admin only) and 'My Profile'. All clickable and direct to the relevant pages.
 - 'Wishlist' logo button. A hollow/empty heart-shaped icon when no items in user Wishlist. Fills to a black heart if there is at least 1 item present in the Wishlist. Logo and feature completely hidden unless user is signed in.
 - Shopping Bag. Logo with the current users bag total. Takes user to the shopping bag page when clicked.
 - The delivery banner promoting free delivery on all orders over £100.
@@ -549,7 +549,7 @@ Mobile search bar:
 
 <img src="docs/screenshots/mobile-search.png">
 
-- A search bar is located just under the page logo links - built into the navbar, so always present. Quick, easy access for user preferred searches. The user can search by name, description or any keyword they choose and either use a keyboard ENTER entry, or use the 'Search' logo button to search though the entire websites database of products.
+- A search bar is located just under the page logo links - built into the navbar, so always present. Quick, easy access for user-preferred searches. The user can search by name, description or any keyword they choose and either use a keyboard ENTER entry, or use the 'Search' logo button to search through the entire websites database of products.
 
 ### Footer
 
@@ -577,8 +577,8 @@ Mobile search bar:
 
 The buttons predominantly serve as triggers for users to achieve something they wish. An action is called on those buttons and are linked on the back-end.
 
-The buttons have an uniform and simple design to create consistency in their functions and to make it easy for the user to understand and use the website.
-Buttons are either green, white or black, with the 'Edit' and 'Remove' buttons reserved for blue and red respecitbely, a choice purposefully made so that they stand out amongst the normal links and buttons.
+The buttons have a uniform and simple design to create consistency in their functions and to make it easy for the user to understand and use the website.
+Buttons are either green, white or black, with the 'Edit' and 'Remove' buttons reserved for blue and red respectively, a choice purposefully made so that they stand out amongst the normal links and buttons.
 
 <img src="docs/screenshots/buttons.png">
 
@@ -588,7 +588,7 @@ The vast majority of buttons have a hover state of black background colour and w
 
 ### Quantity Selector
 
-This feature is present on the Product Ddetail page and the Shopping Bag page. It serves as a way to quickly and easily change the number of each products that the shopper wishes to purchase. Features are:
+This feature is present on the Product Detail page and the Shopping Bag page. It serves as a way to quickly and easily change the number of each product that the shopper wishes to purchase. Features are:
 - Minus (-) button signifies subtracting one item at a time when clicked.
 - Plus (+) button signifies adding one item at a time when clicked.
 - Type the number, use the +/- buttons or use the up/down quantity selector inside the input to decide on the chosen number.
@@ -598,8 +598,8 @@ This feature is present on the Product Ddetail page and the Shopping Bag page. I
 
 ### Shopping Bag Preview
 
-- This is a popup that appears at the top of the page when users make any adjustments to the items in their product. It serves as a handy reminder of what their shopping bag contains, wthout the need to visit the shoppubng bag page on eachg adjustment. Features incliude:
-- A toast message informing users of the chnage in their bag (add/remove/update)
+- This is a popup that appears at the top of the page when users make any adjustments to the items in their product. It serves as a handy reminder of what their shopping bag contains, without the need to visit the shopping bag page on each adjustment. Features include:
+- A toast message informing users of the change in their bag (add/remove/update)
 - Number to signify the total number of items in the bag.
 - Small images of the products chosen.
 - Quantity of each item in bag.
@@ -622,8 +622,8 @@ There are universal features that are present throughout the Morgan & Co website
 - Toasts, explained [here](#interactive-toats).
 - Search Bar, explained [here](#search-bar).
 - Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
-- All clickable images, buttons, links etc have a hovering cursor to signify that the element can be interacted with. The majority of these elements being visually promted either through a short animation, colour change or highlighting.
-- Back-to-top button. Guides the user back to the top of the page once interacted with. Userful for pages with lengthy content.
+- All clickable images, buttons, links etc have a hovering cursor to signify that the element can be interacted with. The majority of these elements are visually prompted either through a short animation, colour change or highlighting.
+- Back-to-top button. Guides the user back to the top of the page once interacted with. Useful for pages with lengthy content.
 
 Here's a breakdown of all the design features on each of the main webpages within the Morgan & Co website:
 
@@ -649,9 +649,9 @@ This is where every product on the Morgan & Co website is listed. All visitors t
 
 <img src="docs/screenshots/filter.png">
 
-The Filter Products by Category Room and Special pages are where users can view every product listed in a certain product range (depending on which product range they choose on the nav bar menu options, or product links page) All visitors to the website can view this webpage. The features include:
-- Page title and subsoquent buttons for further filtering if necessary.
-- A list of every product within the selected product Category/Room/Special presented just as products from the main products page would. Same related product info and interactions available.
+The Filter Products by Category Room and Special pages are where users can view every product listed in a certain product range (depending on which product range they choose on the nav bar menu options, or product links page). All visitors to the website can view this webpage. The features include:
+- Page title and subsequent buttons for further filtering if necessary.
+- A list of every product within the selected product Category/Room/Special presented just as products from the main products page would. The same related product info and interactions are available.
 
 ### - Product Detail page
 
@@ -663,34 +663,34 @@ The Product Detail page is where the user can see the full product details for t
 - All product information presented, which includes product price, rating, category, room, special, sku, description.
 - [Quantity selector](#quantity-selector) to choose how many items to add to the Shopping Bag.
 - Current product rating, that automatically updates whenever a user or admin adds/edits/removes a review with rating.
-- If the admin/store owneris signed in, the 'Edit Product' button appears besides the product detail information and forwards the admin/store owner to the 'Edit Product' (/edit/product_id/) page.
-- If the admin/store owner is signed in, the 'Remove Product' button appears besides the product detail information and once clicked allows the admin/store owner to remove the product from the website. Before doing so, the admin/store owner is met with a modal that asks for confirmation on whether they want to delete that product or not. Admin/store owner must click 'Remove Product' again to confirm this (which will then remove the product from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and return to the product detail page, with no change taken place and the product remaining on the website. 
+- If the admin/store owner is signed in, the 'Edit Product' button appears beside the product detail information and forwards the admin/store owner to the 'Edit Product' (/edit/product_id/) page.
+- If the admin/store owner is signed in, the 'Remove Product' button appears beside the product detail information and once clicked allows the admin/store owner to remove the product from the website. Before doing so, the admin/store owner is met with a modal that asks for confirmation on whether they want to delete that product or not. Admin/store owner must click 'Remove Product' again to confirm this (which will then remove the product from the website and the database), otherwise, they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and return to the product detail page, with no change taken place and the product remaining on the website. 
 - The 'Edit Product' and 'Remove Product' are both hidden if not the admin/store owner.
 - The 'Keep Shopping' button will return the user back to the main products page when clicked.
 - The 'Add to Bag' will add that product to the users shopping bag when clicked.
 
-Wishlist section
+Wishlist section.
 - The feature and button are only available to see for users that are signed in
 - 'Add to Wishlist' button will add that current product to the users Wishlist. User will be informed of this and the button will then disappear and a text to notify that the product is already in their Wishlist will replace it. A link to the Wishlist will also be present.
 
-Review section
+Review section.
 - Product Reviews title showing the current number of reviews listed for that product.
-- Product Reviews listed from most recently newest review first.
+- Product Reviews listed from most recently reviewed first.
 - Reviews to show review authour, review text, rating and date.
 - A review form to appear next to the list of reviews - or hidden if user has already left a review for that product, with a message thanking them for their review.
 
 <img src="docs/screenshots/add-review.png">
 
-- If the review was submitted by the current user, the 'Edit Review' button appears besides that review. Button click forwards the user to the 'Edit Review' (/edit/review_id/) page.
-- If the review was submitted by the current user, the 'Remove Review' button appears besides that review and allows the user to delete their review when clicked. The user is met with a modal that asks for confirmation on whether they want to delete that review or not. User must click 'Remove Review' again to confirm this (which will then remove the review from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the review will remain on the product detail page. 
-- The 'Edit Review' and 'Remove Review' buttons are hidden for all users who are not signed-in to the website. The buttons are always visisble to admin. They are limited to the registered user if they are signed in and had submitted that review.
+- If the review was submitted by the current user, the 'Edit Review' button appears beside that review. Button click forwards the user to the 'Edit Review' (/edit/review_id/) page.
+- If the review was submitted by the current user, the 'Remove Review' button appears beside that review and allows the user to delete their review when clicked. The user is met with a modal that asks for confirmation on whether they want to delete that review or not. User must click 'Remove Review' again to confirm this (which will then remove the review from the website and the database), otherwise, they can cancel by clicking the 'Cancel' button or by just clicking off-screen or pressing ESC on the keyboard and the review will remain on the product detail page. 
+- The 'Edit Review' and 'Remove Review' buttons are hidden for all users who are not signed-in to the website. The buttons are always visible to admin. They are limited to the registered user if they are signed in and had submitted that review.
 - If user is not signed in, they will see a message asking them to Sign In (linked the Sign In page when clicked) to leave a review.
 
 ### - Edit Review
 
 <img src="docs/screenshots/edit-review.png">
 
-The Edit Review page is where the user is direct to after clicking on the 'Edit Review' button on a product detail page. Users must be registered to access this page. Admin has total control on editing all website reviews. Registered users can only edit their own reviews. The features include:
+The Edit Review page is where the user is directed to after clicking on the 'Edit Review' button on a product detail page. Users must be registered to access this page. Admin has total control on editing all website reviews. Registered users can only edit their own reviews. The features include:
 - Page title at top of page.
 - Alert! toast informing user that they are editing the review for a specific product.
 - 'Product Review' input with current user review text populating the text area.
@@ -702,11 +702,11 @@ The Edit Review page is where the user is direct to after clicking on the 'Edit 
 ### - Wishlist page
 <img src="docs/screenshots/wishlist.png">
 
-Th Wishlist page is where the users Wishlist items are stored. Users would have to click 'Add to Wishlist' button on items on the product page to be able to add products here. Every user has the choice to create their own Wishlist and add all items from the website to their own Wishlist. It is a feature that allows users to keep tracks on current products and allows for them to easily find the products they would be interested in purchasing. Only registered users can view this page. The features include:
+The Wishlist page is where the users Wishlist items are stored. Users would have to click 'Add to Wishlist' button on items on the product page to be able to add products here. Every user has the choice to create their own Wishlist and add all items from the website to their own Wishlist. It is a feature that allows users to keep tracks on current products and allows for them to easily find the products they would be interested in purchasing. Only registered users can view this page. The features include:
 - Page title, including the users username at the top of the page.
-- A message informing user that their Wishlist is empty if no products currently in it. Clickable 'Products Page' link directs user to main products page.
+- A message informing user that their Wishlist is empty if no products are currently in it. Clickable 'Products Page' link directs user to main products page.
 - A message at the top informing the registered user of how many items are in their Wishlist.
-- A list of items with relevant image, name, price besides each one.
+- A list of items with relevant image, name, price beside each one.
 - A 'Remove from Wishlist' button. When clicked, this will ask the user if they wish to confirm or cancel the action of removing the item from their wishlist. If they confirm, the item will be removed and the Wishlist to reflect this. Cancel button click will stop this action.
 
 ### - My Profile page
@@ -715,7 +715,7 @@ Th Wishlist page is where the users Wishlist items are stored. Users would have 
 My Profile. This is where the users personal information is stored. Only registered users can view this page. The features include:
 - Page title, including the users username at the top of the page.
 - An editable form that is either empty or contains previously saved user information including delivery address.
-- 'Update Infomration' button, when clicked will update the form and save that information to user profile.
+- 'Update Information' button, when clicked will update the form and save that information to user profile.
 - A table of previously made orders through the Morgan & Co website, with a clickable link to see the full order details.
 - The 'Wishlist' button at the bottom of the page, when clicked directs user to their 'Wishlist' (/wishlist/) page.
 
@@ -723,7 +723,7 @@ My Profile. This is where the users personal information is stored. Only registe
 
 <img src="docs/screenshots/add-product.png">
 
-The Add Product page is for the admin/store owner to add their products website via a form. Only admin/store owners can use this feature. The product is added to the main products page and is avaiable on all relevant pages that the categories, rooms and specials apply to. It will also be searchable in the search bar for user-inputted queries. The features include:
+The Add Product page is for the admin/store owner to add their products website via a form. Only admin/store owners can use this feature. The product is added to the main products page and is available on all relevant pages that the categories, rooms and specials apply to. It will also be searchable in the search bar for user-inputted queries. The features include:
 - Page title and form title at top of page.
 - Validation on all inputs.
 - All inputs linked to the database.
@@ -755,13 +755,13 @@ The Shopping Bag is the page where users add their products to, before advancing
 - Page title at top of page.
 - 'Continue Shopping' button that when clicked will direct users back to the main products page if there are not items in their shopping bag. A text message on screen also informs users of this.
 - A list of products with each product info containing the image, the name, the sku number, the price, the quantity and subtotal.
-- A [quantity selector](#quantity-selector) which then updates the bag total, deliery cost and grand total once updated/ or items are removed from bag.
+- A [quantity selector](#quantity-selector) which then updates the bag total, delivery cost and grand total once updated/ or items are removed from bag.
 - 'Remove' button, when clicked will update the number of items the user has chosen.
 - 'Update' button, when clicked will remove the item from the shopping bag instantly.
 - Bag Total - the total amount in GBP (£) of the items in the bag.
-- Delivery - the delivery cost in GBP (£). Charged at 10% of the bag total at time of development.
+- Delivery - the delivery cost in GBP (£). Charged at 10% of the bag total at the time of development.
 - Grand total - the grand total of bag total and the delivery in GBP (£).
-- A message about free delivery and how much to spend to activate the promotion in red text. This is hidden if shopper has a bag total of +£100 (the current free delivery threshold).
+- A message about free delivery and how much to spend to activate the promotion in red text. This is hidden if the shopper has a bag total of +£100 (the current free delivery threshold).
 - 'Keep Shopping' button which directs user back to the main products page when clicked.
 - 'Secure Checkout' button which directs user to the Checkout page when clicked.
 
@@ -769,30 +769,30 @@ The Shopping Bag is the page where users add their products to, before advancing
 
 ### - Checkout page
 
-The Checkout page is the where users give their delivery information and payment details before confirming the purchase. The features include:
+The Checkout page is where users give their delivery information and payment details before confirming the purchase. The features include:
 - Page title at top of page.
-- Form for user details that includes Full Name and Email.
+- Form for user details that include Full Name and Email.
 - Form for delivery information that includes 'Phone Number', 'Street Address 1', 'Street Address 1', 'Town or City, County', 'State or Locality', 'Postal Code', 'Country'.
 - 'Country' dropdown input to choose country for delivery.
-- Save Delivery checkbox. Feature only avaiable to those signed in. Feature to save current form details for future use. Links to Sign In or Sing Up if user not signed in.
+- Save Delivery checkbox. Feature only available to those signed in. Feature to save current form details for future use. Links to Sign In or Sing Up if user not signed in.
 - Payment input for card payment and validation. Uses Stripe to check. Takes long card number, expiry date and CVC secure number.
 - Form with full validation.
 - Order Summary with details of products and cost.
-- Order Total - the total amount in GBP (£) of the items to purcahse.
+- Order Total - the total amount in GBP (£) of the items to purchase.
 - Delivery - the delivery cost in GBP (£). Charged at 10% of the order total at time of development.
 - Grand total - the grand total of bag total and the delivery in GBP (£).
 - 'Adust Bag' button, to return to Shopping Bag on click.
 - 'Complete Order' button. Users will click this button to confirm all and authorize the purchase. Take them to Checkout Success page if valid, otherwise returns here.
-- Text message underneath buttons to infom user of the charge to their card when processed.
+- Text message underneath buttons to inform user of the charge to their card when processed.
 
 <img src="docs/screenshots/checkout.png">
 
 ### - Checkout Success page
-The Checkout Success page is the where users get a confirmation of their order details after a successful purchase. The features include:
+The Checkout Success page is where users get a confirmation of their order details after a successful purchase. The features include:
 - 'Thank You' page title at top of page.
 - A message to say that all details are forwarded to the given email.
 - Order info including order number limited in size, for security purposes. Message informing customer that full number will be in their email.
-- Order Date, details of products bought, address, phone number, costing.
+- Order Date, details of products bought, address, phone number and costing.
 - 'Latest Deals' button when clicked will take user to the Special filtered products (currently New Arrivals and Clearance at time of development).
 
 <img src="docs/screenshots/checkout-success.png">
@@ -850,14 +850,14 @@ The Sign Up page is where visitors can enter their details for the first time to
 - 'Username' input with placeholder and validation applied.
 - 'Password' input with placeholder and validation applied.
 - 'Password (again)' input with placeholder and validation applied.
-- 'Sign Up' button. When clicked, the user is forwarded to the 'Verify Your E-mail Address' page. They must verifiy the link in their inbox to access their account.
+- 'Sign Up' button. When clicked, the user is forwarded to the 'Verify Your E-mail Address' page. They must verify the link in their inbox to access their account.
 - 'Back to Sign In' button. When clicked, the user is taken to the Sign In page.
 
 ### - Verify Your E-mail Address
 
 <img src="docs/screenshots/verify-email.png">
 
-The 'Verify Your E-mail Address' page is where visitors are forwarded to after they Sing Up for the first time. Users must verify their email address before they are able to access their account. If they attempt to Sign In without verifying this, they will always be re-directed back to this page, with an Alert! toast informing them of the process. The features include:
+The 'Verify Your E-mail Address' page is where visitors are forwarded to after they Sing Up for the first time. Users must verify their email address before they are able to access their account. If they attempt to Sign In without verifying this, they will always be redirected back to this page, with an Alert! toast informing them of the process. The features include:
 - 'Verify Your E-mail Address' title on top of the page.
 - Text to inform user of the process.
 
@@ -868,7 +868,7 @@ The 'Verify Your E-mail Address' page is where visitors are forwarded to after t
 The Password Reset page is where visitors enter their email address to reset their password. A link will be sent out to the uses email inbox. The user must click that link to reset their password, allowing them to regain access to their account. All visitors to the website can view this webpage. The features include:
 - 'Password Reset' title on top of the page.
 - Email address input with placeholder and validation applied.
-- 'Reset Password' button. When clicked, will activated the rest password process.
+- 'Reset Password' button. When clicked, will activate the restet password process.
 - 'Back to Sign In' button. When clicked, the user is taken to the Sign In page.
 
 [Back to table of contents](#table-of-contents)
@@ -905,13 +905,13 @@ The Password Reset page is where visitors enter their email address to reset the
 1. [Eye Dropper:](https://eyedropper.org/).
     - This colour picker tool was used to to pick and experiment with colours.
 1. [Coolors:](https://coolors.co/)
-    - This tool was used to to setup the colour palette [here](#colour-palette).
+    - This tool was used to setup the colour palette [here](#colour-palette).
 1. [TinyPNG:](https://tinypng.com/)
     - TinyPNG is used to optimize images used in the website and documentation.
 1. [iLoveIMG:](https://www.iloveimg.com/)
     - iLoveIMG is used for further image optimization.
 1. [Miscrosoft Paint:](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
-    - Microsoft Paint is used to crop and resize images and editing photos for the project.
+    - Microsoft Paint is used to crop and resize images and edit photos for the project.
 1. [WPS Office:](https://www.wps.com/)
     - WPS Office is used to create the tables found in the [testing](TESTING.md) document and for spell-checking.
 1. [Am I Responsive?:](http://ami.responsivedesign.is/)
@@ -962,7 +962,7 @@ There are many planned updates arranged for the Morgan & Co website that include
 
 # Deployment
 
-Due to the extensive development and depolyment process for the Morgan & Co website, the full documentation can be found here - [DEPLOYMENT](DEPLOYMENT.md).
+Due to the extensive development and deployment process for the Morgan & Co website, the full documentation can be found here - [DEPLOYMENT](DEPLOYMENT.md).
 
 [Back to table of contents](#table-of-contents)
 
@@ -973,14 +973,9 @@ Due to the extensive development and depolyment process for the Morgan & Co webs
 - Code credit is found throughout the documentation whenever possible.
 - Code from official sources related to each service used. e.g. Django Allauth, Stripe, Bootstrap.
 
-
-## Inspiration
-
-
-
 ## Content & Media
 
-All images are copyright-free as were made clearby the projects brief.
+All images are copyright-free as made clear by the projects brief.
 
 Home page background image / `background-blue.jp` - by Virender Singh found [here](https://unsplash.com/photos/hE0nmTffKtM)  
 Black Relaxing Chair / `behnam-norouzi-phXwnWWz-BM-unsplash.jpg` - by Behnam Norouzi found [here](https://unsplash.com/photos/phXwnWWz-BM)  
@@ -1021,3 +1016,5 @@ noimage `noimage.png`- taken from Code Institute's Boutique Ado tutorial reposit
 - Tutor support at Code Institute
 
 [Back to table of contents](#table-of-contents)
+
+This project is for educational purposes only.

@@ -392,7 +392,8 @@ input[name='q']::placeholder {
     }
 
     .message-container {
-        top: 64px;
+        /* top: 64px; */
+        top: 77px;
     }
 
     .nav-link i.fas {
@@ -470,6 +471,39 @@ input[name='q']::placeholder {
     }
 }
 
+/* toast message adjustment */
+@media (max-width: 662px) {
+    .message-container {
+        /* top: 64px; */
+        top: 115px;
+    }
+
+    .arrow-up {
+        display: none;
+    }
+}
+
+/* toast message adjustment */
+@media (max-width: 575px) {
+    .message-container {
+        /* top: 64px; */
+        top: 75px;
+    }
+}
+
+/* responsive styling for under 449px */
+@media (max-width: 497px) {
+    .message-container {
+        top: 119px;
+        right: 8px;
+        left: 5px;
+    }
+
+    .arrow-up {
+        right: 63px;
+    }
+}
+
 /* responsive styling for under 449px */
 @media (max-width: 481px) {
     .nav-link i.fas {
@@ -490,7 +524,7 @@ input[name='q']::placeholder {
     }
 
     .shop-icons li {
-        padding: 0 0.8rem 0 0;
+        padding: 0 0.2rem 0 0;
     }
 
     /* toast */

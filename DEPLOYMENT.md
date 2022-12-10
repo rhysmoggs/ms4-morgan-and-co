@@ -139,7 +139,7 @@ DATABASES = {
 ```
 - Save, but don't commit as this is a temporary change.
 
-- Due to this change, the Postgres  datatbase is now being targeted and thus migrations must be made.
+- Due to this change, the Postgres datatbase is now being targeted and thus migrations must be made.
 
 - ```python3 manage.py showmigrations``` then ```python3 manage.py migrate```.
 
@@ -186,7 +186,7 @@ else:
 
 - in CLI `heroku login -i`, and log in with `heroku info heroku config:set DISABLE_COLLECTSTATIC=1` (if only one heroku app) OR `heroku config:set DISABLE_COLLECTSTATIC=1 --app your-heroku-app-name-here` (if more than one heroku app on website) e.g. `heroku config:set DISABLE_COLLECTSTATIC=1 --app morgan-and-co`, for this example.
 
-- morgan_and_co > "settings.py", update ```ALLOWED_HOSTS = []``` to be  ```ALLOWED_HOSTS = ['your-heroku-app-name-here.herokuapp.com', 'localhost']```  e.g. ```ALLOWED_HOSTS = ['morgan-and-co.herokuapp.com', 'localhost']``` for this example.
+- morgan_and_co > "settings.py", update ```ALLOWED_HOSTS = []``` to be ```ALLOWED_HOSTS = ['your-heroku-app-name-here.herokuapp.com', 'localhost']``` e.g. ```ALLOWED_HOSTS = ['morgan-and-co.herokuapp.com', 'localhost']``` for this example.
 
 - ```ACCOUNT_EMAIL_VERIFICATION = 'none'``` (make sure- to change this back to ```ACCOUNT_EMAIL_VERIFICATION = 'mandatory'``` before production/launching website)
 
