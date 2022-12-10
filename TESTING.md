@@ -51,7 +51,7 @@ Wishlist Logo issue in navbar
 
 <img src="docs/testing/wishlist-error.png">
 
-Error affecting all pages on the website due to the Wishlist navbar icon nestling block level elements within p tags. The error was fixed by replacing the ```<p>``` tags with ```<div>```. Fix source [here](#https://stackoverflow.com/questions/21084870/no-p-element-in-scope-but-a-p-end-tag-seen-w3c-validation)
+Error affecting all pages on the website due to the Wishlist navbar icon nestling block level elements within p tags. The error was fixed by replacing the ```<p>``` tags with ```<div>```. Fix source [here](https://stackoverflow.com/questions/21084870/no-p-element-in-scope-but-a-p-end-tag-seen-w3c-validation).
 
 Wishlist page
 
@@ -63,15 +63,15 @@ Buttons
 
 <img src="docs/testing/div-error.png">
 
-Divs were removed and then br tag added to create button shape.
-Found on Wishlist and product detail page with buttons.
-Edit Product, Edit Review and Remove Product and Remove Review. divs inside buttons. Deleted divs and just added br for button shape.
+`<div>` tags were removed and then a `<br>` tag added to create button shape.
+The error was found on the Wishlist feature and product Detail Page with buttons.
+Edit Product, Edit Review, Remove Product and Remove Review. `<div>` tags found inside buttons again. Deleted the tags and just added a br tag for button shape.
 
 Pass all custom HTML.
 
 <img src="docs/testing/pass.png">
 
-After checking all custom pages and leaving some of the original code (from the Boutique Ado tutorial), the HTML cleared all errors.
+After checking all custom pages and leaving some of the original code (from the Boutique Ado tutorial), the HTML checks cleared all errors.
 
 # W3C CSS Validator - CSS Testing
 
@@ -106,11 +106,11 @@ countryfield.js - no errors found
 Using Code Institute's [PEP8CI](https://pep8ci.herokuapp.com/) to lint the code. Tested all Python code present. Here are the outcomes of those test:
 
 1. bag app - All clear.
-1. checkout app - Some lines too long. Addressed. All clear.
+1. checkout app - Some lines were too long. Addressed. All clear.
 1. morgan_and_co - All clear.
-1. products app - Some lines too long in `views.py`. Addressed. All clear.
-1. profiles app - Some lines too long. Addressed. All clear.
-1. reviews app - Some lines too long. Addressed. All clear.
+1. products app - Some lines were too long in `views.py`. Addressed. All clear.
+1. profiles app - Some lines were too long. Addressed. All clear.
+1. reviews app - Some lines were too long. Addressed. All clear.
 1. wishlist app - All Clear.
 
 By typing `python3 -m flake8` in the terminal, this checked for all linting issues accros the project. Further fixes were made:
@@ -372,7 +372,7 @@ Testing was done using their recommended practices. It was vital that these test
 
 All Stripe testing documentation can be found [here](https://stripe.com/docs/testing).
 
-Input the following card payment details and the checkout page to test and emulate the process of a successful payment:
+Input the following card payment details at the checkout page to test and emulate the process of a successful payment:
 
 - Long Card Number: 4242 4242 4242 4242.  
 - Expiry Date: Enter any date in the future with mm/yy.  
@@ -385,7 +385,7 @@ Testing for authentication was handled by their [3D Secure Authentication](https
 
 Webhooks were tested during development and followed the same practice covered in Code Institute's 'Boutique Ado' tutorial, which this project used as guidance.
 
-Common errors found and fixed during the development processes stemmed from the Gitpod workplace URL changing and then causing issues due the Enpoint URL being different. This was fixed by updating the URL in the endpoint. Development issues also occurred when the Gitpod workspace was not set to 'Shared'. 
+Common errors found and fixed during the development processes stemmed from the Gitpod workplace URL changing and then causing issues due the Endpoint URL being different. This was fixed by updating the URL in the endpoint. Development issues also occurred when the Gitpod workspace was not set to 'Shared'. 
 
 These issues were not present on the final deployed website, as the Morgan & Co URL remains constant.
 
@@ -395,7 +395,7 @@ These issues were not present on the final deployed website, as the Morgan & Co 
 
 # Bug Fixes
 
-Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). This was resolved by adding a favicon image, created [here](https://favicon.io/favicon-generator/). It was `static/images` folder and linked in the `templates/base.html` file.
+Favicon console error [fix](https://www.w3schools.com/html/html_favicon.asp). This was resolved by adding a favicon image, created [here](https://favicon.io/favicon-generator/). It was added to the `static/images` folder and linked in the `templates/base.html` file.
 
 <img src="docs/testing/favicon-error.png">
 

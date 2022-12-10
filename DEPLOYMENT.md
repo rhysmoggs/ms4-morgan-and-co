@@ -148,7 +148,7 @@ DATABASES = {
     - Following the steps to dumpdata from your local sqlite3 database and then loadata on to the postgres data is also possible.
     - See [here](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) for guidence on dumpdata and [here](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata) for loaddata.
 
-- Create a super user to log in with." ```python3 manage.py createsuperuser```. Enter details.
+- Create a super user to log in with. `python3 manage.py createsuperuser`. Enter details.
 
 - Un-comment the 'DATABASES' section in morgan_and_co > "settings.py" that we commented out earlier (make it active now), then delete :
 ```

@@ -51,6 +51,10 @@ footer {
     width: 50%;
 }
 
+.info-style {
+    opacity: 0.9;
+}
+
 .shop-now-button {
     background: rgb(170,198,198);
     color: black;
@@ -63,8 +67,6 @@ footer {
     object-fit: contain;
 }
 
-/* edited the following */
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
 .fade-img {
     opacity: 1;
     transition: .5s ease;
@@ -185,14 +187,14 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- navbar link effects */
+/* navbar link effects */
 
 .nav-item:hover {
     text-decoration: underline solid;
     text-underline-offset: 0.5rem;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -260,7 +262,7 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -331,7 +333,6 @@ input[name='q']::placeholder {
 }
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -392,7 +393,6 @@ input[name='q']::placeholder {
     }
 
     .message-container {
-        /* top: 64px; */
         top: 77px;
     }
 
@@ -439,7 +439,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* increase product image size  on screens up to 768px */
+/* increase product image size on screens up to 768px */
 @media (max-width: 768px) {
     .card-img-top {
         height: 40vw;
@@ -491,7 +491,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* responsive styling for under 449px */
+/* responsive styling for under 497px */
 @media (max-width: 497px) {
     .message-container {
         top: 119px;
@@ -504,7 +504,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* responsive styling for under 449px */
+/* responsive styling for under 481px */
 @media (max-width: 481px) {
     .nav-link i.fas {
         font-size: 0.8rem;

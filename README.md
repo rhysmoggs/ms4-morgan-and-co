@@ -53,20 +53,21 @@ Having said that, registered users will have features and possibilities that wil
 - Personal wishlists.
 - Personal profile.
 - Review posting.
+
 All website features will be documented in this README document.
 
 The website will clearly display information for all visitors, including the company contact information via social media links and helpful customer information pages (About us, Contact Us and the relevant delivery and returns pages). The website is fully responsible for a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit and use the website.
 
-The website is welcoming to a range of visitors and gives a very nice user-experience with plenty of on-screen prompts on display and a whole host of intuitive features, matched with secure technology working in the background to ensure a smooth, safe, efficient user-friendly experience.
+The website is welcoming to a range of visitors and gives a very nice user-experience with plenty of on-screen prompts on display. A whole host of intuitive features, matched with secure technology working in the background creates a smooth, safe and efficient user-friendly experience.
 
-The website is easily maintainable through the admin portal, but also allows admin/store owners to manage aspects of their store by just signing in to the website itself. This is obviously of huge importance and allows the store owner to easily update their store and any time, without having to contact their website developer or miss out on business opportunities. The website and the features built in to the design means it's adaptive and scalable - the store owners can add more products and in turn more user interactivity. This means that Morgan & Co is very much future-proofed.
+The website is easily maintainable through the admin portal, but also allows admin/store owners to manage aspects of their store by just signing in to the website itself. This is obviously of huge importance and allows the store owner to easily update their store at any time, without having to contact their website developer or miss out on business opportunities. The website and the features built in to the design means it's adaptive and scalable - the store owners can add more products and in turn more user interactivity. This means that Morgan & Co is very much future-proofed.
 
 [Back to table of contents](#table-of-contents)
 
 # Project Goals
 This is the fourth and final project submission for [Code Institute](https://codeinstitute.net/)'s 'Level 5 Diploma in Web Application Development' course. The task is to design, build and implement a full-stack e-commerce website that incorporates Django/Python. A shopping bag and checkout app will serve as the stores purchasing method, using Stripe's online payment processing system. This will be fully functioning, secure and tested with feedback provided to the users of the website.
 
-The projects goals are to emulate an application that's as close-to-ready to launch - intending for the website to be able to be passed over to the store owners and for them to manage the rest. 
+The projects goals are to emulate an application that's ready to launch - intending for the website to be passed over to the store owners and for them to manage the rest. 
 
 This project provides an opportunity for the developer to showcase the backend and frontend skills acquired during the length of the course. 
 
@@ -209,7 +210,7 @@ It's vital for the theme to be clear and obvious. The background image makes the
 
 The Morgan & Co website uses the Poppins font. It provides that clean and clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/). Sans Serif is used as a secondary option in case of failure to load the font into the website correctly. Poppins is a font often used in designs, so it is both attractive and appropriate.
 
-There are some stylistic changes to the font (the use of ```<strong>```), but mostly with just colour for impact, attention or contrast and readability purposes.
+There are some stylistic changes to the font (the use of ```<strong>```), but mostly with just colour changes for impact, attention or contrast and readability purposes.
 
 When the underline animation appears underneath the navbar text on cursor hover, they serve as hints to the user that that element can be interacted with.
 
@@ -230,7 +231,7 @@ Here is the Database Schema layout for the Morgan & Co website:
 <img src="docs/schema.png">
 
 It shows each model present in the project and the relationship between them.  
-This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
+This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found [here](#features) along with the code, and how everything links together.
 
 ### Model breakdown:  
 - User - django's built-in [User](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/#user-model) model. Uses Django's [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) application to deal with account authentication, registration and management. Contains user information such as username, password, email.
@@ -248,7 +249,7 @@ This schema is vital in developing the website's functionality, its features and
 
 # Technical Design
 
-Once the user goals and the projects intentions were set out, the next step was to design the technical aspects of the the Morgan & Co website.
+Once the user goals, the projects intentions and aesthetic design were set out, the next step was to design the technical aspects of the Morgan & Co website.
 
 ## Defensive Programming
 Accessibility, authorization and security levels can be controlled by combining django's authentication system found [here](https://docs.djangoproject.com/en/4.1/topics/auth/default/) and a whole host of other technical features written in custom code for the Morgan & Co website.
@@ -534,7 +535,7 @@ Mobile navbar:
 - Clear and obvious navbar links to other pages within the website, including mouse-hover effects to enhance the users experience.
 - Mobile hamburger menu, toggles to show/hide the product menu options and a link to the homepage.
 - The Morgan & Co logo/name is seen at all times whether centrally located on larger screens or adjusted to smaller screen-sizes. This is vital for brand consistency and serves as a simple way of reminding the user of the company's name. The logo/name is clickable and always takes the user to the Morgan & Co homepage.
-- 'My Account' logo, which includes 'Sign In', 'Sign Up' or 'Sign Out' depending on if user is signed in our not. 'Product Management' (for admin only) and 'My Profile'. All clickable and direct to the relevant pages.
+- 'My Account' logo, which includes 'Sign In', 'Sign Up' or 'Sign Out' depending on if user is signed in or not. 'Product Management' (for admin only) and 'My Profile'. All clickable and direct to the relevant pages.
 - 'Wishlist' logo button. A hollow/empty heart-shaped icon when no items in user Wishlist. Fills to a black heart if there is at least 1 item present in the Wishlist. Logo and feature completely hidden unless user is signed in.
 - Shopping Bag. Logo with the current users bag total. Takes user to the shopping bag page when clicked.
 - The delivery banner promoting free delivery on all orders over £100.
@@ -599,7 +600,7 @@ This feature is present on the Product Detail page and the Shopping Bag page. It
 ### Shopping Bag Preview
 
 - This is a popup that appears at the top of the page when users make any adjustments to the items in their product. It serves as a handy reminder of what their shopping bag contains, without the need to visit the shopping bag page on each adjustment. Features include:
-- A toast message informing users of the change in their bag (add/remove/update)
+- A toast message informing users of the change in their bag (add/remove/update).
 - Number to signify the total number of items in the bag.
 - Small images of the products chosen.
 - Quantity of each item in bag.
@@ -611,7 +612,7 @@ This feature is present on the Product Detail page and the Shopping Bag page. It
 
 ### Interactive Toasts
 
-- Messages appearing at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. Toats also appear when website navigation isn't possible e.g. accessing checkout with no items in bag. They are informed of this.
+- Messages appearing at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. Toasts also appear when website navigation isn't possible e.g. accessing checkout with no items in bag. They are informed of this.
 
 ## Page Features
 
@@ -619,7 +620,7 @@ There are universal features that are present throughout the Morgan & Co website
 - Navbar, explained [here](#navbar).
 - Footer, explained [here](#footer).
 - Buttons, explained [here](#buttons).
-- Toasts, explained [here](#interactive-toats).
+- Toasts, explained [here](#interactive-toasts).
 - Search Bar, explained [here](#search-bar).
 - Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
 - All clickable images, buttons, links etc have a hovering cursor to signify that the element can be interacted with. The majority of these elements are visually prompted either through a short animation, colour change or highlighting.
@@ -632,7 +633,7 @@ Here's a breakdown of all the design features on each of the main webpages withi
 <img src="docs/screenshots/homepage.png">
 
 The home page for the Morgan & Co website. All visitors will be welcomed by this page. The features include:
-- A full-screen background image (background-blueg.jpg), a promotion/brief message and then a button that leads to the products page.
+- A full-screen background image (background-blue.jpg), a promotion/brief message and then a button that leads to the products page.
 
 ### - The Products pages
 
@@ -914,6 +915,8 @@ The Password Reset page is where visitors enter their email address to reset the
     - Microsoft Paint is used to crop and resize images and edit photos for the project.
 1. [WPS Office:](https://www.wps.com/)
     - WPS Office is used to create the tables found in the [testing](TESTING.md) document and for spell-checking.
+1. [Grammarly:](https://app.grammarly.com/)
+    - Grammarly is used for spell-checking.
 1. [Am I Responsive?:](http://ami.responsivedesign.is/)
     - Used to create the image at the very top of this document.
 1. [PsycoPG2:](https://pypi.org/project/psycopg2/)
@@ -968,10 +971,11 @@ Due to the extensive development and deployment process for the Morgan & Co webs
 
 # Credits
 ## Code
-
-- Boutique Ado.
+- Code Institute's Boutique Ado tutorial forms the basis of this project.
 - Code credit is found throughout the documentation whenever possible.
 - Code from official sources related to each service used. e.g. Django Allauth, Stripe, Bootstrap.
+- The product image hover overlay was taken from [here](https://www.w3schools.com/howto/howto_css_image_overlay.asp) and adjusted to suit the website.
+- A [privacy policy generator](https://www.privacypolicygenerator.info/) was used and linked in the Delivery Info and Returns & Refunds pages.
 
 ## Content & Media
 
@@ -1013,7 +1017,17 @@ noimage `noimage.png`- taken from Code Institute's Boutique Ado tutorial reposit
 
 - Mentor Antonio Rodriguez for helpful feedback and input throughout the course.
 
-- Tutor support at Code Institute
+- Database Model Queries | Django (3.0) Crash Course Tutorials (pt 7) - YouTube [video](https://www.youtube.com/watch?v=PD3YnPSHC-c) by Dennis Ivy.
+
+- Learn Django - The Easy Way | Adding Posts to Favourites | Tutorial - 51 - YouTube [video](https://www.youtube.com/watch?v=1XiJvIuvqhs) by Abhishek Verma.
+
+- Python for Beginners - Learn Python in 1 Hour - YouTube [video](https://www.youtube.com/watch?v=kqtD5dpn9C8) by Programming with Mosh.
+
+- Codemy.com - YouTube [channel](https://www.youtube.com/watch?v=H4QPHLmsZMU).
+
+- https://www.youtube.com/@Codemycom - YouTube [video](https://www.youtube.com/@Codemycom) by Very Academy.
+
+- Tutor support at Code Institute.
 
 [Back to table of contents](#table-of-contents)
 
